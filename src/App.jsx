@@ -3,11 +3,17 @@ import React from "react";
 import "./App1.css";
 
 import Content from "./components/Main/content/Content";
+import About from "./components/About/about";
 const App = () => {
    return (
       <>
          <div className="main_container">
-            <Content />
+            <div>
+               <Content />
+            </div>
+            <div>
+               <About />
+            </div>
          </div>
       </>
    );
