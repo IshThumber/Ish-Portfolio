@@ -1,0 +1,19 @@
+.Quote_container {
+   display: flex;
+   margin: auto;
+   flex-direction: column;
+   justify-content: center;
+   /* align-items: center; */
+   width: 60%;
+   text-align: center;
+   background-color: #FCFAFA;
+   padding: 1rem;
+   border-radius: 1rem;
+   /* font-family: 'Kalam', cursive !important; */
+   font-size: 1.1rem;
+}
+
+.Quote_author {
+   font-weight: 600;
+   text-align: end;
+}

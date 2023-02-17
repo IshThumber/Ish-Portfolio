@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+
+.main_container {
+   margin: 0;
+   padding: 0;
+   height: 100vh;
+   width: 100%;
+   box-sizing: border-box;
+   background: linear-gradient(68.1deg, #253341 8.7%, #35404C 39.13%, #5D6066 82.88%, #7E7A7C 99.99%, #968D8C 100%);
+}

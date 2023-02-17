@@ -1,0 +1,11 @@
+.main_div {
+   width: 60%;
+   margin: auto;
+   display: flex;
+   flex-direction: row;
+   color: #FCFAFA;
+   font-size: 2rem;
+   align-items: center;
+   justify-content: space-between;
+   padding: 10rem 0rem 0rem 0rem;
+}
