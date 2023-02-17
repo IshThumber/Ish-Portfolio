@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "../header/header";
+import Header from "../header/Header";
 import Section from "../section/section";
-import "./Content.css";
 import Quote from '../Quotes/quote';
+import "./Content.css";
 
 const Content = () => {
    return (
