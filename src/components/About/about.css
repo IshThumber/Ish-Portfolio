@@ -1,49 +1,31 @@
 .main__div_about {
-   /* width: 60%; */
-   /* height: 50vh; */
-   margin: auto;
-   display: flex;
-   flex-direction: row;
-   /* color: #323232; */
-   /* background-image: url(../../assets/patternpad.svg); */
-   /* background-repeat: no-repeat; */
-   /* font-size: 2rem; */
-   /* align-items: center; */
-   /* justify-content: space-between; */
-   /* margin: 10rem 5rem; */
-   padding: 10rem 0rem 0rem 0rem;
-}
-
-.about__container {
-   width: 100%;
-   height: 100%;
    margin: auto;
    display: flex;
    flex-direction: column;
-   color: #323232;
-   background-image: url(../../assets/patternpad.svg);
+   padding: 1rem 0rem 15rem 0rem;
+   background-image: url("../../assets/square.svg");
    background-repeat: no-repeat;
-   /* background-attachment: fixed; */
-   background-size: 100% 100%;
+   background-position: center;
+   background-size: 100%;
+   /* background-size: 100% 100%; */
+}
+
+.about__container {
+   width: 80%;
+   margin: auto;
+   border: 1px solid black;
+   display: flex;
    font-size: 2rem;
-   text-align: center;
-   /* align-items: center; */
-   /* justify-content: space-between; */
-   /* margin: 10rem 5rem; */
-   padding: 2rem 0rem 0rem 0rem;
 }
 
 .about__heading {
    font-size: 4rem;
-   text-align: start;
-   background: linear-gradient(90deg, #D9E4EC 0%, #385E72 30%);
+   width: 80%;
+   /* text-align: start; */
+   /*background: linear-gradient(90deg, #D9E4EC 0%, #385E72 30%);
    -webkit-text-fill-color: transparent;
-   -webkit-background-clip: text;
+   -webkit-background-clip: text; */
 }
-
-/* font-weight: 600; */
-/* margin: 0rem 0rem 2rem 0rem; */
-
 
 .about__para {
    font-size: 1rem;
