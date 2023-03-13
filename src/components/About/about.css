@@ -1,0 +1,52 @@
+.main__div_about {
+   /* width: 60%; */
+   /* height: 50vh; */
+   margin: auto;
+   display: flex;
+   flex-direction: row;
+   /* color: #323232; */
+   /* background-image: url(../../assets/patternpad.svg); */
+   /* background-repeat: no-repeat; */
+   /* font-size: 2rem; */
+   /* align-items: center; */
+   /* justify-content: space-between; */
+   /* margin: 10rem 5rem; */
+   padding: 10rem 0rem 0rem 0rem;
+}
+
+.about__container {
+   width: 100%;
+   height: 100%;
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+   color: #323232;
+   background-image: url(../../assets/patternpad.svg);
+   background-repeat: no-repeat;
+   /* background-attachment: fixed; */
+   background-size: 100% 100%;
+   font-size: 2rem;
+   text-align: center;
+   /* align-items: center; */
+   /* justify-content: space-between; */
+   /* margin: 10rem 5rem; */
+   padding: 2rem 0rem 0rem 0rem;
+}
+
+.about__heading {
+   font-size: 4rem;
+   text-align: start;
+   background: linear-gradient(90deg, #D9E4EC 0%, #385E72 30%);
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+}
+
+/* font-weight: 600; */
+/* margin: 0rem 0rem 2rem 0rem; */
+
+
+.about__para {
+   font-size: 1rem;
+   text-align: left;
+   margin: 01rem 1rem 2rem 15rem;
+}

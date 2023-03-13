@@ -1,0 +1,24 @@
+@font-face {
+   font-family: Averta-Regular;
+   src: url(./AvertaStd-Regular.ttf);
+}
+
+@font-face {
+   font-family: Averta-Bold;
+   src: url(./AvertaStd-Bold.ttf);
+}
+
+@font-face {
+   font-family: Averta-Semibold;
+   src: url(./AvertaStd-Semibold.ttf);
+}
+
+@font-face {
+   font-family: Averta-ExtraBold;
+   src: url(./AvertaStd-ExtraBold.ttf);
+}
+
+@font-face {
+   font-family: Averta-ExtraThin;
+   src: url(./AvertaStd-Extrathin.ttf);
+}

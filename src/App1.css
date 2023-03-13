@@ -1,18 +1,32 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap'); */
+
+@import "./assets/fonts/Averta/fonts.css";
 
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   font-family: 'Poppins', sans-serif;
+   /* font-family: 'Poppins', sans-serif; */
+   /* font-family: 'Kalam', cursive; */
+   font-family: 'Averta-Regular', sans-serif;
 }
 
 .main_container {
    margin: 0;
    padding: 0;
-   height: 100vh;
+   height: 4000px;
    width: 100%;
    box-sizing: border-box;
-   background: linear-gradient(68.1deg, #253341 8.7%, #35404C 39.13%, #5D6066 82.88%, #7E7A7C 99.99%, #968D8C 100%);
+   overflow-x: hidden;
+   /* background: linear-gradient(68.1deg, #253341 8.7%, #35404C 39.13%, #5D6066 82.88%, #7E7A7C 99.99%, #968D8C 100%); */
+   /* background-image: url(./assets/patternpad.svg); */
+
+
+   background: hsla(201, 34%, 33%, 1);
+   background: linear-gradient(180deg, #385d71 0%, #dae4ec 100%);
+
+   /* background: -moz-linear-gradient(180deg, hsla(201, 34%, 33%, 1) 0%, hsla(205, 33%, 89%, 1) 100%)
+   background: -webkit-linear-gradient(180deg, hsla(201, 34%, 33%, 1) 0%, hsla(205, 33%, 89%, 1) 100%);
+   filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#385E72", endColorstr="#D9E4EC", GradientType=1); */
 }

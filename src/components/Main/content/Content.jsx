@@ -7,9 +7,9 @@ import "./Content.css";
 const Content = () => {
    return (
       <>
-         <div>
+         <nav>
             <Header />
-         </div>
+         </nav>
          <div>
             <Section />
          </div>
