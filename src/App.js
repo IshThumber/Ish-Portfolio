@@ -1,7 +1,9 @@
 import React from "react";
 import Header from "./components/Main/header/Header";
+import Hero from "./components/Main/content/Hero";
 import "./App.css";
 import { Box, Card, Container } from "@chakra-ui/react";
+import Quote from "./components/Main/Quotes/quote";
 const App = () => {
    return (
       <>
@@ -12,20 +14,9 @@ const App = () => {
             padding={0}
             bgGradient="linear(to-b, #FFF6DC, #fff )"
          >
-            <Box
-               w="40%"
-               paddingTop={10}
-               paddingLeft={"15%"}
-               border="2px"
-               marginLeft="-10%"
-               borderRadius={50}
-            >
-               <Header />
-            </Box>
-
-            <Card >
-               sd
-            </Card>
+            <Header />
+            <Hero />
+            <Quote />
          </Container>
       </>
    );

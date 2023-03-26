@@ -1,12 +1,13 @@
+import { Box, Card, Text } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 
-import "./quote.css";
+// import "./quote.css";
 // import Skeleton from "@mui/material/Skeleton";
 
 function Quote() {
    const [quote, setQuote] = useState("");
    const [author, setAuthor] = useState("");
-   const [isLoading, setIsLoading] = useState(true);
+   // const [isLoading, setIsLoading] = useState(true);
 
    useEffect(() => {
       const fetchQuote = async () => {
@@ -27,7 +28,7 @@ function Quote() {
             const data = await response.json();
             setQuote(data.content);
             setAuthor(data.originator.name);
-            setIsLoading(false);
+            // setIsLoading(false);
          } catch (error) {
             console.error(error);
          }
@@ -44,22 +45,32 @@ function Quote() {
 
    return (
       <>
-         <div className="Quote_container">
-            {/* {isLoading ? (
-               <Skeleton animation="wave" width={""} />
-            ) : ( */}
-            <>
-               <p>{quote}</p>
-            </>
-            {/* )}
-            {isLoading ? (
-               <Skeleton animation="wave" width={""} />
-            ) : ( */}
-            <>
-               <p className="Quote_author">- {author}</p>
-            </>
-            {/* )} */}
-         </div>
+         <Card
+            // className="Quote_container"
+            w="60%"
+            margin="auto"
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            // alignItems="center"
+            // textAlign="center"
+            padding={5}
+            borderRadius="1rem"
+         >
+            <Box textAlign="center">
+               <Text>{quote}</Text>
+            </Box>
+
+            <Box textAlign="right">
+               <Text
+                  // className="Quote_author"
+                  fontWeight={600}
+                  textAlign="right"
+               >
+                  - {author}
+               </Text>
+            </Box>
+         </Card>
       </>
    );
 }
