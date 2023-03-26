@@ -56,6 +56,7 @@ function Quote() {
             // textAlign="center"
             padding={5}
             borderRadius="1rem"
+            border="2px"
          >
             <Box textAlign="center">
                <Text>{quote}</Text>
