@@ -9,9 +9,7 @@ const Header = () => {
             w="40%"
             paddingTop={10}
             paddingLeft={"15%"}
-            border="2px"
             marginLeft="-10%"
-            borderRadius={50}
          >
             <div className="header__container">
                <div className="header_div">
