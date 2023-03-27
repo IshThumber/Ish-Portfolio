@@ -11,9 +11,29 @@
   /* font-family: 'Kalam', cursive; */
   font-family: 'Averta-Regular', sans-serif;
   /* font-family: 'Jost', sans-serif; */
+  /* Change ScrollBar */
+  -webkit-perspective: 1px;
+  -webkit-backface-visibility: hidden;
 }
 
-.main_container {
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF6DC;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FFC300;
+  /* background-color: #21846C; */
+  border-radius: 20px;
+  border: 2px solid #FFF6DC;
+}
+
+
+/* .main_container {
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -22,4 +42,4 @@
   overflow-x: hidden;
   background: #FFF6DC;
   background: linear-gradient(0deg, #FFF6DC 0%, #ffffff 100%);
-}
+} */
