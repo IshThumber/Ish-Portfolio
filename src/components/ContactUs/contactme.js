@@ -7,7 +7,7 @@ const Contact = () => {
             width="60%"
             margin="auto"
             alignItems="center"
-            bg="brown"
+            // bg="brown"
             // padding={10}
             marginTop={10}
          >
@@ -33,7 +33,7 @@ const Contact = () => {
                justifyContent="space-between"
             >
                <HStack w="100%">
-                  <Box display="flex" bg="green.100">
+                  <Box display="flex" >
                      <Box>
                         <Box justifyContent={"space-between"} h="100%">
                            <Heading
