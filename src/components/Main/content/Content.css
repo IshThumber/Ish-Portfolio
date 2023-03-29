@@ -12,3 +12,8 @@
    text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000;
 
 }
+
+::selection {
+   background: #FFC300;
+   /* color: #ffffff; */
+}
