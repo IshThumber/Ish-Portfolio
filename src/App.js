@@ -28,6 +28,8 @@ const App = () => {
             <br />
             <br />
             <ContactMe />
+
+            <footer></footer>
          </Container>
       </>
    );
