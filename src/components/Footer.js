@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 const Footer = () => {
    return (
       <>
-         <Container as="footer" role="contentinfo" maxW="100%" bg="dark">
+         <Container as="footer" role="contentinfo" maxW="100%"    >
             <Stack
                spacing="8"
                direction={{
@@ -13,7 +13,10 @@ const Footer = () => {
                   md: "row"
                }}
                justify="space-between"
-               py={{
+               pt={{
+                  base: "9"
+               }}
+               pb={{
                   base: "12",
                   md: "16"
                }}
@@ -37,12 +40,13 @@ const Footer = () => {
                         md: "8"
                      }}
                   >
-                     <Button variant="link" color="subtle">
+                     <Button as="a" href="" variant="link" color="subtle">
                         ishthumber.me
                      </Button>{" "}
                      is a personal portfolio developed by <u>Ish Thumber</u>
                   </Text>
                </Stack>
+
                <Stack
                   direction={{
                      base: "column-reverse",
@@ -50,8 +54,8 @@ const Footer = () => {
                      lg: "row"
                   }}
                   spacing={{
-                     base: "12",
-                     md: "8"
+                     base: "15",
+                     md: "10"
                   }}
                >
                   <Stack direction="row" spacing="8">
@@ -59,50 +63,24 @@ const Footer = () => {
                         <Text fontSize="sm" fontWeight="semibold" color="subtle">
                            Product
                         </Text>
-                        <Stack spacing="3" shouldWrapChildren>
-                           <Button variant="link">How it works</Button>
-                           <Button variant="link">Pricing</Button>
-                           <Button variant="link">Use Cases</Button>
-                        </Stack>
                      </Stack>
+
                      <Stack spacing="4" minW="36" flex="1">
                         <Text fontSize="sm" fontWeight="semibold" color="subtle">
                            Legal
                         </Text>
-                        <Stack spacing="3" shouldWrapChildren>
-                           <Button variant="link">Privacy</Button>
-                           <Button variant="link">Terms</Button>
-                           <Button variant="link">License</Button>
-                        </Stack>
-                     </Stack>
-                  </Stack>
-                  <Stack spacing="4">
-                     <Text fontSize="sm" fontWeight="semibold" color="subtle">
-                        Stay up to date
-                     </Text>
-                     <Stack
-                        spacing="4"
-                        direction={{
-                           base: "column",
-                           sm: "row"
-                        }}
-                        maxW={{
-                           lg: "360px"
-                        }}
-                     >
-                        <Input placeholder="Enter your email" type="email" required />
-                        <Button variant="primary" type="submit" flexShrink={0}>
-                           Subscribe
-                        </Button>
                      </Stack>
                   </Stack>
                </Stack>
             </Stack>
+
             <Divider />
+
             <Stack pt="8" pb="12" justify="space-between" direction={{ base: "column-reverse", md: "row" }} align="center">
                <Text fontSize="sm" color="subtle">
                   &copy; {new Date().getFullYear()} ishthumber.me
                </Text>
+
                <ButtonGroup variant="ghost">
                   <IconButton as="a" href="#" aria-label="LinkedIn" icon={<FaLinkedin fontSize="1.25rem" />} />
                   <IconButton as="a" href="#" aria-label="GitHub" icon={<FaGithub fontSize="1.25rem" />} />

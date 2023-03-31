@@ -40,9 +40,9 @@ const About = () => {
                   Hey 👋🏻 I'm
                </Heading>
                <Box>
-                  <Heading className="text_ish" as="h1" fontSize={{ base: "3.5rem", md: "5rem" }}>
+                  <Heading className="text_ish" as="h1" fontSize={{ base: "4rem", md: "5rem" }}>
                      Ish{" "}
-                     <span className="text_thumber" as="h1" fontSize={{ base: "3.5rem", md: "5rem" }}>
+                     <span className="text_thumber" as="h1" fontSize={{ base: "4rem", md: "5rem" }}>
                         Thumber
                      </span>
                   </Heading>
@@ -111,7 +111,7 @@ const About = () => {
                   </Box> */}
                </Box>
             </Box>
-            
+
             <Box>
                <Image
                   src={sideImg}

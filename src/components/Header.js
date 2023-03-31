@@ -23,8 +23,7 @@
 
 // export default Header;
 import { Box, Container, Text } from "@chakra-ui/react";
-// import { Logo } from "./Logo";
-
+   
 const Header = () => {
    return (
       <Box as="nav">

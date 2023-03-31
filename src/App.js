@@ -22,14 +22,9 @@ const App = () => {
             <Header />
             <Hero />
             <Quote />
-            <br />
-            <br />
-            <br />
-            <About />
-            <br />
-            <br />
-            <br />
-            {/* <ContactMe /> */}
+            
+            {/* <About /> */}
+            
          </Container>
          <footer
             style={{
