@@ -1,16 +1,18 @@
 import React from "react";
-import Header from "./components/Main/header/Header";
-import Hero from "./components/Main/content/Hero";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
 import "./App.css";
 import { Container } from "@chakra-ui/react";
-import Quote from "./components/Main/Quotes/quote";
-import About from "./components/About/about";
-import ContactMe from "./components/ContactUs/contactme.js";
+import Quote from "./components/quote";
+import About from "./components/about";
+// import ContactMe from "./components/contactme.js"; 
+import Footer from "./components/Footer";
 const App = () => {
    return (
       <>
          <Container
             maxW="100%"
+            w="100%"
             h="100%"
             margin={0}
             padding={0}
@@ -27,10 +29,16 @@ const App = () => {
             <br />
             <br />
             <br />
-            <ContactMe />
-
-            <footer></footer>
+            {/* <ContactMe /> */}
          </Container>
+         <footer
+            style={{
+               position: "absolute",
+               width: "100%"
+            }}
+         >
+            <Footer />
+         </footer>
       </>
    );
 };

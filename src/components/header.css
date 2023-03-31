@@ -25,13 +25,13 @@
 }
 
 .header__heading {
-   font-size: 1.7rem;
-   font-weight: 600;
-   margin: 0rem 0rem 0rem 0rem;
-   padding: 1rem 0rem 1rem 0rem;
-   color: #000000;
+   /* font-size: 1.7rem; */
+   /* font-weight: 600; */
+   /* margin: 0rem 0rem 0rem 0rem; */
+   /* padding: 1rem 0rem 1rem 0rem; */
+   /* color: #000000; */
    /* background-color: red; */
-   background-image: url("../../../assets/IshD2.svg");
+   background-image: url("../assets/IshD2.svg");
    background-repeat: no-repeat;
    background-position: center;
    background-size: 80%;
