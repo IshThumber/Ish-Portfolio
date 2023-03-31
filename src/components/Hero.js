@@ -1,8 +1,8 @@
 import React from "react";
-import { Box, Heading, Image, Text, Icon } from "@chakra-ui/react";
+import { Box, Heading, Image, Text, Icon, IconButton, Stack } from "@chakra-ui/react";
 import sideImg from "../assets/self.png";
 import "./Content.css";
-
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { AiOutlineGithub, AiFillLinkedin, AiOutlineTwitter } from "react-icons/ai";
 
 const About = () => {
@@ -33,16 +33,16 @@ const About = () => {
                color={"black"}
                flexDirection={"column"}
                alignSelf="center"
-               textAlign={{ base: "left", sm: "center", md: "left" }}
+               textAlign={{ lg: "left", base: "center", md: "left" }}
                h="100%"
             >
                <Heading as="h1" size="md" fontFamily="Josefin Slab">
                   Hey 👋🏻 I'm
                </Heading>
                <Box>
-                  <Heading className="text_ish" as="h1" fontSize={{ base: "4rem", md: "5rem" }}>
+                  <Heading className="text_ish" fontSize={{ base: "4.5rem", md: "5rem" }}>
                      Ish{" "}
-                     <span className="text_thumber" as="h1" fontSize={{ base: "4rem", md: "5rem" }}>
+                     <span className="text_thumber" fontSize={{ base: "4rem", md: "5rem" }}>
                         Thumber
                      </span>
                   </Heading>
@@ -61,55 +61,51 @@ const About = () => {
                   </span>
                </Text>
 
-               <Box
-                  w="30%"
-                  padding={2}
-                  display="flex"
-                  justifyContent="space-between"
+               <Stack
+                  spacing={4}
+                  direction="row"
+                  // w={{ base: "50%", lg: "30%" }}
+                  // padding={2}
+                  // display="flex"
+                  // justifyContent="space-between"
                   alignSelf={{ base: "center", md: "flex-start" }}
-                  marginBottom={{ base: "2rem", md: "0rem" }}
+                  // marginBottom={{ base: "2rem", md: "0rem" }}
                   pt={{
                      base: "2rem",
                      md: "2rem"
                   }}
                >
-                  <Box
-                     borderRadius="100%"
-                     onClick={() => {
-                        window.location.href = "https://github.com/IshThumber";
-                     }}
-                     cursor="pointer"
-                  >
-                     <Icon as={AiOutlineGithub} boxSize="6" color="#161b22" />
-                  </Box>
-                  <Box
-                     borderRadius="100%"
-                     onClick={() => {
-                        window.location.href = "https://www.linkedin.com/in/ishthumber/";
-                     }}
-                     cursor="pointer"
-                  >
-                     <Icon as={AiFillLinkedin} boxSize="6" color="#0a66c2" />
-                  </Box>
-                  <Box
-                     borderRadius="100%"
-                     onClick={() => {
-                        window.location.href = "https://twitter.com/ish_thumber";
-                     }}
-                     cursor="pointer"
-                  >
-                     <Icon as={AiOutlineTwitter} boxSize="6" color="#1da1f2" />
-                  </Box>
-                  {/* <Box
-                     borderRadius="100%"
-                     onClick={() => {
-                        window.location.href = "https://instagram.com/__ish343__";
-                     }}
-                     cursor="pointer"
-                  >
-                     <Icon as={AiOutlineInstagram} boxSize="6" color="" />
-                  </Box> */}
-               </Box>
+                  <IconButton
+                     as="a"
+                     href="https://github.com/IshThumber"
+                     aria-label="GitHub"
+                     icon={<FaGithub fontSize="1.5rem" />}
+                     color="#161b22"
+                     // colorScheme="#161b22"
+                     variant="ghost"
+                     borderRadius="full"
+                  />
+                  <IconButton
+                     as="a"
+                     href="https://www.linkedin.com/in/ishthumber/"
+                     aria-label="LinkedIn"
+                     icon={<FaLinkedin fontSize="1.5rem" />}
+                     // color="#0a66c2"
+                     colorScheme="linkedin"
+                     variant="ghost"
+                     borderRadius="full"
+                  />
+                  <IconButton
+                     as="a"
+                     href="https://twitter.com/ish_thumber"
+                     aria-label="Twitter"
+                     icon={<FaTwitter fontSize="1.5rem" />}
+                     // color="#1da1f2"
+                     colorScheme="twitter"
+                     variant="ghost"
+                     borderRadius="full"
+                  />
+               </Stack>
             </Box>
 
             <Box>

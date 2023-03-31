@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 const Footer = () => {
    return (
       <>
-         <Container as="footer" role="contentinfo" maxW="100%"    >
+         <Container as="footer" role="contentinfo" maxW="100%">
             <Stack
                spacing="8"
                direction={{
