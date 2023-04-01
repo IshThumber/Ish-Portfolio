@@ -2,11 +2,12 @@ import React from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import "./App.css";
-import { Container } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
 import Quote from "./components/quote";
 import About from "./components/about";
-// import ContactMe from "./components/contactme.js"; 
+// import ContactMe from "./components/contactme.js";
 import Footer from "./components/Footer";
+import Skills from "./components/skills";
 const App = () => {
    return (
       <>
@@ -22,9 +23,11 @@ const App = () => {
             <Header />
             <Hero />
             <Quote />
-            
-            {/* <About /> */}
-            
+
+            <Skills />
+            <Box bg="green.100">
+               <About />
+            </Box>
          </Container>
          <footer
             style={{

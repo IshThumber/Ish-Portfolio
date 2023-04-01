@@ -37,3 +37,8 @@
    font-family: Averta-Black;
    src: url(./AvertaStd-Black.ttf);
 }
+
+@font-face {
+   font-family: TheScientist;
+   src: url(./TheScientist.ttf);
+}

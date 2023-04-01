@@ -3,7 +3,6 @@ import { Box, Heading, Image, Text, Icon, IconButton, Stack } from "@chakra-ui/r
 import sideImg from "../assets/self.png";
 import "./Content.css";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { AiOutlineGithub, AiFillLinkedin, AiOutlineTwitter } from "react-icons/ai";
 
 const About = () => {
    return (
