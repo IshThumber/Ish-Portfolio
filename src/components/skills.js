@@ -15,16 +15,24 @@ const Skills = () => {
                <Heading as="h1" size={{ base: "xl", md: "2xl" }} textAlign="center" className="about__heading">
                   Skills
                </Heading>
-               <Stack direction={{ base: "column", md: "row" }} spacing={4} padding={10}>
+               <Stack
+                  // direction={{ base: "column", md: "row" }}
+                  spacing={6}
+                  padding={10}
+                  display="grid"
+                  gridTemplateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
+                  gridTemplateRows={{ base: "repeat(1, 1fr)", md: "repeat(1, 1fr)" }}
+               >
                   <Card
                      bg="red.500"
-                     w={{ md: "30%", lg: "20%" }}
+                     // w={{ md: "30%", lg: "20%" }}
                      borderRadius={{
                         md: "10px",
                         base: "10px",
                         lg: "10px",
                         sm: "10px"
                      }}
+                     
                   >
                      <CardHeader>
                         <Text
@@ -44,6 +52,24 @@ const Skills = () => {
                            <SliderThumb />
                         </Slider>
                      </CardBody>
+                  </Card>
+                  <Card>
+                     <CardHeader>
+                        <Text> HTML </Text>
+                     </CardHeader>
+                     <CardBody>ksdfjgbs</CardBody>
+                  </Card>
+                  <Card>
+                     <CardHeader>
+                        <Text> HTML </Text>
+                     </CardHeader>
+                     <CardBody>ksdfjgbs</CardBody>
+                  </Card>
+                  <Card>
+                     <CardHeader>
+                        <Text> HTML </Text>
+                     </CardHeader>
+                     <CardBody>ksdfjgbs</CardBody>
                   </Card>
                   <Card>
                      <CardHeader>

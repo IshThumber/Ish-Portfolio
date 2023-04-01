@@ -23,7 +23,7 @@
 
 // export default Header;
 import { Box, Container, Text } from "@chakra-ui/react";
-   
+
 const Header = () => {
    return (
       <Box as="nav">
@@ -35,7 +35,18 @@ const Header = () => {
             maxW="80%"
             className="header__heading"
          >
-            <Text fontSize="1.3rem" fontWeight={600} color="muted" w="fit-content">
+            <Text
+               fontSize={{
+                  // base: "xl",
+                  // lg: "2xl",
+                  md: "xl",
+                  sm: "2xl",
+                  xl: "3xl"
+               }}
+               fontWeight={600}
+               color="black"
+               w="fit-content"
+            >
                ishthumber.me
             </Text>
          </Container>

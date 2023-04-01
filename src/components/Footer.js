@@ -1,11 +1,19 @@
 import { Button, ButtonGroup, Container, Divider, IconButton, Image, Input, Stack, Text } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 // import { Logo } from "./Logo";
-import handshake from "../assets/handshake.png";
 const Footer = () => {
    return (
       <>
-         <Container as="footer" role="contentinfo" maxW="100%">
+         <Container
+            as="footer"
+            role="contentinfo"
+            maxW="100%"
+            mt={{
+               base: "9",
+               md: "15"
+            }}
+            bg="green"
+         >
             <Stack
                spacing="8"
                direction={{
@@ -74,10 +82,8 @@ const Footer = () => {
                </Text>
 
                <ButtonGroup variant="ghost">
-                  <IconButton as="a" href="https://www.linkedin.com/in/ishthumber/" aria-label="LinkedIn" icon={<FaLinkedin fontSize="1.25rem" />} />
-
                   <IconButton as="a" href="https://github.com/IshThumber" aria-label="GitHub" icon={<FaGithub fontSize="1.25rem" />} />
-
+                  <IconButton as="a" href="https://www.linkedin.com/in/ishthumber/" aria-label="LinkedIn" icon={<FaLinkedin fontSize="1.25rem" />} />
                   <IconButton as="a" href="https://twitter.com/ish_thumber" aria-label="Twitter" icon={<FaTwitter fontSize="1.25rem" />} />
                </ButtonGroup>
             </Stack>

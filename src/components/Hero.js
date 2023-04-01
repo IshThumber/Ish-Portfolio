@@ -39,7 +39,7 @@ const About = () => {
                   Hey 👋🏻 I'm
                </Heading>
                <Box>
-                  <Heading className="text_ish" fontSize={{ base: "4.5rem", md: "5rem" }}>
+                  <Heading className="text_ish" fontSize={{ base: "4.5rem", md: "5rem" }} >
                      Ish{" "}
                      <span className="text_thumber" fontSize={{ base: "4rem", md: "5rem" }}>
                         Thumber

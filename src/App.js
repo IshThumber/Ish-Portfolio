@@ -24,15 +24,17 @@ const App = () => {
             <Hero />
             <Quote />
 
-            <Skills />
-            <Box bg="green.100">
+            {/* <Skills /> */}
+            {/* <Box bg="green.100">
                <About />
-            </Box>
+            </Box> */}
          </Container>
          <footer
             style={{
                position: "absolute",
-               width: "100%"
+               width: "100%",
+               backgroundColor: "red",
+               marginTop: "10px"
             }}
          >
             <Footer />
