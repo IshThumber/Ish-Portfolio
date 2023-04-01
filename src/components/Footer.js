@@ -12,7 +12,6 @@ const Footer = () => {
                base: "9",
                md: "15"
             }}
-            bg="green"
          >
             <Stack
                spacing="8"
@@ -82,9 +81,33 @@ const Footer = () => {
                </Text>
 
                <ButtonGroup variant="ghost">
-                  <IconButton as="a" href="https://github.com/IshThumber" aria-label="GitHub" icon={<FaGithub fontSize="1.25rem" />} />
-                  <IconButton as="a" href="https://www.linkedin.com/in/ishthumber/" aria-label="LinkedIn" icon={<FaLinkedin fontSize="1.25rem" />} />
-                  <IconButton as="a" href="https://twitter.com/ish_thumber" aria-label="Twitter" icon={<FaTwitter fontSize="1.25rem" />} />
+                  <IconButton
+                     as="a"
+                     // href="https://github.com/IshThumber"
+                     aria-label="GitHub"
+                     icon={<FaGithub fontSize="1.25rem" />}
+                     onClick={() => {
+                        window.open("https://github.com/IshThumber", "_blank");
+                     }}
+                  />
+                  <IconButton
+                     as="a"
+                     // href="https://www.linkedin.com/in/ishthumber/"
+                     aria-label="LinkedIn"
+                     icon={<FaLinkedin fontSize="1.25rem" />}
+                     onClick={() => {
+                        window.open("https://www.linkedin.com/in/ishthumber/", "_blank");
+                     }}
+                  />
+                  <IconButton
+                     as="a"
+                     // href="https://twitter.com/ish_thumber"
+                     aria-label="Twitter"
+                     icon={<FaTwitter fontSize="1.25rem" />}
+                     onClick={() => {
+                        window.open("https://twitter.com/ish_thumber", "_blank");
+                     }}
+                  />
                </ButtonGroup>
             </Stack>
          </Container>

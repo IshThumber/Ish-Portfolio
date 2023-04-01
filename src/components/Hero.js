@@ -1,8 +1,8 @@
 import React from "react";
-import { Box, Heading, Image, Text, Icon, IconButton, Stack } from "@chakra-ui/react";
+import { Box, Heading, Image, Text, Icon, IconButton, Stack, Button } from "@chakra-ui/react";
 import sideImg from "../assets/self.png";
 import "./Content.css";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { HiOutlineExternalLink } from "react-icons/hi";
 
 const About = () => {
    return (
@@ -36,10 +36,10 @@ const About = () => {
                h="100%"
             >
                <Heading as="h1" size="md" fontFamily="Josefin Slab">
-                  Hey 👋🏻 I'm
+                  Hey 👋 I'm
                </Heading>
                <Box>
-                  <Heading className="text_ish" fontSize={{ base: "4.5rem", md: "5rem" }} >
+                  <Heading className="text_ish" fontSize={{ base: "4.5rem", md: "5rem" }}>
                      Ish{" "}
                      <span className="text_thumber" fontSize={{ base: "4rem", md: "5rem" }}>
                         Thumber
@@ -74,7 +74,18 @@ const About = () => {
                      md: "2rem"
                   }}
                >
-                  <IconButton
+                  <Button
+                     onClick={() => {
+                        window.open("https://drive.google.com/file/d/1HW5CGHEjK8XQc8vzqNXj1vUJJ9PzNnep/view?usp=share_link", "_blank");
+                     }}
+                     rightIcon={<HiOutlineExternalLink />}
+                     colorScheme="teal"
+                     color="muted"
+                     variant="outline"
+                  >
+                     Resume
+                  </Button>
+                  {/* <IconButton
                      as="a"
                      href="https://github.com/IshThumber"
                      aria-label="GitHub"
@@ -103,7 +114,7 @@ const About = () => {
                      colorScheme="twitter"
                      variant="ghost"
                      borderRadius="full"
-                  />
+                  /> */}
                </Stack>
             </Box>
 
