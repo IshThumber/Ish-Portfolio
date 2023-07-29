@@ -1,11 +1,12 @@
-import React from "react";
-import "./general.css";
 import { Button } from "@material-tailwind/react";
 import { ExternalLink } from "lucide-react";
+import React from "react";
+import "./general.css";
+
 const HeroMain = () => {
   return (
     <>
-      <div className="w-full h-screen flex flex-col justify-center items-center">
+      <div className="bg-[#fdf4ff] w-full h-screen flex flex-col justify-center items-center -mt-24 sm:m-0">
         <div className="items-center text-center">
           <h3 className="font-brandonLight text-lg sm:text-2xl">
             Hey I&apos;m
@@ -25,13 +26,13 @@ const HeroMain = () => {
           <div className=" my-3 p-1 flex flex-row justify-between items-center gap-8">
             <Button
               variant="outlined"
-              className="shadowButton text-blue-gray-800 border-gray-900 border-2 py-2 rounded-md w-[150px]"
+              className="shadowButton text-blue-gray-800 border-gray-900 border-2 py-3 rounded-md w-[150px]"
             >
-              Contact me 🫱🏻‍🫲🏻
+              Contact me
             </Button>
             <Button
               variant="outlined"
-              className="shadowButton text-blue-gray-800 border-gray-900 border-2 py-2 rounded-md w-[150px] flex justify-center items-center gap-2"
+              className="shadowButton text-blue-gray-800 border-gray-900 border-2 py-3 rounded-md w-[150px] flex justify-center items-center gap-2"
             >
               Resume
               <ExternalLink size={12} color="#1f2937" />
