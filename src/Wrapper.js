@@ -8,11 +8,11 @@ const Wrapper = () => {
   return (
     <>
       <div>
-        {/* <div className="bg-[#fdf4ff]">
+        <div className="bg-[#fdf4ff]">
           <Navbar />
         </div>
         <HeroMain />
-        <Quote /> */}
+        <Quote />
         <About />
       </div>
     </>
