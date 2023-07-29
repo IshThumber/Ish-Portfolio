@@ -1,0 +1,66 @@
+@import url(https://db.onlinewebfonts.com/c/2508aff8605749b70637c38fc364e949?family=Brandon+Text+Medium);
+@import url(https://db.onlinewebfonts.com/c/447315c0c330fd423c8e1cc18024669d?family=AvertaStd-Bold);
+@import url(https://db.onlinewebfonts.com/c/bb6967a207924f3f94995e91a51ec804?family=AvertaStd-Thin);
+@import url(https://db.onlinewebfonts.com/c/7e177265c8ab836aeb674e390aae99d0?family=BrandonText-Light);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Brandon Text Medium";
+  src: url("https://db.onlinewebfonts.com/t/2508aff8605749b70637c38fc364e949.eot");
+  src: url("https://db.onlinewebfonts.com/t/2508aff8605749b70637c38fc364e949.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/2508aff8605749b70637c38fc364e949.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/2508aff8605749b70637c38fc364e949.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/2508aff8605749b70637c38fc364e949.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/2508aff8605749b70637c38fc364e949.svg#Brandon Text Medium")
+      format("svg");
+}
+@font-face {
+  font-family: "AvertaStd-Thin";
+  src: url("https://db.onlinewebfonts.com/t/bb6967a207924f3f94995e91a51ec804.eot");
+  src: url("https://db.onlinewebfonts.com/t/bb6967a207924f3f94995e91a51ec804.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/bb6967a207924f3f94995e91a51ec804.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/bb6967a207924f3f94995e91a51ec804.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/bb6967a207924f3f94995e91a51ec804.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/bb6967a207924f3f94995e91a51ec804.svg#AvertaStd-Thin")
+      format("svg");
+}
+@font-face {
+  font-family: "AvertaStd-Bold";
+  src: url("https://db.onlinewebfonts.com/t/447315c0c330fd423c8e1cc18024669d.eot");
+  src: url("https://db.onlinewebfonts.com/t/447315c0c330fd423c8e1cc18024669d.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/447315c0c330fd423c8e1cc18024669d.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/447315c0c330fd423c8e1cc18024669d.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/447315c0c330fd423c8e1cc18024669d.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/447315c0c330fd423c8e1cc18024669d.svg#AvertaStd-Bold")
+      format("svg");
+}
+
+@font-face {
+  font-family: "BrandonText-Light";
+  src: url("https://db.onlinewebfonts.com/t/7e177265c8ab836aeb674e390aae99d0.eot");
+  src: url("https://db.onlinewebfonts.com/t/7e177265c8ab836aeb674e390aae99d0.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/7e177265c8ab836aeb674e390aae99d0.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/7e177265c8ab836aeb674e390aae99d0.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/7e177265c8ab836aeb674e390aae99d0.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/7e177265c8ab836aeb674e390aae99d0.svg#BrandonText-Light")
+      format("svg");
+}
