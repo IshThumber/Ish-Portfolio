@@ -7,8 +7,8 @@ import Quote from "./Quote";
 const HeroMain = () => {
   return (
     <>
-      <div className="bg-[#fdf4ff] w-full h- flex flex-col justify-center items-center ">
-        <div className="items-center text-center mt-44">
+      <div className="bg-lime-50 w-full h- flex flex-col justify-center items-center ">
+        <div className="items-center text-center mt-56">
           <h3 className="font-brandonLight text-lg sm:text-2xl">
             Hey I&apos;m
           </h3>
@@ -27,20 +27,20 @@ const HeroMain = () => {
           <div className=" my-3 p-1 flex flex-row justify-between items-center gap-8">
             <Button
               variant="outlined"
-              className="shadowButton text-blue-gray-800 border-gray-900 border-2 py-3 rounded-md w-[150px]"
+              className="shadowButton bg-green-100 text-blue-gray-800 border-gray-900 border-2 py-3 rounded-md w-[150px]"
             >
               Contact me
             </Button>
             <Button
               variant="outlined"
-              className="shadowButton text-blue-gray-800 border-gray-900 border-2 py-3 rounded-md w-[150px] flex justify-center items-center gap-2"
+              className="shadowButton bg-green-100 text-blue-gray-800 border-gray-900 border-2 py-3 rounded-md w-[150px] flex justify-center items-center gap-2"
             >
               Resume
               <ExternalLink size={12} color="#1f2937" />
             </Button>
           </div>
         </div>
-        <div className="w-full items-center justify-center mt-28 py-7">
+        <div className="w-full items-center justify-center mt-20 py-7">
           <Quote />
         </div>
       </div>
