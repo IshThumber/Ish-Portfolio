@@ -8,9 +8,9 @@ const Wrapper = () => {
   return (
     <>
       <div>
-        <div className="bg-lime-50">
+        <>
           <Navbar />
-        </div>
+        </>
         <HeroMain />
         {/* <Quote /> */}
         <About />

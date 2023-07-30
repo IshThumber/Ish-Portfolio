@@ -63,7 +63,7 @@ function NavList() {
 
 const NavbarSimple = () => {
   return (
-    <Navbar className="mx-auto w-screen py-5 font-brandonMedium shadow-none rounded-none bg-lime-50 border-0">
+    <Navbar className="mx-auto w-screen py-5 font-brandonMedium shadow-none rounded-none bg-transparent border-0">
       <div className="font-brandonMedium flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"

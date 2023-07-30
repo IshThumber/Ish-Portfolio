@@ -7,12 +7,12 @@ import Quote from "./Quote";
 const HeroMain = () => {
   return (
     <>
-      <div className="bg-lime-50 w-full h- flex flex-col justify-center items-center ">
+      <div className="bg-[#F8F6F4] w-full h- flex flex-col justify-center items-center ">
         <div className="items-center text-center mt-56">
           <h3 className="font-brandonLight text-lg sm:text-2xl">
             Hey I&apos;m
           </h3>
-          <h1 className="font-avertaStdBold font-black text-6xl sm:text-7xl md:text-9xl transition-transform">
+          <h1 className="font-penna font-black text-6xl sm:text-7xl md:text-9xl transition-transform">
             Ish Thumber
           </h1>
         </div>
@@ -27,13 +27,13 @@ const HeroMain = () => {
           <div className=" my-3 p-1 flex flex-row justify-between items-center gap-8">
             <Button
               variant="outlined"
-              className="shadowButton bg-green-100 text-blue-gray-800 border-gray-900 border-2 py-3 rounded-md w-[150px]"
+              className="shadowButton bg-amber-100 text-blue-gray-800 border-gray-900 border-2 py-3 rounded-md w-[150px]"
             >
               Contact me
             </Button>
             <Button
               variant="outlined"
-              className="shadowButton bg-green-100 text-blue-gray-800 border-gray-900 border-2 py-3 rounded-md w-[150px] flex justify-center items-center gap-2"
+              className="shadowButton bg-amber-100 text-blue-gray-800 border-gray-900 border-2 py-3 rounded-md w-[150px] flex justify-center items-center gap-2"
             >
               Resume
               <ExternalLink size={12} color="#1f2937" />

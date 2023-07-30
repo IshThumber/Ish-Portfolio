@@ -15,7 +15,10 @@ module.exports = withMT({
       brandonMedium: ["Brandon Text Medium", "sans-serif"],
       brandonLight: ["BrandonText-Light", "sans-serif"],
       avertaStdThin: ["AvertaStd-Thin", "sans-serif"],
-      avertaStdBold: ["AvertaStd-Bold", "sans-serif"]
+      avertaStdBold: ["AvertaStd-Bold", "sans-serif"],
+      honeyLight: ["Honey Script Light", "sans-serif"],
+      ikaros: ["Ikaros", "sans-serif"],
+      penna: ["Penna", "sans-serif"]
     }
   },
   plugins: [require("flowbite/plugin")]

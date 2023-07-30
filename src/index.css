@@ -3,6 +3,8 @@
 @import url(https://db.onlinewebfonts.com/c/bb6967a207924f3f94995e91a51ec804?family=AvertaStd-Thin);
 @import url(https://db.onlinewebfonts.com/c/7e177265c8ab836aeb674e390aae99d0?family=BrandonText-Light);
 @import url(https://db.onlinewebfonts.com/c/7ce37c58b06c0bb6900b5c310dbb03ad?family=Honey+Script+Light);
+@import url(https://db.onlinewebfonts.com/c/f539461b3613468067ebbc4cadaf2a14?family=Penna);
+@import url(https://db.onlinewebfonts.com/c/666590a2cbf57917db412d927daafa99?family=Ikaros);
 
 @tailwind base;
 @tailwind components;
@@ -79,4 +81,37 @@
       format("truetype"),
     url("https://db.onlinewebfonts.com/t/7ce37c58b06c0bb6900b5c310dbb03ad.svg#Honey Script Light")
       format("svg");
+}
+
+@font-face {
+  font-family: "Ikaros";
+  src: url("https://db.onlinewebfonts.com/t/666590a2cbf57917db412d927daafa99.eot");
+  src: url("https://db.onlinewebfonts.com/t/666590a2cbf57917db412d927daafa99.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/666590a2cbf57917db412d927daafa99.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/666590a2cbf57917db412d927daafa99.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/666590a2cbf57917db412d927daafa99.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/666590a2cbf57917db412d927daafa99.svg#Ikaros")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Penna";
+  src: url("https://db.onlinewebfonts.com/t/f539461b3613468067ebbc4cadaf2a14.eot");
+  src: url("https://db.onlinewebfonts.com/t/f539461b3613468067ebbc4cadaf2a14.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/f539461b3613468067ebbc4cadaf2a14.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/f539461b3613468067ebbc4cadaf2a14.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/f539461b3613468067ebbc4cadaf2a14.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/f539461b3613468067ebbc4cadaf2a14.svg#Penna")
+      format("svg");
+}
+body {
+  background-color: #f8f6f4;
 }
