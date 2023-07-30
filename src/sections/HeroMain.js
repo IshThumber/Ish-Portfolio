@@ -2,12 +2,13 @@ import { Button } from "@material-tailwind/react";
 import { ExternalLink } from "lucide-react";
 import React from "react";
 import "./general.css";
+import Quote from "./Quote";
 
 const HeroMain = () => {
   return (
     <>
-      <div className="bg-[#fdf4ff] w-full h-screen flex flex-col justify-center items-center -mt-24 sm:m-0">
-        <div className="items-center text-center">
+      <div className="bg-[#fdf4ff] w-full h- flex flex-col justify-center items-center ">
+        <div className="items-center text-center mt-44">
           <h3 className="font-brandonLight text-lg sm:text-2xl">
             Hey I&apos;m
           </h3>
@@ -38,6 +39,9 @@ const HeroMain = () => {
               <ExternalLink size={12} color="#1f2937" />
             </Button>
           </div>
+        </div>
+        <div className="w-full items-center justify-center mt-28 py-7">
+          <Quote />
         </div>
       </div>
     </>

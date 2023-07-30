@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./sections/Navbar";
 import HeroMain from "./sections/HeroMain";
-import Quote from "./sections/Quote";
+// import Quote from "./sections/Quote";
 import About from "./sections/About";
 
 const Wrapper = () => {
@@ -12,7 +12,7 @@ const Wrapper = () => {
           <Navbar />
         </div>
         <HeroMain />
-        <Quote />
+        {/* <Quote /> */}
         <About />
       </div>
     </>

@@ -42,7 +42,7 @@ function Quote() {
 
   return (
     <>
-      <div className="flex justify-center items-center w-full -mt-28 sm:-mt-20">
+      <div className="flex justify-center items-center w-full">
         <div className="bigShadowButton w-2/3 bg-teal-50 p-3 rounded-md border border-blue-gray-800">
           <div className="text-center">
             <p className="text-md font-brandonMedium">{quote}</p>

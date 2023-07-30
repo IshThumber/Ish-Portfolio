@@ -2,7 +2,7 @@
 @import url(https://db.onlinewebfonts.com/c/447315c0c330fd423c8e1cc18024669d?family=AvertaStd-Bold);
 @import url(https://db.onlinewebfonts.com/c/bb6967a207924f3f94995e91a51ec804?family=AvertaStd-Thin);
 @import url(https://db.onlinewebfonts.com/c/7e177265c8ab836aeb674e390aae99d0?family=BrandonText-Light);
-@import url(https://db.onlinewebfonts.com/c/078cc42bf41226594d7edbd10304df26?family=The+Scientist);
+@import url(https://db.onlinewebfonts.com/c/7ce37c58b06c0bb6900b5c310dbb03ad?family=Honey+Script+Light);
 
 @tailwind base;
 @tailwind components;
@@ -67,16 +67,16 @@
 }
 
 @font-face {
-  font-family: "The Scientist";
-  src: url("https://db.onlinewebfonts.com/t/078cc42bf41226594d7edbd10304df26.eot");
-  src: url("https://db.onlinewebfonts.com/t/078cc42bf41226594d7edbd10304df26.eot?#iefix")
+  font-family: "Honey Script Light";
+  src: url("https://db.onlinewebfonts.com/t/7ce37c58b06c0bb6900b5c310dbb03ad.eot");
+  src: url("https://db.onlinewebfonts.com/t/7ce37c58b06c0bb6900b5c310dbb03ad.eot?#iefix")
       format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/078cc42bf41226594d7edbd10304df26.woff2")
+    url("https://db.onlinewebfonts.com/t/7ce37c58b06c0bb6900b5c310dbb03ad.woff2")
       format("woff2"),
-    url("https://db.onlinewebfonts.com/t/078cc42bf41226594d7edbd10304df26.woff")
+    url("https://db.onlinewebfonts.com/t/7ce37c58b06c0bb6900b5c310dbb03ad.woff")
       format("woff"),
-    url("https://db.onlinewebfonts.com/t/078cc42bf41226594d7edbd10304df26.ttf")
+    url("https://db.onlinewebfonts.com/t/7ce37c58b06c0bb6900b5c310dbb03ad.ttf")
       format("truetype"),
-    url("https://db.onlinewebfonts.com/t/078cc42bf41226594d7edbd10304df26.svg#The Scientist")
+    url("https://db.onlinewebfonts.com/t/7ce37c58b06c0bb6900b5c310dbb03ad.svg#Honey Script Light")
       format("svg");
 }
