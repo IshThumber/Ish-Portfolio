@@ -12,7 +12,7 @@ const HeroMain = () => {
           <h3 className="font-brandonLight text-lg sm:text-2xl">
             Hey I&apos;m
           </h3>
-          <h1 className="font-penna font-black text-6xl sm:text-7xl md:text-9xl transition-transform">
+          <h1 className="font-penna font-black text-7xl sm:text-7xl md:text-9xl transition-transform">
             Ish Thumber
           </h1>
         </div>

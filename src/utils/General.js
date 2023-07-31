@@ -50,3 +50,17 @@ export const experience = [
     ]
   }
 ];
+
+export const skills = [
+  { title: "PostgreSQL", percent: 70 },
+  { title: "MongoDB", percent: 60 },
+  { title: "ExpressJs", percent: 70 },
+  { title: "ReactJs", percent: 70 },
+  { title: "NodeJs", percent: 60 },
+  { title: "Prisma (Db ORM)", percent: 65 },
+  { title: "JavaScript", percent: 75 },
+  { title: "Docker", percent: 60 },
+  { title: "Kubernetes", percent: 60 },
+  { title: "Git & GitHub", percent: 70 },
+  { title: "Linux", percent: 60 }
+];
