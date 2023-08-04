@@ -5,12 +5,19 @@ import "./general.css";
 import Quote from "./Quote";
 
 const HeroMain = () => {
+  const handleScroll = () => {
+    const element = document.getElementById("contact-us");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <div className="bg-[#F8F6F4] w-full h- flex flex-col justify-center items-center ">
         <div className="items-center text-center mt-56">
           <h3 className="font-brandonLight text-lg sm:text-2xl">
-            Hey I&apos;m
+            Hey, I&apos;m
           </h3>
           <h1 className="font-penna font-black text-7xl sm:text-7xl md:text-9xl transition-transform">
             Ish Thumber
@@ -28,19 +35,14 @@ const HeroMain = () => {
             <Button
               variant="outlined"
               className="shadowButton bg-amber-100 text-blue-gray-800 border-gray-900 border-2 py-3 rounded-md w-[150px]"
-              onClick={() => {
-                // scroll to contactme
-                document.querySelector("contactme").scrollIntoView();
-              }}
+              onClick={handleScroll}
             >
               Contact me
             </Button>
             <Button
               variant="outlined"
               className="shadowButton bg-amber-100 text-blue-gray-800 border-gray-900 border-2 py-3 rounded-md w-[150px] flex justify-center items-center gap-2"
-              onClick={() => {
-                
-              }}
+              onClick={() => {}}
             >
               Resume
               <ExternalLink size={12} color="#1f2937" />

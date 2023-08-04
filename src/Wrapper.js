@@ -7,6 +7,7 @@ import Skills from "./sections/Skills";
 import Experiences from "./sections/Experiences";
 import Contact from "./sections/Contact";
 import Education from "./sections/Education";
+import Projects from "./sections/Projects";
 
 const Wrapper = () => {
   return (
@@ -19,10 +20,12 @@ const Wrapper = () => {
         {/* <Quote /> */}
         <About />
         <Education />
+        <Projects />
         <Experiences />
         <Skills />
-
-        <Contact />
+        <div id="contact-us">
+          <Contact />
+        </div>
       </div>
     </>
   );

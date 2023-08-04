@@ -75,13 +75,13 @@ export const projects = [];
 
 export const education = [
   {
-    name: "Charotar University of Science and Technology",
+    name: "Charotar University of Science and Technology, Changa - Gujarat",
     degree: "B.Tech in Computer Science and Engineering",
-    year: "2020 - present",
+    year: "2020 - 2024",
     description: "CGPA: 8.52/10.0"
   },
   {
-    name: "IPD School",
+    name: "IPD School, Ahmedabad - Gujarat",
     degree: "Higher Secondary Education",
     year: "2019 - 2020",
     description: "80% in CBSE"
