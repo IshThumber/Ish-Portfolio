@@ -15,7 +15,7 @@ const About = () => {
             <h1 className="font-brandonMedium font-semibold -ml-5">Myself:</h1>
             <h1 className="font-brandonMedium text-md text-left">
               Hello! I'm Ish Thumber, a full-stack developer residing in
-              Gujarat, India. 🌍👨‍💻 I have over a year of experience in
+              Gujarat, India. I have over a year of experience 🌍👨‍💻 in
               developing web applications using ReactJs and NodeJs. 💻🚀 My
               proficiency in these technologies has been sharpened through
               multiple projects and internships.
