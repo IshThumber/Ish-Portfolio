@@ -9,7 +9,7 @@ const Projects = () => {
 
         <div className="flex flex-col justify-center items-center -mt-5">
           <div className="flex flex-col w-full px-9 md:w-4/5 mb-6">
-            <div className="bigShadowButton border border-gray-800 bg-light-blue-50 p-4 mt-4 text-md justify-start w-full md:w-3/4 items-center rounded-md font-ikaros font-thin">
+            <div className="bigShadowButton border border-gray-800 bg-light-blue-50 p-4 mt-4 text-md justify-start w-full md:w-3/4 items-center rounded-md font-brandonMedium font-thin">
               {/* <h1 className="font-brandonMedium text-md text-left font-semibold mb-5">
                 <span className="mr-1 font-thin font-ikaros text-pink-400">
                   1.
