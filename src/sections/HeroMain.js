@@ -16,7 +16,7 @@ const HeroMain = () => {
     <>
       <div className="bg-[#F8F6F4] w-full h- flex flex-col justify-center items-center ">
         <div className="items-center text-center mt-56">
-          <h3 className="font-brandonLight text-lg sm:text-2xl">
+          <h3 className="font-brandonLight text-lg sm:text-2xl mb-2">
             Hey, I&apos;m
           </h3>
           <h1 className="font-penna font-black text-7xl sm:text-7xl md:text-9xl transition-transform">
