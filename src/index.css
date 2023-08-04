@@ -5,6 +5,7 @@
 @import url(https://db.onlinewebfonts.com/c/7ce37c58b06c0bb6900b5c310dbb03ad?family=Honey+Script+Light);
 @import url(https://db.onlinewebfonts.com/c/f539461b3613468067ebbc4cadaf2a14?family=Penna);
 @import url(https://db.onlinewebfonts.com/c/666590a2cbf57917db412d927daafa99?family=Ikaros);
+@import url(https://db.onlinewebfonts.com/c/6eb423bcd4953053bb2671f139d18075?family=GT+Walsheim+Pro+Thin);
 
 @tailwind base;
 @tailwind components;
@@ -112,6 +113,22 @@
     url("https://db.onlinewebfonts.com/t/f539461b3613468067ebbc4cadaf2a14.svg#Penna")
       format("svg");
 }
+
+@font-face {
+  font-family: "GT Walsheim Pro Thin";
+  src: url("https://db.onlinewebfonts.com/t/6eb423bcd4953053bb2671f139d18075.eot");
+  src: url("https://db.onlinewebfonts.com/t/6eb423bcd4953053bb2671f139d18075.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/6eb423bcd4953053bb2671f139d18075.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/6eb423bcd4953053bb2671f139d18075.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/6eb423bcd4953053bb2671f139d18075.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/6eb423bcd4953053bb2671f139d18075.svg#GT Walsheim Pro Thin")
+      format("svg");
+}
+
 body {
   background-color: #f8f6f4;
 }

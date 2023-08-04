@@ -57,10 +57,33 @@ export const skills = [
   { title: "ExpressJs", percent: 70 },
   { title: "ReactJs", percent: 70 },
   { title: "NodeJs", percent: 60 },
-  { title: "Prisma (Db ORM)", percent: 65 },
+  { title: "Prisma -ORM", percent: 65 },
+  { title: "HTML5", percent: 80 },
+  { title: "CSS3", percent: 80 },
+  { title: "Tailwind CSS", percent: 80 },
   { title: "JavaScript", percent: 75 },
   { title: "Docker", percent: 60 },
   { title: "Kubernetes", percent: 60 },
   { title: "Git & GitHub", percent: 70 },
-  { title: "Linux", percent: 60 }
+  { title: "Linux", percent: 60 },
+  { title: "Canva", percent: 80 },
+  { title: "Figma", percent: 80 }
+  //   { title: "Apache Spark", percent: 60 },
+];
+
+export const projects = [];
+
+export const education = [
+  {
+    name: "Charotar University of Science and Technology",
+    degree: "B.Tech in Computer Science and Engineering",
+    year: "2020 - present",
+    description: "CGPA: 8.52/10.0"
+  },
+  {
+    name: "IPD School",
+    degree: "Higher Secondary Education",
+    year: "2019 - 2020",
+    description: "80% in CBSE"
+  }
 ];

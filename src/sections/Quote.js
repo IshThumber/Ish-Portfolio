@@ -6,39 +6,39 @@ function Quote() {
   const [author, setAuthor] = useState("");
   // const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchQuote = async () => {
-      try {
-        const response = await fetch(
-          "https://famous-quotes4.p.rapidapi.com/random?category=all&count=2",
-          {
-            method: "GET",
-            headers: {
-              "X-RapidAPI-Key":
-                "f80d8bf742mshfc2de04cfe6451bp1c8969jsn01b6259f2f3f",
-              "X-RapidAPI-Host": "famous-quotes4.p.rapidapi.com"
-            }
-          }
-        );
+//   useEffect(() => {
+//     const fetchQuote = async () => {
+//       try {
+//         const response = await fetch(
+//           "https://famous-quotes4.p.rapidapi.com/random?category=all&count=2",
+//           {
+//             method: "GET",
+//             headers: {
+//               "X-RapidAPI-Key":
+//                 "f80d8bf742mshfc2de04cfe6451bp1c8969jsn01b6259f2f3f",
+//               "X-RapidAPI-Host": "famous-quotes4.p.rapidapi.com"
+//             }
+//           }
+//         );
 
-        const data = await response.json();
-        // console.log(data[0].text);
-        setQuote(data[0].text);
-        setAuthor(data[0].author);
-        // setIsLoading(false);
-      } catch (error) {
-        console.error(error);
-      }
-    };
+//         const data = await response.json();
+//         // console.log(data[0].text);
+//         setQuote(data[0].text);
+//         setAuthor(data[0].author);
+//         // setIsLoading(false);
+//       } catch (error) {
+//         console.error(error);
+//       }
+//     };
 
-    fetchQuote();
+//     // fetchQuote();
 
-    const interval = setInterval(() => {
-      fetchQuote();
-    }, 5 * 60 * 1000); // refresh every 5 minutes
+//     const interval = setInterval(() => {
+//       fetchQuote();
+//     }, 5 * 60 * 1000); // refresh every 5 minutes
 
-    return () => clearInterval(interval);
-  }, []);
+//     return () => clearInterval(interval);
+//   }, []);
 
   return (
     <>

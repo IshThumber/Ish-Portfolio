@@ -28,12 +28,19 @@ const HeroMain = () => {
             <Button
               variant="outlined"
               className="shadowButton bg-amber-100 text-blue-gray-800 border-gray-900 border-2 py-3 rounded-md w-[150px]"
+              onClick={() => {
+                // scroll to contactme
+                document.querySelector("contactme").scrollIntoView();
+              }}
             >
               Contact me
             </Button>
             <Button
               variant="outlined"
               className="shadowButton bg-amber-100 text-blue-gray-800 border-gray-900 border-2 py-3 rounded-md w-[150px] flex justify-center items-center gap-2"
+              onClick={() => {
+                
+              }}
             >
               Resume
               <ExternalLink size={12} color="#1f2937" />
