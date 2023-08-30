@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Typography } from "@material-tailwind/react";
 // import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-
+import profile from "../assets/profile.png";
 function NavList() {
     return (
         <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
@@ -33,8 +33,13 @@ const NavbarSimple = () => {
     return (
         <Navbar className="mx-auto w-screen py-5 font-brandonMedium shadow-none rounded-none bg-transparent border-0">
             <div className="font-brandonMedium flex items-center justify-between text-blue-gray-900">
-                <Typography as="a" href="#" variant="h6" className="font-brandonMedium mr-4 py-1.5">
-                    IT
+                <Typography
+                    as="a"
+                    href="#"
+                    variant="h6"
+                    className="flex flex-row items-center gap-2 font-brandonMedium mr-4 py-1.5"
+                >
+                    <img src={profile} alt="logo" className="w-14 md:w-11 aspect-auto" />
                 </Typography>
                 <div className="hidden lg:block">
                     <NavList />
