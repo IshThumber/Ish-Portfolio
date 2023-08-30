@@ -10,25 +10,25 @@ import Education from "./sections/Education";
 import Projects from "./sections/Projects";
 
 const Wrapper = () => {
-  return (
-    <>
-      <div>
+    return (
         <>
-          <Navbar />
+            <div>
+                <>
+                    <Navbar />
+                </>
+                <HeroMain />
+                {/* <Quote /> */}
+                <About />
+                <Education />
+                <Projects />
+                <Experiences />
+                <Skills />
+                <div id="contact-us">
+                    <Contact />
+                </div>
+            </div>
         </>
-        <HeroMain />
-        {/* <Quote /> */}
-        <About />
-        <Education />
-        <Projects />
-        <Experiences />
-        <Skills />
-        <div id="contact-us">
-          <Contact />
-        </div>
-      </div>
-    </>
-  );
+    );
 };
 
 export default Wrapper;
