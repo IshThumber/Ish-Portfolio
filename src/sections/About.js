@@ -2,7 +2,7 @@ import React from "react";
 import "./general.css";
 // import { experience } from "../utils/General";
 import Heading from "../components/Heading";
-// import { Progress } from "@material-tailwind/react";
+import ish from "../assets/Ish.png";
 
 const About = () => {
     return (
@@ -12,14 +12,25 @@ const About = () => {
 
                 <div className="flex flex-col mt-3 justify-center items-center relative">
                     <div className="font-avertaStdBold w-4/5 md:w-2/3 md:text-lg flex flex-col justify-center">
-                        <h1 className="font-brandonMedium font-semibold -ml-5">Myself:</h1>
-                        <h1 className="font-brandonMedium text-md text-left">
-                            Hello! I'm Ish Thumber, a full-stack developer residing in Gujarat,
-                            India. I have over a year of experience 🌍👨‍💻 in developing web
-                            applications using ReactJs and NodeJs. 💻🚀 My proficiency in these
-                            technologies has been sharpened through multiple projects and
-                            internships.
+                        <h1 className="font-brandonMedium font-semibold -ml-5">
+                            Myself:
                         </h1>
+                        <div className="flex flex-row gap-6 mt-3 justify-center items-center">
+                            <img
+                                className="bg-[#5c88db] img-responsive aspect-auto w-4/12 bigShadowButton border-gray-900 border-2 rounded-full p-2"
+                                src={ish}
+                                alt="ish"
+                            />
+                            <h1 className="w-1/2 font-brandonMedium text-md text-justify ">
+                                Hello! I'm Ish Thumber, a full-stack developer
+                                residing in Gujarat, India. I have over a year
+                                of experience 🌍👨‍💻 in developing web
+                                applications using ReactJs and NodeJs. 💻🚀 My
+                                proficiency in these technologies has been
+                                sharpened through multiple projects and
+                                internships.
+                            </h1>
+                        </div>
                     </div>
 
                     {/* <div className="flex flex-col w-full md:w-4/5 pt-12 pl-4 sm:pl-0 text-2xl relative">
