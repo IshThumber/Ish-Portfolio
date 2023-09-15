@@ -1,6 +1,5 @@
 import React from "react";
 import "./general.css";
-// import { experience } from "../utils/General";
 import Heading from "../components/Heading";
 import ish from "../assets/Ish.png";
 
@@ -15,13 +14,13 @@ const About = () => {
                         <h1 className="font-brandonMedium font-semibold -ml-5">
                             Myself:
                         </h1>
-                        <div className="flex flex-row gap-6 mt-3 justify-center items-center">
+                        <div className="flex flex-col md:flex-row gap-6 mt-3 justify-center items-center">
                             <img
-                                className="bg-[#5c88db] img-responsive aspect-auto w-4/12 bigShadowButton border-gray-900 border-2 rounded-full p-2"
+                                className="bg-[#5c88db] img-responsive aspect-auto w-5/12 md:w-4/12 bigShadowButton border-gray-900 border-2 rounded-full p-2"
                                 src={ish}
                                 alt="ish"
                             />
-                            <h1 className="w-1/2 font-brandonMedium text-md text-justify ">
+                            <h1 className="w-full md:w-1/2 font-brandonMedium text-md text-justify ">
                                 Hello! I'm Ish Thumber, a full-stack developer
                                 residing in Gujarat, India. I have over a year
                                 of experience 🌍👨‍💻 in developing web

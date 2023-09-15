@@ -52,7 +52,7 @@ const HeroMain = () => {
                             }}
                         >
                             Resume
-                            <ExternalLink size={12} color="#1f2937" />
+                            <ExternalLink size={12} color="rgb(55 71 79)" strokeWidth={3} />
                         </Button>
                     </div>
                 </div>
