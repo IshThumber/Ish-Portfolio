@@ -13,7 +13,7 @@ const Skills = () => {
         <div className="flex flex-col justify-center items-center -mt-5">
           <div className="flex flex-col w-full px-9 md:w-4/5 mb-6">
             <div className="grid grid-cols-2 md:grid-cols-4 items-center gap-4 p-3">
-              {skills.map((key) => {
+              {skills.map(key => {
                 return <SkillSet key={key.id} name={key.title} />;
               })}
             </div>
