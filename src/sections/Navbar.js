@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Navbar, Typography } from "@material-tailwind/react";
-// import profile from "../assets/profile.png";
+import profile from "../assets/4.png";
 import { Link } from "react-router-dom";
 
 function NavList() {
@@ -95,7 +95,7 @@ const NavbarSimple = () => {
           variant="h6"
           className="flex flex-row items-center gap-2 font-brandonMedium mr-4 py-1.5"
         >
-          <img src="" alt="logo" className="w-14 md:w-11 aspect-auto" />
+          <img src={profile} alt="logo" className="w-16 md:w-12 aspect-auto" />
         </Typography>
         <Typography className="block sm:hidden">
           darkThemeToggle
