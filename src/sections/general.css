@@ -5,3 +5,25 @@
 .bigShadowButton {
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
 }
+
+.midShadowButton {
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 1);
+}
+
+.navWidth {
+  max-width: calc(100% - 17px);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}

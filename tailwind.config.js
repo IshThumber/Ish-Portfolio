@@ -8,6 +8,7 @@ module.exports = withMT({
     "path-to-your-node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
     "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}"
   ],
+  darkTheme: "class",
   theme: {
     extend: {
       aspectRatio: {
@@ -25,6 +26,47 @@ module.exports = withMT({
       ikaros: ["Ikaros", "sans-serif"],
       penna: ["Penna", "sans-serif"],
       gtThin: ["GT Walsheim Pro Thin", "sans-serif"]
+    },
+    colors: {
+      cascade: {
+        50: "#f4f7f7",
+        100: "#e2ebeb",
+        200: "#c8d9d8",
+        300: "#a1bfbf",
+        400: "#89acac",
+        500: "#588282",
+        600: "#4c6d6e",
+        700: "#425a5c",
+        800: "#3b4d4f",
+        900: "#354244",
+        950: "#202b2c"
+      },
+      "desert-storm": {
+        50: "#f8f6f4",
+        100: "#efeae5",
+        200: "#ddd4cb",
+        300: "#c8b7a9",
+        400: "#b19786",
+        500: "#a1806e",
+        600: "#947062",
+        700: "#7b5d53",
+        800: "#654c47",
+        900: "#53403b",
+        950: "#2c201e"
+      },
+      genoa: {
+        50: "#f3faf8",
+        100: "#d6f1ec",
+        200: "#ade2d9",
+        300: "#7dcbc3",
+        400: "#52afa8",
+        500: "#38948e",
+        600: "#286f6c",
+        700: "#265f5e",
+        800: "#224d4c",
+        900: "#204141",
+        950: "#0d2626"
+      }
     }
   },
   plugins: [require("flowbite/plugin")]
