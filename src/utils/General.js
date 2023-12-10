@@ -1,13 +1,13 @@
 export const experience = [
-  {
-    id: 1,
-    title: "Web Developer",
-    company: "IIT-Delhi (StartUp) - Leoron World",
-    description: [
-      "Contribute to discussions and play an active role in core feature development as a junior developer.",
-      "Collaborate with the development team to ensure seamless integration of new features and enhancements."
-    ]
-  },
+  // {
+  //   id: 1,
+  //   title: "Web Developer",
+  //   company: "IIT-Delhi (StartUp) - Leoron World",
+  //   description: [
+  //     "Contribute to discussions and play an active role in core feature development as a junior developer.",
+  //     "Collaborate with the development team to ensure seamless integration of new features and enhancements."
+  //   ]
+  // },
   {
     id: 2,
     title: "Web Developer",
@@ -67,8 +67,10 @@ export const skills = [
   { id: 13, title: "Git & GitHub", percent: 70 },
   { id: 14, title: "Linux", percent: 60 },
   { id: 15, title: "Canva", percent: 80 },
-  { id: 16, title: "Figma", percent: 80 }
-  //   { title: "Apache Spark", percent: 60 },
+  { id: 16, title: "Figma", percent: 80 },
+  { id: 17, title: "AWS", percent: 50 },
+  { id: 18, title: "Python", percent: 60 },
+  { id: 19, title: "C++", percent: 60 }
 ];
 
 export const projects = [];

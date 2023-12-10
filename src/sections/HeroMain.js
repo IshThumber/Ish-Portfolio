@@ -13,7 +13,10 @@ const HeroMain = () => {
   };
 
   const openResume = () => {
-    
+    window.open(
+      "https://drive.google.com/file/d/1dCukUpwN8EbVZwBdKMTVNDxm6M-fkbhz/view?usp=sharing",
+      "_blank"
+    );
   };
   return (
     <>

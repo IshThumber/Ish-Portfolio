@@ -1,7 +1,7 @@
 import React from "react";
 import "./general.css";
 import Heading from "../components/Heading";
-import ish from "../assets/4.png";
+// import ish from "../assets/4.png";
 
 const About = () => {
   return (
@@ -12,18 +12,13 @@ const About = () => {
         <div className="flex flex-col mt-3 justify-center items-center relative">
           <div className="font-avertaStdBold w-4/5 md:w-2/3 md:text-lg flex flex-col justify-center">
             <h1 className="font-brandonMedium font-semibold -ml-5">Myself:</h1>
-            <div className="flex flex-col md:flex-row gap-6 mt-3 justify-center items-center">
-              <img
-                className="bg-[#5c88db] img-responsive aspect-auto w-5/12 md:w-4/12 bigShadowButton border-gray-900 border-2 rounded-full p-2"
-                src={ish}
-                alt="ish"
-              />
-              <h1 className="w-full md:w-1/2 font-brandonMedium text-md text-justify ">
+            <div className="mt-3 justify-center items-center">
+              <h1 className="w-full font-brandonMedium text-md text-justify ">
                 Hello! I'm Ish Thumber, a full-stack developer residing in
-                Gujarat, India. I have over a year of experience in
-                developing web applications using ReactJs and NodeJs. My
-                proficiency in these technologies has been sharpened through
-                multiple projects and internships.
+                Gujarat, India. I have over a year of experience in developing
+                web applications using ReactJs and NodeJs. My proficiency in
+                these technologies has been sharpened through multiple projects
+                and internships.
               </h1>
             </div>
           </div>

@@ -14,7 +14,7 @@ const Education = () => {
               return (
                 <div
                   key={key.id}
-                  className="bigShadowButton border border-gray-800 bg-amber-50 p-4 mt-4 text-md justify-start w-full md:w-3/4 items-center rounded-md font-ikaros font-thin"
+                  className="bigShadowButton border border-gray-800 bg-amber-50 p-5 pl-8 mt-4 text-md justify-start w-full md:w-3/4 items-center rounded-3xl font-ikaros font-thin"
                 >
                   <h1 className="font-brandonMedium text-md text-left font-semibold">
                     {key.degree}
