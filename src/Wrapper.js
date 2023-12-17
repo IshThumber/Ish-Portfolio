@@ -5,7 +5,7 @@ import HeroMain from "./sections/HeroMain";
 import About from "./sections/About";
 import Skills from "./sections/Skills";
 import Experiences from "./sections/Experiences";
-import Contact from "./sections/Contact";
+// import Contact from "./sections/Contact";
 import Education from "./sections/Education";
 import Projects from "./sections/Projects";
 
@@ -18,14 +18,18 @@ const Wrapper = () => {
         </>
         <HeroMain />
         {/* <Quote /> */}
-        <About />
+        <div id="about">
+          <About />
+        </div>
         <Education />
         <Projects />
         <Experiences />
-        <Skills />
-        <div id="contact-us">
-          <Contact />
+        <div id="skills">
+          <Skills />
         </div>
+        {/* <div id="contact-us"> */}
+        {/* <Contact /> */}
+        {/* </div> */}
       </div>
     </>
   );
