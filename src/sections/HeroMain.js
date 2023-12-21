@@ -20,7 +20,7 @@ const HeroMain = () => {
   };
   return (
     <>
-      <div className="bg-desert-storm-50 w-full flex flex-col justify-center items-center mt-32 md:mt-28">
+      <div className="bg-transparent w-full flex flex-col justify-center items-center mt-32 md:mt-28">
         <div className="items-center text-center mt-56">
           <h3 className="font-brandonLight text-lg sm:text-2xl mb-2">
             Hey, I&apos;m

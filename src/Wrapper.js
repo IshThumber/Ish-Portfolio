@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./sections/Navbar";
 import HeroMain from "./sections/HeroMain";
-// import Quote from "./sections/Quote";
+import Quote from "./sections/Quote";
 import About from "./sections/About";
 import Skills from "./sections/Skills";
 import Experiences from "./sections/Experiences";
@@ -17,7 +17,7 @@ const Wrapper = () => {
           <Navbar />
         </>
         <HeroMain />
-        {/* <Quote /> */}
+        <Quote />
         <div id="about">
           <About />
         </div>

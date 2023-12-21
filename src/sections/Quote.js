@@ -2,38 +2,43 @@ import { useEffect, useState } from "react";
 import "./general.css";
 
 function Quote() {
-  const [quote, setQuote] = useState("");
-  const [author, setAuthor] = useState("");
-  // const [isLoading, setIsLoading] = useState(true);
+  const [category, setCategory] = useState("");
+  const [type, setType] = useState("");
+  const [setup, setSetUp] = useState("");
+  const [delivery, setDelivery] = useState("");
+  const [joke, setJoke] = useState("");
 
   useEffect(() => {
     const fetchQuote = async () => {
       try {
         const response = await fetch(
-          "https://famous-quotes4.p.rapidapi.com/random?category=all&count=2",
-          {
-            method: "GET",
-            headers: {
-              "X-RapidAPI-Key":
-                "f80d8bf742mshfc2de04cfe6451bp1c8969jsn01b6259f2f3f",
-              "X-RapidAPI-Host": "famous-quotes4.p.rapidapi.com"
-            }
-          }
+          // "https://famous-quotes4.p.rapidapi.com/random?category=all&count=2",
+          // {
+          //   method: "GET",
+          //   headers: {
+          //     "X-RapidAPI-Key":
+          //       "f80d8bf742mshfc2de04cfe6451bp1c8969jsn01b6259f2f3f",
+          //     "X-RapidAPI-Host": "famous-quotes4.p.rapidapi.com"
+          //   }
+          // }
+          "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit"
         );
 
+        // console.log(response);
         const data = await response.json();
-        console.log(data[0]);
-        setAuthor();
-        setQuote();
-        // setQuote(data[0].text);
-        // setAuthor(data[0].author);
-        // setIsLoading(false);
+        // console.log(data);
+        // console.log(data.type);
+        setCategory(data.category);
+        setType(data.type);
+        setSetUp(data.setup);
+        setDelivery(data.delivery);
+        setJoke(data.joke);
       } catch (error) {
         console.error(error);
       }
     };
 
-    // fetchQuote();
+    fetchQuote();
 
     const interval = setInterval(() => {
       fetchQuote();
@@ -44,13 +49,24 @@ function Quote() {
 
   return (
     <>
-      <div className="flex justify-center items-center w-full">
-        <div className="bigShadowButton w-2/3 bg-teal-50 p-3 rounded-md border border-blue-gray-800">
-          <div className="text-center">
-            <p className="text-md font-brandonMedium">{quote}</p>
-          </div>
-          <div className="text-right">
-            <p className="font-avertaStdBold">- {author}</p>
+      <div className="flex justify-center items-center w-full mt-14">
+        <div className="bigShadowButton md:w-2/3 w-11/12 bg-teal-50 p-5 rounded-3xl border-2 border-blue-gray-800">
+          <div>
+            <>
+              <div className="w-fit text-[12px] rounded-full p-1 px-4 bg-genoa-100">
+                Category: {category}
+              </div>
+              <div className="text-right w-11/12 float-right p-3">
+                {type === "single" ? (
+                  <div className="text-xl text-genoa-900">{joke}</div>
+                ) : (
+                  <>
+                    <div className="text-lg">{setup}</div>
+                    <div className="text-xl text-genoa-900">{delivery}</div>
+                  </>
+                )}
+              </div>
+            </>
           </div>
         </div>
       </div>

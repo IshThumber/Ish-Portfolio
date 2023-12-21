@@ -1,5 +1,4 @@
 import React from "react";
-import { Power } from "lucide-react";
 import { Link } from "react-router-dom";
 import profile from "../assets/4.png";
 import { Navbar, Typography } from "@material-tailwind/react";
@@ -88,13 +87,13 @@ const NavbarSimple = () => {
           variant="h6"
           className="flex flex-row items-center gap-2 font-brandonMedium mr-4 py-1.5"
         >
-          <img src={profile} alt="logo" className="w-16 md:w-12 aspect-auto" />
+          <img
+            src={profile}
+            alt="logo"
+            className="w-16 md:w-12 aspect-auto ring-2 ring-offset-4 ring-green-500 ring-offset-inherit rounded-full"
+          />
         </Typography>
-        <Typography className="block sm:hidden">
-          {/* <Link to="/" onClick={close}> */}
-          <Power />
-          {/* </Link> */}
-        </Typography>
+
         <div className="hidden lg:block">
           <NavList />
         </div>
