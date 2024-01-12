@@ -92,7 +92,7 @@ const NavList = ({ dark, toggleDark }) => {
 
 const NavbarSimple = ({ dark, toggleDark }) => {
   return (
-    <Navbar className="fixed top-1 m-2 z-10 navWidth bg-desert-storm-900 py-5 font-brandonMedium shadow-none rounded-3xl backdrop-filter backdrop-blur-lg bg-opacity-30 border-2 border-desert-storm-100 dark:border-wild-sand-700">
+    <Navbar className="fixed top-1 m-2 z-10 navWidth bg-desert-storm-50 py-5 font-brandonMedium shadow-none rounded-3xl backdrop-filter backdrop-blur-lg bg-opacity-30 border-2 border-desert-storm-100 dark:border-wild-sand-700">
       <div className="font-brandonMedium flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
