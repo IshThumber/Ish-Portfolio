@@ -9,7 +9,7 @@ const About = () => {
       <div className="w-full">
         <Heading name="#About myself" />
 
-        <div className="flex flex-col mt-3 justify-center items-center relative">
+        <div className="flex flex-col mt-3 justify-center items-center relative dark:text-wild-sand-300 transition-color duration-500">
           <div className="font-avertaStdBold w-4/5 md:w-2/3 md:text-lg flex flex-col justify-center">
             <h1 className="font-brandonMedium font-semibold -ml-5">Myself:</h1>
             <div className="mt-3 justify-center items-center">

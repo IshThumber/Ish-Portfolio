@@ -8,12 +8,20 @@ module.exports = withMT({
     "path-to-your-node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
     "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}"
   ],
-  darkTheme: "class",
+  dark: "class",
   theme: {
     extend: {
       aspectRatio: {
         "4/3": "4 / 3",
         "3/4": "3 / 4"
+      },
+      boxShadow: {
+        normal: "2px 2px 0px rgba(0, 0, 0, 1)",
+        bg: "4px 4px 0px rgba(0, 0, 0, 1)",
+        md: "3px 3px 0px rgba(0, 0, 0, 1)",
+        "neg-normal": "2px 2px 0px rgba(255,255,255)",
+        "neg-bg": "4px 4px 0px rgba(255,255,255)",
+        "neg-md": "3px 3px 0px rgba(255,255,255)"
       }
     },
     fontFamily: {
@@ -92,6 +100,32 @@ module.exports = withMT({
         800: "#116a46",
         900: "#10573b",
         950: "#023120"
+      },
+      bunker: {
+        50: "#eff6ff",
+        100: "#deecff",
+        200: "#b6daff",
+        300: "#75bdff",
+        400: "#2c9cff",
+        500: "#007ef7",
+        600: "#0062d4",
+        700: "#004dab",
+        800: "#00428d",
+        900: "#063874",
+        950: "#010914"
+      },
+      "wild-sand": {
+        50: "#f3f4f6",
+        100: "#edeef1",
+        200: "#d7dbe0",
+        300: "#b3bbc6",
+        400: "#8a96a6",
+        500: "#6c798b",
+        600: "#566173",
+        700: "#474f5d",
+        800: "#3d444f",
+        900: "#363b44",
+        950: "#24272d"
       }
     }
   },
