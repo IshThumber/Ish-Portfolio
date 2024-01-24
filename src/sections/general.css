@@ -10,8 +10,9 @@
   box-shadow: 3px 3px 0px rgba(0, 0, 0, 1);
 }
 
-.navWidth {
-  max-width: calc(100% - 17px);
+.nav {
+  /* max-width: calc(100% - 17px); */
+  z-index: 9999999999 !important;
 }
 
 ::-webkit-scrollbar {

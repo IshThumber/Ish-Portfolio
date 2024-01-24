@@ -1,85 +1,91 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./general.css";
+import Navbar from "./Navbar";
+import Footer from './../components/Footer';
 import Heading from "../components/Heading";
-// import ish from "../assets/4.png";
+import profile from "../assets/Profile.png"
+import { Link } from "react-router-dom";
+import TechList from "../components/TechList";
+import { FiArrowUpRight } from "react-icons/fi";
+import Education from './Education';
 
 const About = () => {
+  const component = useRef(null);
+
   return (
     <>
-      <div className="w-full">
-        <Heading name="#About myself" />
+      <Heading>
+        <div className="relative w-full p-1 m-0 font-gtReg text-wild-sand-200">
+          <div className="relative flex flex-col-reverse justify-between w-full m-auto gap-14 xl:w-3/4 md:w-11/12 md:flex-row">
+            <div className="flex flex-col justify-center w-11/12 gap-12 mx-auto md:m-0 md:w-3/5 flex-wrapborder-2">
+              <span className="font-black tracking-tight underline font-urbanist text-8xl md:text-9xl place-self-center md:place-self-start decoration-1 underline-offset-8">
+                About Ish
+              </span>
+              <div className="flex flex-col justify-center gap-10 text-xl">
+                <p>
+                  Hello, I'm Ish Thumber, a creative web developer from Una, Gujarat, India.
+                </p>
+                <p>
+                  I blend artistic flair with technical skill, specializing in front-end development to create visually stunning and functional web experiences. Whether redesigning NGO websites or streamlining PhD admissions, I'm passionate about pushing the boundaries of what's possible in the digital world.
+                </p>
+                <p>
+                  When I'm not coding, you'll find me experimenting with digital art and exploring the latest in web animation.
+                </p>
+                <p>
+                  Join me on this journey of innovation!
+                </p>
 
-        <div className="flex flex-col mt-3 justify-center items-center relative dark:text-wild-sand-300 transition-color duration-500">
-          <div className="font-avertaStdBold w-4/5 md:w-2/3 md:text-lg flex flex-col justify-center">
-            <h1 className="font-brandonMedium font-semibold -ml-5">Myself:</h1>
-            <div className="mt-3 justify-center items-center">
-              <h1 className="w-full font-brandonMedium text-md text-justify ">
-                Hello! I'm Ish Thumber, a full-stack developer residing in
-                Gujarat, India. I have over a year of experience in developing
-                web applications using ReactJs and NodeJs. My proficiency in
-                these technologies has been sharpened through multiple projects
-                and internships.
-              </h1>
+                <div className="flex flex-col gap-4 text-base font-bold md:flex-row md:gap-9">
+                  <Link to="mailto:ishthumber343@gmail.com">
+                    <button className="px-4 py-2 text-black transition-colors duration-300 bg-purple-400 rounded-lg hover:bg-purple-500 border-3 w-fit">
+                      <span className=" after:content-['👋🏻']">Say Hello</span>
+                    </button>
+                  </Link>
+
+                  <Link to="https://ishthumber.notion.site/ishthumber/Ish-Thumber-66ae5352f54b4e5695d285fca4644542">
+                    <button className="items-center px-4 py-2 text-black transition-colors duration-300 bg-purple-400 rounded-lg hover:bg-purple-500 border-3 w-fit">
+                      <div className="flex flex-row items-center gap-1">
+                        <span className="">Web Resume</span>
+                        <span className=""><FiArrowUpRight /></span>
+                      </div>
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="relative inline-block rounded-md md:place-self-start place-self-center before:block before:absolute before:-inset-6 before:-skew-y-6 before:outline-yellow-200 before:bg-blue-gray-300 before:skew-x-6 before:rounded-3xl">
+              <img src={profile} alt="ish" className="relative h-60 rounded-xl" />
             </div>
           </div>
+        </div>
 
-          {/* <div className="flex flex-col w-full md:w-4/5 pt-12 pl-4 sm:pl-0 text-2xl relative">
-            <h1 className="font-avertaSdBold text-3xl text-left underline">
-              Experiences
-            </h1>
-          </div>
+        <div className="w-full mx-auto tracking-tight font-urbanist" ref={component}>
+          <TechList component={component} />
+        </div>
 
-          <div className="flex flex-col w-full px-9 md:w-4/5 mb-6">
-            {experience.map((key) => {
-              return (
-                <div className="bigShadowButton border border-gray-800 bg-pink-50 p-4 mt-4 text-md justify-start w-full md:w-3/4 items-center rounded-md font-ikaros font-thin">
-                  <>
-                    <h1 className="font-brandonMedium text-md text-left font-semibold mb-5">
-                      <span className="mr-1 font-thin font-ikaros text-pink-400">
-                        {key.id}.
-                      </span>{" "}
-                      {key.title} Intern in {key.company}
-                    </h1>
-                    {/* {key.description.map((value) => {
-                      return <li>{value}</li>;
-                    })} 
-                  </>
-                </div>
-              );
-            })}
-          </div> */}
+        {/* <div className="w-full mx-auto tracking-tight md:w-3/4 font-urbanist">
+          <Education />
+        </div> */}
+        <Footer />
+      </Heading>
+    </>
+  )
+}
 
-          {/* <div className="flex flex-col w-full md:w-4/5 pt-12 pl-4 sm:pl-0 text-2xl">
-            <h1 className="font-avertaSdBold text-3xl text-left underline">
-              Skills
-            </h1>
-          </div>
-
-          <div className="flex flex-col w-full px-9 md:w-4/5 mb-6">
-            {skills.map((key) => {
-              return (
-                <div className="bigShadowButton border border-gray-800 bg-[#ecfdf5] p-4 py-3 mt-5 text-md justify-start w-full md:w-3/4 items-center rounded-md font-ikaros font-thin">
-                  <h1 className="font-brandonMedium text-md text-left font-semibold mb-3">
-                    <span className="mr-1 font-thin font-ikaros text-[#047857]">
-                      {key.title}.
-                    </span>
-                  </h1>
-                  <>
-                    <Progress
-                      value={key.percent}
-                      size="sm"
-                      className="bg-[#064e3b]/10"
-                      color="teal"
-                    />
-                  </>
-                </div>
-              );
-            })}
-          </div> */}
+const AboutWrapper = () => {
+  return (
+    <>
+      <div className="min-h-screen transition-all duration-500 bg-gray-800 -z-2">
+        <div className="fixed w-full">
+          <Navbar />
+        </div>
+        <div className="h-36 md:h-32"></div>
+        <div className="max-h-screen wrapper">
+          <About />
         </div>
       </div>
     </>
   );
 };
 
-export default About;
+export default AboutWrapper;

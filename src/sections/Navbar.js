@@ -1,62 +1,36 @@
 import { Navbar, Typography } from "@material-tailwind/react";
-import { Lightbulb, LightbulbOff } from "lucide-react";
+// import { FiSun, FiMoon } from "react-icons/fi";
 import React from "react";
-import { Link } from "react-router-dom";
-import { ScrollLink } from "react-scroll";
-import profile from "../assets/4.png";
+import { NavLink } from "react-router-dom";
 
-const NavList = ({ dark, toggleDark }) => {
-  const home = () => {
-    ScrollLink.scrollToTop();
-  };
-  const contact = () => {
-    const element = document.getElementById("contact-us");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-  const about = () => {
-    const element = document.getElementById("about");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-  const skills = () => {
-    const element = document.getElementById("skills");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+
+const NavList = () => {
+  const className = "flex items-center px-4 py-[6px] text-lg transition-colors duration-300 rounded-lg font-gtReg hover:bg-yellow-300 dark:text-wild-sand-300"
+  const ClassName = "flex items-center px-4 py-[0px] text-lg transition-colors duration-300 font-gtReg border-b-4 border-b-yellow-300 dark:text-wild-sand-300"
   const links = [
     {
-      label: "Home",
-      onClick: home,
-      className:
-        "flex items-center hover:text-desert-storm-700 transition-colors dark:text-wild-sand-300 transition-color duration-500"
-    },
-    {
       label: "About",
-      onClick: about,
-      className:
-        "flex items-center hover:text-desert-storm-700 transition-colors dark:text-wild-sand-300 transition-color duration-500"
+      to: "/about",
+      className,
+      ClassName
     },
     {
-      label: "Skills",
-      onClick: skills,
-      className:
-        "flex items-center hover:text-desert-storm-700 transition-colors dark:text-wild-sand-300 transition-color duration-500"
+      label: "Projects",
+      to: "/projects",
+      className,
+      ClassName
     },
     {
       label: "Contact-Me",
-      onClick: contact,
-      className:
-        "flex items-center hover:text-genoa-700 transition-colors dark:text-wild-sand-300 transition-color duration-500"
+      to: "/contact",
+      className,
+      ClassName
     }
   ];
 
   // console.log(links.map(it => typeof it.label));
   return (
-    <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="flex flex-col gap-2 my-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-3">
       {links.map((link, index) => (
         <Typography
           key={index}
@@ -65,67 +39,71 @@ const NavList = ({ dark, toggleDark }) => {
           color="blue-gray"
           className="p-1 font-medium"
         >
-          {link.onClick && (
-            <Link onClick={link.onClick} className={link.className}>
+          {link.to && (
+            <NavLink to={link.to} className={({ isActive }) =>
+              isActive ? link.ClassName : link.className
+            }>
               {link.label}
-            </Link>
+            </NavLink>
           )}
         </Typography>
-      ))}
+      ))
+      }
 
-      <div className="p-2 cursor-pointer" onClick={toggleDark}>
+      {/* <div className="p-2 cursor-pointer" onClick={toggleDark}>
         {dark ? (
-          <Lightbulb
-            className="dark:text-wild-sand-300 transition-color duration-700"
+          <FiSun
+            className="duration-700 dark:text-wild-sand-300 transition-color"
             size={24}
           />
         ) : (
-          <LightbulbOff
-            className="dark:text-wild-sand-300 transition-color duration-700"
+          <FiMoon
+            className="duration-700 dark:text-wild-sand-300 transition-color"
             size={24}
           />
         )}
-      </div>
-    </ul>
+      </div> */}
+    </ul >
   );
 };
-
-const NavbarSimple = ({ dark, toggleDark }) => {
+const NavbarSimple = () => {
   return (
-    <Navbar className="fixed top-1 m-2 z-10 navWidth bg-desert-storm-50 py-5 font-brandonMedium shadow-none rounded-3xl backdrop-filter backdrop-blur-lg bg-opacity-30 border-2 border-desert-storm-100 dark:border-wild-sand-700">
-      <div className="font-brandonMedium flex items-center justify-between text-blue-gray-900">
+    <Navbar className="relative w-3/4 px-4 py-3 m-2 mx-auto border-2 shadow-none nav md:py-2 bg-wild-sand-100 font-gtReg rounded-xl md:rounded-2xl backdrop-filter backdrop-blur-md bg-opacity-60 border-desert-storm-100 dark:border-wild-sand-700">
+      {/* <Navbar className="fixed z-10 py-5 m-2 border-2 shadow-none top-1 navWidth bg-desert-storm-50 font-brandonMedium rounded-3xl backdrop-filter backdrop-blur-lg bg-opacity-30 border-desert-storm-100 dark:border-wild-sand-700"> */}
+      <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
-          href="#"
+          href="/"
           variant="h6"
-          className="flex flex-row items-center gap-2 font-brandonMedium mr-4 py-1.5"
+          className="text-lg transition-colors duration-200 rounded-lg md:px-3 md:py-1 font-gtReg hover:bg-purple-500 place-self-center"
         >
-          <img
+          {/* <img
             src={profile}
             alt="logo"
-            className="w-16 md:w-12 aspect-auto ring-2 ring-offset-4 ring-green-500 ring-offset-inherit rounded-full"
-          />
+            className="w-10 rounded-full md:w-12 aspect-auto ring-2 ring-offset-4 ring-green-500 ring-offset-inherit"
+          /> */}
+          Ish Thumber
         </Typography>
 
         <div className="hidden lg:block">
-          <NavList toggleDark={toggleDark} dark={dark} />
+          <NavList />
         </div>
-        <div
-          className="lg:hidden transition-all duration-300 p-2 rounded-full"
+        {/* <div
+          className="p-2 transition-all duration-300 rounded-full lg:hidden"
           onClick={toggleDark}
         >
           {dark ? (
-            <Lightbulb
-              className="dark:text-wild-sand-300 transition-color duration-700"
+            <FiSun
+              className="duration-700 dark:text-wild-sand-300 transition-color"
               size={28}
             />
           ) : (
-            <LightbulbOff
-              className="dark:text-wild-sand-300 transition-color duration-700"
+            <FiMoon
+              className="duration-700 dark:text-wild-sand-300 transition-color"
               size={28}
             />
           )}
-        </div>
+        </div> */}
       </div>
     </Navbar>
   );

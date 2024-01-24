@@ -1,14 +1,14 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Heading from "../components/Heading";
-import {
-  ArrowBigUpDash,
-  Github,
-  Instagram,
-  Linkedin,
-  Send,
-  Twitter
-} from "lucide-react";
+// import {
+//   ArrowBigUpDash,
+//   Github,
+//   Instagram,
+//   Linkedin,
+//   Send,
+//   Twitter
+// } from "lucide-react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -184,7 +184,7 @@ const Contact = () => {
                   class="shadowButton w-fit bg-gray-50 border flex flex-row items-center gap-3 border-blue-gray-800 px-5 py-2 rounded-lg cursor-pointer hover:bg-blue-gray-100"
                 >
                   <span className="text-purple-500">Send</span>
-                  <Send size={16} className="text-purple-500" />
+                  {/* <Send size={16} className="text-purple-500" /> */}
                 </button>
               </div>
             </form>
@@ -201,19 +201,19 @@ const Contact = () => {
                     window.open("https://www.linkedin.com/in/ishthumber/")
                   }
                 >
-                  <Linkedin size={16} className="text-blue-900" />
+                  {/* <Linkedin size={16} className="text-blue-900" /> */} li
                 </div>
                 <div
                   className="shadowButton border border-blue-gray-800 p-2 rounded-full bg-blue-gray-100 cursor-pointer hover:bg-blue-gray-200"
                   onClick={() => window.open("https://github.com/IshThumber")}
                 >
-                  <Github size={16} className="text-gray-700" />
+                  {/* <Github size={16} className="text-gray-700" /> */} gh
                 </div>
                 <div
                   className="shadowButton border border-blue-gray-800 p-2 rounded-full bg-blue-gray-100 cursor-pointer hover:bg-blue-gray-200"
                   onClick={() => window.open("https://twitter.com/ishthumber")}
                 >
-                  <Twitter size={16} className="text-blue-600" />
+                  {/* <Twitter size={16} className="text-blue-600" /> */} tw
                 </div>
                 <div
                   className="shadowButton border border-blue-gray-800 p-2 rounded-full bg-blue-gray-100 cursor-pointer hover:bg-blue-gray-200"
@@ -221,7 +221,7 @@ const Contact = () => {
                     window.open("https://www.instagram.com/__ish343__/")
                   }
                 >
-                  <Instagram size={16} className="text-pink-600" />
+                  {/* <Instagram size={16} className="text-pink-600" /> */} ig
                 </div>
               </div>
             </div>
@@ -242,7 +242,7 @@ const Contact = () => {
                 <span className="text-blue-gray-900 sm:text-xs text-sm">
                   Back to top
                 </span>
-                <ArrowBigUpDash className="text-blue-gray-900" size={16} />
+                {/* <ArrowBigUpDash className="text-blue-gray-900" size={16} /> */}
               </div>
             </div>
           </div>

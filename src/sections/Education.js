@@ -5,7 +5,7 @@ import { education } from "../utils/General";
 const Education = () => {
   return (
     <>
-      <div className="w-full">
+      {/* <div className="w-full">
         <Heading name="#Education" />
 
         <div className="flex flex-col justify-center items-center -mt-5">
@@ -30,7 +30,15 @@ const Education = () => {
             })}
           </div>
         </div>
-      </div>
+      </div> */}
+
+      <div className="relative w-full mt-16 overflow-hidden wrapper text-wild-sand-200">
+        <div className="my-10 font-black tracking-tight text-7xl md:text-8xl w-11/12 md:w-full mx-auto">Education</div>
+        <div>
+          dfgdf
+        </div>
+      </div >
+
     </>
   );
 };

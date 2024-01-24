@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./general.css";
-import { RotateCcw } from "lucide-react";
+// import { RotateCcw } from "lucide-react";
 
 function Quote() {
   const [category, setCategory] = useState("");

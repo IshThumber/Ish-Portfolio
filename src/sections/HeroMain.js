@@ -1,66 +1,66 @@
-import { Button } from "@material-tailwind/react";
-// import { ExternalLink } from "lucide-react";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./general.css";
-// import Quote from "./Quote";
+import { gsap } from "gsap";
+import { Shapes } from "./Shaper";
+import Footer from "../components/Footer";
+import Heading from "../components/Heading";
 
 const HeroMain = () => {
-  const handleScroll = () => {
-    const element = document.getElementById("contact-us");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const compoRef = useRef(null);
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap
+        .timeline()
+        .fromTo(
+          ".name-animation",
+          { x: -100, opacity: 0, rotate: -10 },
+          {
+            x: 0,
+            opacity: 1,
+            rotate: 0,
+            // ease: "back.out(2)",
+            ease: "elastic.out(1,0.3)",
+            duration: 1,
+            transformOrigin: "left top",
+            stagger: { each: 0.1, from: "random" },
+          },
+        )
+    }, compoRef)
+    return () => ctx.revert()
+  }, [])
+
+  const firstName = "Ish";
+  const lastName = "Thumber";
+
+  const renderLetter = (name, key) => {
+    if (!name) return null;
+    return name.split("").map((letter, index) => (
+      <span
+        key={index}
+        className={`p-[1.5px] name-animation name-animation-${key}-index inline-block opacity-0`}
+      >
+        {letter}
+      </span>
+    ));
   };
 
-  const openResume = () => {
-    window.open(
-      "https://drive.google.com/file/d/1dCukUpwN8EbVZwBdKMTVNDxm6M-fkbhz/view?usp=sharing",
-      "_blank",
-      "resume"
-    ); 
-  };
   return (
     <>
-      <div className="flex flex-col items-center justify-center w-full duration-500 bg-transparent dark:text-wild-sand-300 transition-color">
-        <div className="items-center mt-56 text-center">
-          <h3 className="mb-2 text-lg font-brandonLight sm:text-2xl">
-            Hey, I&apos;m
-          </h3>
-          <h1 className="font-black transition-transform duration-500 font-penna text-7xl sm:text-7xl md:text-9xl transition-color">
-            Ish Thumber
-          </h1>
-        </div>
-        <div className="justify-center w-4/6 text-center">
-          <p className="text-sm font-thin duration-500 font-brandonLight sm:text-lg transition-color">
-            I&apos;m a Full-Stack Developer who loves crafting awesome web
-            experiences with ReactJS, NodeJS, and a dash of DevOps magic. Let's
-            code, collaborate, and create something extraordinary together! 🚀
-          </p>
-        </div>
-        <div className="items-center justify-center">
-          <div className="flex flex-row items-center justify-between gap-8 p-1 my-3 md:gap-20">
-            <Button
-              // variant="outlined"
-              className="midShadowButton bg-cascade-100 hover:bg-cascade-500 text-blue-gray-800 border-gray-900 border-2 py-5 rounded-full w-[150px] md:w-[180px] dark:border-bunker-50 dark:text-wild-sand-50 dark:bg-cascade-800 dark:hover:bg-cascade-500 dark:hover:text-wild-sand-800"
-              onClick={handleScroll}
-            >
-              Contact me
-            </Button>
-            <Button
-              // variant="outlined"
-              className="midShadowButton bg-amber-100 hover:bg-amber-500 text-blue-gray-800 border-gray-900 border-2 py-5 rounded-full w-[150px] md:w-[180px] flex justify-center items-center gap-2 dark:border-bunker-50 dark:text-wild-sand-50 dark:bg-amber-800 dark:hover:bg-amber-200 dark:hover:text-wild-sand-800"
-              onClick={openResume}
-            >
-              Resume
-              {/* <ExternalLink size={12} color="rgb(55 71 79)" strokeWidth={3} />   */}
-            </Button>
+      <Heading>
+        <div className="flex flex-col items-center justify-center w-4/5 max-h-screen gap-8 m-auto xl:flex-row-reverse">
+          <div className="w-full lg:w-2/5 sm:w-10/12">
+            <Shapes />
+          </div>
+          <div className="font-urbanist" data-speed=".2" ref={compoRef}>
+            <h1 className="mb-8 font-extrabold leading-none tracking-tighter text-7xl lg:text-[8rem] 2xl:text-[10rem] sm:text-9xl" aria-label={`${firstName}+${lastName}`}>
+              <span className="block text-genoa-500/70">{renderLetter(firstName, "first")}</span>
+              <span className="block text-genoa-600/70">{renderLetter(lastName, "last")}</span>
+            </h1>
           </div>
         </div>
-
-        {/* <div className="items-center justify-center w-full mt-20 py-7">
-          <Quote />
-        </div> */}
-      </div>
+        <Footer />
+      </Heading>
     </>
   );
 };

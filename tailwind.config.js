@@ -25,15 +25,17 @@ module.exports = withMT({
       }
     },
     fontFamily: {
-      sans: ["Brandon Text Medium", "sans-serif"],
-      brandonMedium: ["Brandon Text Medium", "sans-serif"],
+      // sans: ["Brandon Text Medium", "sans-serif"],
+      // brandonMedium: ["Brandon Text Medium", "sans-serif"],
       brandonLight: ["BrandonText-Light", "sans-serif"],
-      avertaStdThin: ["AvertaStd-Thin", "sans-serif"],
-      avertaStdBold: ["AvertaStd-Bold", "sans-serif"],
-      honeyLight: ["Honey Script Light", "sans-serif"],
-      ikaros: ["Ikaros", "sans-serif"],
-      penna: ["Penna", "sans-serif"],
-      gtThin: ["GT Walsheim Pro Thin", "sans-serif"]
+      // avertaStdThin: ["AvertaStd-Thin", "sans-serif"],
+      // avertaStdBold: ["AvertaStd-Bold", "sans-serif"],
+      // honeyLight: ["Honey Script Light", "sans-serif"],
+      // ikaros: ["Ikaros", "sans-serif"],
+      // penna: ["Penna", "sans-serif"],
+      // gtThin: ["GT Walsheim Pro Thin", "sans-serif"],
+      gtReg: ["GT Walsheim Regular", "sans-serif"],
+      urbanist: ["Urbanist", "sans-serif"]
     },
     colors: {
       cascade: {
