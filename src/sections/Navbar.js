@@ -68,7 +68,7 @@ const NavList = () => {
 };
 const NavbarSimple = () => {
   return (
-    <Navbar className="relative w-3/4 px-4 py-3 m-2 mx-auto border-2 shadow-none nav md:py-2 bg-wild-sand-100 font-gtReg rounded-xl md:rounded-2xl backdrop-filter backdrop-blur-md bg-opacity-60 border-desert-storm-100 dark:border-wild-sand-700">
+    <Navbar className="relative z-10 w-3/4 px-4 py-3 m-2 mx-auto border-2 shadow-none md:py-2 bg-wild-sand-100 font-gtReg rounded-xl md:rounded-2xl backdrop-filter backdrop-blur-md bg-opacity-60 border-desert-storm-100 dark:border-wild-sand-700">
       {/* <Navbar className="fixed z-10 py-5 m-2 border-2 shadow-none top-1 navWidth bg-desert-storm-50 font-brandonMedium rounded-3xl backdrop-filter backdrop-blur-lg bg-opacity-30 border-desert-storm-100 dark:border-wild-sand-700"> */}
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography

@@ -83,11 +83,11 @@ export const education = [
     year: "2020 - 2024",
     description: "CGPA: 8.52/10.0"
   },
-  {
-    id: 2,
-    name: "IPD School, Ahmedabad - Gujarat",
-    degree: "Higher Secondary Education",
-    year: "2019 - 2020",
-    description: "80% in CBSE"
-  }
+  // {
+  //   id: 2,
+  //   name: "IPD School, Ahmedabad - Gujarat",
+  //   degree: "Higher Secondary Education",
+  //   year: "2019 - 2020",
+  //   description: "80% in CBSE"
+  // }
 ];

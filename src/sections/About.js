@@ -63,9 +63,9 @@ const About = () => {
           <TechList component={component} />
         </div>
 
-        {/* <div className="w-full mx-auto tracking-tight md:w-3/4 font-urbanist">
+        <div className="w-full mx-auto tracking-tight md:w-3/4 font-urbanist">
           <Education />
-        </div> */}
+        </div>
         <Footer />
       </Heading>
     </>
