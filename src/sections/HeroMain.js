@@ -48,7 +48,7 @@ const HeroMain = () => {
   return (
     <>
       <Heading>
-        <div className="flex flex-col items-center justify-center w-4/5 max-h-screen gap-8 m-auto xl:flex-row-reverse">
+        <div className="flex flex-col items-center justify-center w-4/5 max-h-screen gap-8 m-auto xl:flex-row-reverse -z-50">
           <div className="w-full lg:w-2/5 sm:w-10/12">
             <Shapes />
           </div>

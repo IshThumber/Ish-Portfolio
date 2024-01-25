@@ -9,7 +9,7 @@ const Heading = ({ children }) => {
     // </div>
 
     <>
-      <div className="flex flex-col w-full min-h-screen bg-gray-800">
+      <div className="flex flex-col w-full min-h-screen -z-50">
         {children}
       </div>
     </>

@@ -15,7 +15,7 @@ const About = () => {
   return (
     <>
       <Heading>
-        <div className="relative w-full p-1 m-0 font-gtReg text-wild-sand-200">
+        <div className="relative w-full p-1 m-0 font-gtReg text-wild-sand-200 -z-50">
           <div className="relative flex flex-col-reverse justify-between w-full m-auto gap-14 xl:w-3/4 md:w-11/12 md:flex-row">
             <div className="flex flex-col justify-center w-11/12 gap-12 mx-auto md:m-0 md:w-3/5 flex-wrapborder-2">
               <span className="font-black tracking-tight underline font-urbanist text-8xl md:text-9xl place-self-center md:place-self-start decoration-1 underline-offset-8">
@@ -59,7 +59,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="w-full mx-auto tracking-tight font-urbanist" ref={component}>
+        <div className="w-full mx-auto tracking-tight font-urbanist -z-50" ref={component}>
           <TechList component={component} />
         </div>
 
@@ -75,12 +75,12 @@ const About = () => {
 const AboutWrapper = () => {
   return (
     <>
-      <div className="min-h-screen transition-all duration-500 bg-gray-800 -z-2">
+      <div className="min-h-screen transition-all duration-500 bg-transparent">
         <div className="fixed w-full">
           <Navbar />
         </div>
         <div className="h-36 md:h-32"></div>
-        <div className="max-h-screen wrapper">
+        <div className="max-h-screen wrapper -z-50 bg-transparent">
           <About />
         </div>
       </div>
