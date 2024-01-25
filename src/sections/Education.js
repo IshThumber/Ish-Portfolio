@@ -1,6 +1,6 @@
 import React from "react";
 import Heading from "../components/Heading";
-import { educati  on } from "../utils/General";
+import { education } from "../utils/General";
 
 const Education = () => {
   return (
