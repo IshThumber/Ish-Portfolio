@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from "react";
-import "./general.css";
 import { gsap } from "gsap";
-import { Shapes } from "./Shaper";
+import React, { useEffect, useRef } from "react";
 import Footer from "../components/Footer";
 import Heading from "../components/Heading";
+import { Shapes } from "./Shaper";
+import "./general.css";
 
 const HeroMain = () => {
   const compoRef = useRef(null);
@@ -48,7 +48,7 @@ const HeroMain = () => {
   return (
     <>
       <Heading>
-        <div className="flex flex-col items-center justify-center w-4/5 max-h-screen gap-8 m-auto xl:flex-row-reverse -z-50">
+        <div className="flex flex-col items-center justify-center w-4/5 max-h-screen gap-8 m-auto xl:flex-row-reverse ">
           <div className="w-full lg:w-2/5 sm:w-10/12">
             <Shapes />
           </div>

@@ -9,26 +9,26 @@ const Error = () => {
   return (
     <>
       <div className="w-full h-screen bg-[#F8F6F4]">
-        <div className="h-screen flex justify-center items-center">
-          <div className="flex flex-col justify-center items-center">
+        <div className="flex items-center justify-center h-screen">
+          <div className="flex flex-col items-center justify-center">
             <img
-              className="img-responsive w-5/6 md:w-1/2 shadowButton border-gray-900 border-2 rounded-lg p-3"
+              className="w-5/6 p-3 border-2 border-gray-900 rounded-lg img-responsive md:w-1/2 shadowButton"
               src={error}
               alt="error"
             />
 
-            <h1 className="text-md md:text-lg mt-14 font-thin font-ikaros">
-              <span className=" underline">{windowLocation}</span>
+            <h1 className="font-thin text-md md:text-lg mt-14 font-ikaros">
+              <span className="underline ">{windowLocation}</span>
               <span> does not exist.</span>
             </h1>
 
-            <h1 className="text-md md:text-lg font-thin font-ikaros">
+            <h1 className="font-thin text-md md:text-lg font-ikaros">
               <span>Please check the URL or </span>
             </h1>
             <Button
               variant="outlined"
               className="shadowButton bg-green-100 hover:bg-green-600 text-blue-gray-800 hover:text-blue-gray-50 border-gray-900 border-2 py-3 rounded-md w-[150px] flex justify-center items-center gap-2 capitalize font-ikaros"
-              // className="bg-amber-400 hover:bg-amber-500 text-white font-bold py-2 px-4 rounded"
+              // className="px-4 py-2 font-bold text-white rounded bg-amber-400 hover:bg-amber-500"
             >
               <Link to="/">Go to Home</Link>
             </Button>

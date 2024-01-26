@@ -12,8 +12,8 @@ const TechList = () => {
 
   return (
     <>
-      <div className="relative w-full  mt-16 overflow-hidden wrapper text-wild-sand-200">
-        <div className="my-10 font-black tracking-tight text-7xl md:text-8xl w-11/12 md:w-3/4 mx-auto ">Tech List</div>
+      <div className="relative w-full mt-16 overflow-hidden wrapper text-wild-sand-200">
+        <div className="w-11/12 mx-auto my-10 font-black tracking-tight text-7xl md:text-8xl md:w-3/4 ">Tech List</div>
         <div>
           {List.map((tech, index) => (
             <div key={index} className="flex items-center justify-center gap-4 mb-8 tech-row text-wild-sand-200/20">
@@ -32,6 +32,8 @@ const TechList = () => {
             </div>
           ))}
         </div>
+
+        {/* <button onClick={() => { console.log("Dfgd"); }}>f</button> */}
       </div >
     </>
   )

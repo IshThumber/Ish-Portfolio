@@ -22,14 +22,14 @@ const Wrapper = () => {
   return (
     <>
       <div
-        className="transition-all duration-500 min-h-screen"
+        className="min-h-screen transition-all duration-500"
       >
-        <div className="fixed w-full">
+        <div className="fixed z-50 w-full">
           <Navbar />
         </div>
         {/* mt-32 md:mt-28 bg-green-200 */}
         <div className="h-36 md:h-32" ></div>
-        <div className="max-h-screen -z-50 bg-transparent">
+        <div className="max-h-screen bg-transparent">
           <HeroMain />
         </div>
       </div>

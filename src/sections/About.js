@@ -1,21 +1,19 @@
-import React, { useRef } from "react";
-import "./general.css";
-import Navbar from "./Navbar";
-import Footer from './../components/Footer';
-import Heading from "../components/Heading";
-import profile from "../assets/Profile.png"
-import { Link } from "react-router-dom";
-import TechList from "../components/TechList";
+import React from "react";
 import { FiArrowUpRight } from "react-icons/fi";
+import { Link } from "react-router-dom";
+import profile from "../assets/Profile.png";
+import Heading from "../components/Heading";
+import TechList from "../components/TechList";
+import Footer from './../components/Footer';
 import Education from './Education';
+import Navbar from "./Navbar";
+import "./general.css";
 
 const About = () => {
-  const component = useRef(null);
-
   return (
     <>
       <Heading>
-        <div className="relative w-full p-1 m-0 font-gtReg text-wild-sand-200 -z-50">
+        <div className="relative w-full p-1 m-0 font-gtReg text-wild-sand-200 ">
           <div className="relative flex flex-col-reverse justify-between w-full m-auto gap-14 xl:w-3/4 md:w-11/12 md:flex-row">
             <div className="flex flex-col justify-center w-11/12 gap-12 mx-auto md:m-0 md:w-3/5 flex-wrapborder-2">
               <span className="font-black tracking-tight underline font-urbanist text-8xl md:text-9xl place-self-center md:place-self-start decoration-1 underline-offset-8">
@@ -36,18 +34,18 @@ const About = () => {
                 </p>
 
                 <div className="flex flex-col gap-4 text-base font-bold md:flex-row md:gap-9">
-                  <Link to="mailto:ishthumber343@gmail.com">
+                  <Link to="mailto:ishthumber343@gmail.com" target="_blank" rel="noopener noreferrer">
                     <button className="px-4 py-2 text-black transition-colors duration-300 bg-purple-400 rounded-lg hover:bg-purple-500 border-3 w-fit">
                       <span className=" after:content-['👋🏻']">Say Hello</span>
                     </button>
                   </Link>
 
-                  <Link to="https://ishthumber.notion.site/ishthumber/Ish-Thumber-66ae5352f54b4e5695d285fca4644542">
-                    <button className="items-center px-4 py-2 text-black transition-colors duration-300 bg-purple-400 rounded-lg hover:bg-purple-500 border-3 w-fit">
-                      <div className="flex flex-row items-center gap-1">
+                  <Link to="https://ishthumber.notion.site/ishthumber/Ish-Thumber-66ae5352f54b4e5695d285fca4644542" target="_blank" rel="noopener noreferrer">
+                    <button className="relative items-center px-4 py-2 text-black transition-colors duration-300 bg-purple-400 rounded-lg hover:bg-purple-500 border-3 w-fit">
+                      <span className="flex flex-row items-center gap-1">
                         <span className="">Web Resume</span>
                         <span className=""><FiArrowUpRight /></span>
-                      </div>
+                      </span>
                     </button>
                   </Link>
                 </div>
@@ -59,8 +57,8 @@ const About = () => {
           </div>
         </div>
 
-        <div className="w-full mx-auto tracking-tight font-urbanist -z-50" ref={component}>
-          <TechList component={component} />
+        <div className="w-full mx-auto tracking-tight font-urbanist ">
+          <TechList />
         </div>
 
         <div className="w-full mx-auto tracking-tight md:w-3/4 font-urbanist">
@@ -69,18 +67,18 @@ const About = () => {
         <Footer />
       </Heading>
     </>
-  )
+  );
 }
 
 const AboutWrapper = () => {
   return (
     <>
       <div className="min-h-screen transition-all duration-500 bg-transparent">
-        <div className="fixed w-full">
+        <div className="fixed z-50 w-full">
           <Navbar />
         </div>
         <div className="h-36 md:h-32"></div>
-        <div className="max-h-screen wrapper -z-50 bg-transparent">
+        <div className="max-h-screen bg-transparent wrapper">
           <About />
         </div>
       </div>
