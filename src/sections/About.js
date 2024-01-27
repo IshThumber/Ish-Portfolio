@@ -13,9 +13,9 @@ const About = () => {
   return (
     <>
       <Heading>
-        <div className="relative w-full p-1 m-0 font-gtReg text-wild-sand-200 ">
+        <div className="relative w-full p-1 m-0 font-gtReg text-wild-sand-200">
           <div className="relative flex flex-col-reverse justify-between w-full m-auto gap-14 xl:w-3/4 md:w-11/12 md:flex-row">
-            <div className="flex flex-col justify-center w-11/12 gap-12 mx-auto md:m-0 md:w-3/5 flex-wrapborder-2">
+            <div className="flex flex-col flex-wrap justify-center w-11/12 gap-12 mx-auto md:m-0 md:w-3/5">
               <span className="font-black tracking-tight underline font-urbanist text-8xl md:text-9xl place-self-center md:place-self-start decoration-1 underline-offset-8">
                 About Ish
               </span>
@@ -36,15 +36,15 @@ const About = () => {
                 <div className="flex flex-col gap-4 text-base font-bold md:flex-row md:gap-9">
                   <Link to="mailto:ishthumber343@gmail.com" target="_blank" rel="noopener noreferrer">
                     <button className="px-4 py-2 text-black transition-colors duration-300 bg-purple-400 rounded-lg hover:bg-purple-500 border-3 w-fit">
-                      <span className=" after:content-['👋🏻']">Say Hello</span>
+                      <span className="after:content-['👋🏻']">Say Hello </span>
                     </button>
                   </Link>
 
                   <Link to="https://ishthumber.notion.site/ishthumber/Ish-Thumber-66ae5352f54b4e5695d285fca4644542" target="_blank" rel="noopener noreferrer">
                     <button className="relative items-center px-4 py-2 text-black transition-colors duration-300 bg-purple-400 rounded-lg hover:bg-purple-500 border-3 w-fit">
                       <span className="flex flex-row items-center gap-1">
-                        <span className="">Web Resume</span>
-                        <span className=""><FiArrowUpRight /></span>
+                        <span>Web Resume</span>
+                        <span><FiArrowUpRight /></span>
                       </span>
                     </button>
                   </Link>

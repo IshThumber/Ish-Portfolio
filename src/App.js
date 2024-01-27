@@ -4,7 +4,7 @@ import Resume from "./sections/Resume";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Error from "./components/Error";
 import AboutWrapper from "./sections/About";
-import Projects from "./sections/Projects";
+import ProjectWrapper from "./sections/Projects";
 import Contact from './sections/Contact';
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
           <Route path="/" element={<Wrapper />} />
           <Route path="/rs" element={<Resume />} />
           <Route path="/about" element={<AboutWrapper />} />
-          <Route path="/projects" element={<Error />} />
+          <Route path="/projects" element={<ProjectWrapper />} />
           <Route path="/contact" element={<Error />} />
           <Route path="*" element={<Error />} />
         </Routes>

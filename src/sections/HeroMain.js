@@ -48,12 +48,12 @@ const HeroMain = () => {
   return (
     <>
       <Heading>
-        <div className="flex flex-col items-center justify-center w-4/5 max-h-screen gap-8 m-auto xl:flex-row-reverse ">
+        <div className="flex flex-col items-center justify-center w-11/12 max-h-screen gap-8 m-auto lg:w-4/5 xl:flex-row-reverse">
           <div className="w-full lg:w-2/5 sm:w-10/12">
             <Shapes />
           </div>
           <div className="font-urbanist" data-speed=".2" ref={compoRef}>
-            <h1 className="mb-8 font-extrabold leading-none tracking-tighter text-7xl lg:text-[8rem] 2xl:text-[10rem] sm:text-9xl" aria-label={`${firstName}+${lastName}`}>
+            <h1 className="mb-8 font-extrabold leading-none tracking-tight text-7xl lg:text-[8rem] 2xl:text-[10rem] sm:text-9xl w-full" aria-label={`${firstName}+${lastName}`}>
               <span className="block text-genoa-500/70">{renderLetter(firstName, "first")}</span>
               <span className="block text-genoa-600/70">{renderLetter(lastName, "last")}</span>
             </h1>
