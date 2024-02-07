@@ -1,6 +1,6 @@
 import React from 'react'
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 const Footer = () => {
   const defaultClass = "block px-4 py-1 duration-500 rounded-lg hover:bg-purple-400 hover:text-wild-sand-950 transition-color"
   const linkClass = "block px-4 py-1 duration-500 border-b-4 border-b-purple-400 transition-color"
@@ -29,9 +29,15 @@ const Footer = () => {
           </NavLink>
         </div>
         <div className="flex flex-row items-center gap-4">
-          <span className="items-center justify-center block p-2 text-lg duration-500 rounded-full bg-blue-gray-400 hover:bg-cyan-700 hover:text-wild-sand-950 transition-color"><FiGithub /></span>
-          <span className="items-center justify-center block p-2 text-lg duration-500 rounded-full bg-blue-gray-400 hover:bg-cyan-700 hover:text-wild-sand-950 transition-color"><FiLinkedin /></span>
-          <span className="items-center justify-center block p-2 text-lg duration-500 rounded-full bg-blue-gray-400 hover:bg-cyan-700 hover:text-wild-sand-950 transition-color"><FiTwitter /></span>
+          <Link to="https://github.com/ishthumber" target="_blank" rel="noopener noreferrer">
+            <span className="items-center justify-center block p-2 text-lg duration-500 rounded-full bg-blue-gray-400 hover:bg-cyan-700 hover:text-wild-sand-950 transition-color hover:scale-125"><FiGithub /></span>
+          </Link>
+          <Link to="https://www.linkedin.com/in/ishthumber/>" target="_blank" rel="noopener noreferrer">
+            <span className="items-center justify-center block p-2 text-lg duration-500 rounded-full bg-blue-gray-400 hover:bg-cyan-700 hover:text-wild-sand-950 transition-color hover:scale-125"><FiLinkedin /></span>
+          </Link>
+          <Link to="https://twitter.com/ishthumber" target="_blank" rel="noopener noreferrer">
+            <span className="items-center justify-center block p-2 text-lg duration-500 rounded-full bg-blue-gray-400 hover:bg-cyan-700 hover:text-wild-sand-950 transition-color hover:scale-125"><FiTwitter /></span>
+          </Link>
         </div>
       </div>
     </div>

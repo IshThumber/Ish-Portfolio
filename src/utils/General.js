@@ -81,7 +81,7 @@ export const education = [
     name: "Charotar University of Science and Technology, Changa - Gujarat",
     degree: "B.Tech in Computer Science and Engineering",
     year: "2020 - 2024",
-    description: "CGPA: 8.52/10.0"
+    description: "CGPA: 8.44/10.0"
   },
   // {
   //   id: 2,

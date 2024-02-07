@@ -1,12 +1,12 @@
 import { Navbar, Typography } from "@material-tailwind/react";
 // import { FiSun, FiMoon } from "react-icons/fi";
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const NavList = () => {
-  const className = "flex items-center px-4 py-[6px] text-lg transition-colors duration-300 rounded-lg font-gtReg hover:bg-yellow-300 dark:text-wild-sand-300"
-  const ClassName = "flex items-center px-4 py-[0px] text-lg transition-colors duration-300 font-gtReg border-b-4 border-b-yellow-300 dark:text-wild-sand-300"
+  const className = "flex items-center px-4 py-[6px] text-lg transition-colors duration-300 rounded-lg font-gtReg hover:bg-yellow-300 text-wild-sand-300 hover:text-blue-gray-700"
+  const ClassName = "flex items-center px-4 py-[0px] text-lg transition-colors duration-300 font-gtReg border-b-4 border-b-yellow-300 text-wild-sand-300"
   const links = [
     {
       label: "About",
@@ -68,42 +68,17 @@ const NavList = () => {
 };
 const NavbarSimple = () => {
   return (
-    <Navbar className="w-3/4 px-4 py-3 m-2 mx-auto border-2 shadow-none md:py-2 bg-wild-sand-100/30 font-gtReg rounded-xl md:rounded-2xl backdrop-filter backdrop-blur-md border-desert-storm-100 dark:border-wild-sand-700">
+    <Navbar className="w-3/4 px-4 py-3 m-2 mx-auto border-2 shadow-none md:py-2 bg-wild-sand-100/30 font-gtReg rounded-xl md:rounded-2xl backdrop-filter backdrop-blur-md border-desert-storm-100">
       {/* <Navbar className="fixed z-10 py-5 m-2 border-2 shadow-none top-1 navWidth bg-desert-storm-50 font-brandonMedium rounded-3xl backdrop-filter backdrop-blur-lg bg-opacity-30 border-desert-storm-100 dark:border-wild-sand-700"> */}
-      <div className="flex items-center justify-between text-blue-gray-900">
-        <Typography
-          as="a"
-          href="/"
-          variant="h6"
-          className="text-lg transition-colors duration-200 rounded-lg md:px-3 md:py-1 font-gtReg hover:bg-purple-500 place-self-center"
-        >
-          {/* <img
-            src={profile}
-            alt="logo"
-            className="w-10 rounded-full md:w-12 aspect-auto ring-2 ring-offset-4 ring-green-500 ring-offset-inherit"
-          /> */}
-          Ish Thumber
-        </Typography>
+      <div className="flex items-center justify-between text-wild-sand-300">
+        <Link to="/" >
+          <h2 className="text-[22px] py-1 md:m-0 mt-1 align-middle md:text-2xl transition-colors duration-200 rounded-lg md:px-3 md:py-1 font-gtReg hover:bg-purple-500 place-self-center"
+          >Ish Thumber</h2>
+        </Link>
 
         <div className="hidden lg:block">
           <NavList />
         </div>
-        {/* <div
-          className="p-2 transition-all duration-300 rounded-full lg:hidden"
-          onClick={toggleDark}
-        >
-          {dark ? (
-            <FiSun
-              className="duration-700 dark:text-wild-sand-300 transition-color"
-              size={28}
-            />
-          ) : (
-            <FiMoon
-              className="duration-700 dark:text-wild-sand-300 transition-color"
-              size={28}
-            />
-          )}
-        </div> */}
       </div>
     </Navbar>
   );

@@ -27,7 +27,7 @@ const About = () => {
                   I blend artistic flair with technical skill, specializing in front-end development to create visually stunning and functional web experiences. Whether redesigning NGO websites or streamlining PhD admissions, I'm passionate about pushing the boundaries of what's possible in the digital world.
                 </p>
                 <p>
-                  When I'm not coding, you'll find me experimenting with digital art and exploring the latest in web animation.
+                  When I'm not coding, you'll find me experimenting and exploring with the latest in web tech.
                 </p>
                 <p>
                   Join me on this journey of innovation!
