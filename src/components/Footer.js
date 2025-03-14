@@ -1,5 +1,6 @@
 import React from 'react'
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { PiMediumLogo,PiGithubLogo,PiLinkedinLogo } from "react-icons/pi";
 import { NavLink, Link } from "react-router-dom";
 const Footer = () => {
   const defaultClass = "block px-4 py-1 duration-500 rounded-lg hover:bg-purple-400 hover:text-wild-sand-950 transition-color"
@@ -13,7 +14,7 @@ const Footer = () => {
             <span className="block text-lg transition-all duration-500 rounded-lg hover:underline hover:decoration-yellow-200 underline-offset-4 decoration-2">Ish Thumber</span>
           </NavLink>
           <span className="hidden text-5xl font-thin lg:block font-brandonLight">/</span>
-          <span className="block text-xs">©2024 </span>
+          <span className="block text-xs">©{new Date().getFullYear()} </span>
         </div>
         <div className="flex flex-row items-center gap-1 text-md">
           <NavLink to="/about" className={({ isActive }) => isActive ? linkClass : defaultClass}>
@@ -30,13 +31,16 @@ const Footer = () => {
         </div>
         <div className="flex flex-row items-center gap-4">
           <Link to="https://github.com/ishthumber" target="_blank" rel="noopener noreferrer">
-            <span className="items-center justify-center block p-2 text-lg duration-500 rounded-full bg-blue-gray-400 hover:bg-cyan-700 hover:text-wild-sand-950 transition-color hover:scale-125"><FiGithub /></span>
+            <span className="items-center justify-center block p-2 text-lg duration-500 rounded-full bg-blue-gray-400 hover:bg-cyan-700 hover:text-wild-sand-950 transition-color hover:scale-125"><PiGithubLogo /></span>
           </Link>
           <Link to="https://www.linkedin.com/in/ishthumber/>" target="_blank" rel="noopener noreferrer">
-            <span className="items-center justify-center block p-2 text-lg duration-500 rounded-full bg-blue-gray-400 hover:bg-cyan-700 hover:text-wild-sand-950 transition-color hover:scale-125"><FiLinkedin /></span>
+            <span className="items-center justify-center block p-2 text-lg duration-500 rounded-full bg-blue-gray-400 hover:bg-cyan-700 hover:text-wild-sand-950 transition-color hover:scale-125"><PiLinkedinLogo /></span>
           </Link>
           <Link to="https://twitter.com/ishthumber" target="_blank" rel="noopener noreferrer">
             <span className="items-center justify-center block p-2 text-lg duration-500 rounded-full bg-blue-gray-400 hover:bg-cyan-700 hover:text-wild-sand-950 transition-color hover:scale-125"><FiTwitter /></span>
+          </Link>
+          <Link to="https://medium.com/ishthumber" target="_blank" rel="noopener noreferrer">
+            <span className="items-center justify-center block p-2 text-lg duration-500 rounded-full bg-blue-gray-400 hover:bg-cyan-700 hover:text-wild-sand-950 transition-color hover:scale-125"><PiMediumLogo /></span>
           </Link>
         </div>
       </div>
