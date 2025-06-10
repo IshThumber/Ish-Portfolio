@@ -1,12 +1,21 @@
 import React from "react";
 
-const SkillSet = ({ name }) => {
+const SkillSet = ({ name, percent }) => {
+  const level = Math.round(percent / 20); // 1-5 dots
   return (
-    <>
-      <div className="col-span-1 shadowButton p-3 pl-4 border bg-shamrock-100 border-blue-gray-700 rounded-xl text-md text-left font-semibold">
-        <h1 className="font-thin font-ikaros text-shamrock-700">{name}</h1>
+    <div className="flex items-center gap-2">
+      <span className="font-semibold">{name}</span>
+      <div className="flex gap-1">
+        {[...Array(5)].map((_, i) => (
+          <span
+            key={i}
+            className={i < level ? "text-shamrock-400" : "text-gray-400"}
+          >
+            ●
+          </span>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 

@@ -28,7 +28,7 @@ const Error = () => {
             <Button
               variant="outlined"
               className="shadowButton bg-green-100 hover:bg-green-600 text-blue-gray-800 hover:text-blue-gray-50 border-gray-900 border-2 py-3 rounded-md w-[150px] flex justify-center items-center gap-2 capitalize font-ikaros"
-              // className="px-4 py-2 font-bold text-white rounded bg-amber-400 hover:bg-amber-500"
+            // className="px-4 py-2 font-bold text-white rounded bg-amber-400 hover:bg-amber-500"
             >
               <Link to="/">Go to Home</Link>
             </Button>

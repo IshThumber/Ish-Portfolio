@@ -20,7 +20,7 @@ const Experiences = () => {
                   <>
                     <h1 className="font-brandonMedium text-md text-left font-semibold mb-5">
                       <span className="mr-1 font-thin font-ikaros text-pink-400">
-                        {key.id-1}.
+                        {key.id - 1}.
                       </span>{" "}
                       {key.title} Intern in {key.company}
                     </h1>

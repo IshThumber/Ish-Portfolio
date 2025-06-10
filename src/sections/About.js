@@ -1,89 +1,144 @@
-import React from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import profile from "../assets/Profile.png";
-import Heading from "../components/Heading";
+import PageTransition from "../components/PageTransition";
 import TechList from "../components/TechList";
-import Footer from './../components/Footer';
-import Education from './Education';
+import Footer from "./../components/Footer";
 import Navbar from "./Navbar";
-import "./general.css";
 
-const About = () => {
+const AboutPage = () => {
   return (
     <>
-      <Heading>
-        <div className="relative w-full p-1 m-0 font-gtReg text-wild-sand-200">
-          <div className="relative flex flex-col-reverse justify-between w-full m-auto gap-14 xl:w-3/4 md:w-11/12 md:flex-row">
-            <div className="flex flex-col flex-wrap justify-center w-11/12 gap-12 mx-auto md:m-0 md:w-3/5">
-              <span className="font-black tracking-tight underline font-urbanist text-8xl md:text-9xl place-self-center md:place-self-start decoration-1 underline-offset-8">
-                About Ish
-              </span>
-              <div className="flex flex-col justify-center gap-10 text-xl">
-                <p>
-                  Hello, I'm Ish Thumber, a creative web developer from Una, Gujarat, India.
-                </p>
-                <p>
-                  I blend artistic flair with technical skill, specializing in front-end development to create visually stunning and functional web experiences. Whether redesigning NGO websites or streamlining PhD admissions, I'm passionate about pushing the boundaries of what's possible in the digital world.
-                </p>
-                <p>
-                  When I'm not coding, you'll find me experimenting and exploring with the latest in web tech.
-                </p>
-                <p>
-                  Join me on this journey of innovation!
-                </p>
+      <div className="min-h-screen transition-all duration-500">
+        <div className="fixed z-50 w-full">
+          <Navbar />
+        </div>
+        <PageTransition>
+          <div className="h-32"></div>
+          <div className="relative w-[97%] md:w-5/6 p-2 lg:p-6 font-gtReg text-wild-sand-200 mx-auto">
+            <div className="w-full m-auto mb-10 xl:w-full text-center md:text-left">
+              <h1 className="font-black tracking-tight font-urbanist text-7xl lg:text-9xl bg-gradient-to-r from-purple-400 to-genoa-300 inline-block text-transparent bg-clip-text xl:w-fit w-full">
+                About Myself
+                <span className="block h-2 mt-4 md:mt-4 bg-gradient-to-r from-purple-400 to-genoa-300 w-28 md:w-40 mx-auto md:mx-0 rounded-full" />
+              </h1>
+            </div>
 
-                <div className="flex flex-col gap-4 text-base font-bold md:flex-row md:gap-9">
-                  <Link to="mailto:ishthumber343@gmail.com" target="_blank" rel="noopener noreferrer">
-                    <button className="px-4 py-2 text-black transition-colors duration-300 bg-purple-400 rounded-lg hover:bg-purple-500 border-3 w-fit">
-                      <span className="after:content-['👋🏻']">Say Hello </span>
+            <div className="flex flex-col-reverse xl:flex-row justify-between items-center gap-12 bg-blue-gray-700/40 backdrop-blur-sm rounded-2xl shadow-xl p-6 lg:p-10 border border-blue-gray-600/30">
+              <section className="flex flex-col justify-center w-full gap-8 text-base md:text-lg xl:w-[60%] p-2 text-wild-sand-200">
+                <div className="flex flex-col gap-2">
+                  <h2 className="text-3xl font-semibold">
+                    Hey 👋🏻, I'm{" "}
+                    <strong className="text-yellow-300 underline decoration-purple-400 underline-offset-4">
+                      Ish Thumber
+                    </strong>{" "}
+                  </h2>
+                  <h2 className="text-lg font-black text-wild-sand-300 flex gap-x-2 flex-wrap">
+                    <span>Cloud Engineer</span>
+                    <span className="text-gray-500 text-xl">•</span>
+                    <span>Developer</span>
+                    <span className="text-gray-500 text-xl">•</span>
+                    <span>Curious Mind</span>
+                  </h2>
+                </div>
+
+                <div className="gap-4 flex flex-col">
+                  <p className="text-gray-200 leading-relaxed">
+                    As an{" "}
+                    <strong className="font-semibold text-wild-sand-100">
+                      AWS Community Builder
+                    </strong>
+                    , I work across{" "}
+                    <strong className="font-semibold text-yellow-200">AWS</strong>
+                    ,{" "}
+                    <strong className="font-semibold text-yellow-200">GCP</strong>
+                    , and{" "}
+                    <strong className="font-semibold text-yellow-200">
+                      Azure
+                    </strong>{" "}
+                    — designing cloud architectures and automating infrastructure
+                    with tools like{" "}
+                    <strong className="font-semibold text-yellow-200">
+                      Terraform
+                    </strong>{" "}
+                    and{" "}
+                    <strong className="font-semibold text-yellow-200">
+                      Kubernetes
+                    </strong>
+                    . I also build{" "}
+                    <strong className="font-semibold text-yellow-200">
+                      full-stack
+                    </strong>{" "}
+                    applications using{" "}
+                    <strong className="font-semibold text-yellow-200">
+                      React
+                    </strong>
+                    , Vite,{" "}
+                    <strong className="font-semibold text-yellow-200">
+                      Node.js
+                    </strong>
+                    , and{" "}
+                    <strong className="font-semibold text-yellow-200">
+                      Python
+                    </strong>
+                    , bridging cloud and code to deliver end-to-end solutions.
+                  </p>
+
+                  <p className="text-xl font-semibold text-genoa-200">
+                    Join me on this journey of innovation!
+                  </p>
+                </div>
+
+                <div className="flex flex-col gap-4 text-base font-bold md:flex-row md:gap-6 mt-4">
+                  <Link
+                    to="mailto:ishthumber343@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className="px-5 py-3 rounded-xl bg-purple-500 hover:bg-gradient-to-r from-purple-500 to-purple-700 text-black font-bold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-blue-gray-700">
+                      <span className="flex items-center gap-2">
+                        Say Hello 👋🏻
+                      </span>
                     </button>
                   </Link>
 
-                  <Link to="https://ishthumber.notion.site/ishthumber/Ish-Thumber-66ae5352f54b4e5695d285fca4644542" target="_blank" rel="noopener noreferrer">
-                    <button className="relative items-center px-4 py-2 text-black transition-colors duration-300 bg-purple-400 rounded-lg hover:bg-purple-500 border-3 w-fit">
-                      <span className="flex flex-row items-center gap-1">
+                  <Link
+                    to="https://ishthumber.notion.site/ishthumber/Ish-Thumber-66ae5352f54b4e5695d285fca4644542"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className="px-5 py-3 rounded-xl bg-genoa-500 hover:bg-gradient-to-r from-genoa-500 to-genoa-700 font-bold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-genoa-400 focus:ring-offset-2 focus:ring-offset-blue-gray-700">
+                      <span className="flex flex-row items-center gap-2">
                         <span>Web Resume</span>
-                        <span><FiArrowUpRight /></span>
+                        <FiArrowUpRight className="text-lg" />
                       </span>
                     </button>
                   </Link>
                 </div>
+              </section>
+
+              <div className="xl:w-[40%] flex justify-center items-center p-4">
+                <div className="relative inline-block rounded-md group transform transition-all duration-500 </div>hover:scale-105">
+                  <div className="absolute -inset-4 sm:-inset- bg-gradient-to-tr from-purple-500/40 to-genoa-400/30 rounded-3xl transform rotate-3 group-hover:rotate-0 transition-all duration-500 ease-out blur-sm group-hover:blur-md"></div>
+                  <div className="absolute -inset-4 sm:-inset-6 border-4 border-purple-400/50 rounded-3xl transform -rotate-2 group-hover:rotate-0 transition-all duration-500 ease-out"></div>
+
+                  <img
+                    src={profile}
+                    alt="Ish Thumber"
+                    className="relative h-64 w-64 sm:h-80 sm:w-80 object-cover rounded-2xl shadow-2xl border-4 border-blue-gray-800/80 transition-all duration-500 group-hover:shadow-purple-500/20"
+                  />
+                </div>
               </div>
             </div>
-            <div className="relative inline-block rounded-md md:place-self-start place-self-center before:block before:absolute before:-inset-6 before:-skew-y-6 before:outline-yellow-200 before:bg-blue-gray-300 before:skew-x-6 before:rounded-3xl">
-              <img src={profile} alt="ish" className="relative h-60 rounded-xl" />
+
+            <div className="p-4 mt-12 bg-blue-gray-700/30 backdrop-blur-sm rounded-xl shadow-lg border border-blue-gray-600/20">
+              <TechList />
             </div>
           </div>
-        </div>
-
-        <div className="w-full mx-auto tracking-tight font-urbanist ">
-          <TechList />
-        </div>
-
-        <div className="w-full mx-auto tracking-tight md:w-3/4 font-urbanist">
-          <Education />
-        </div>
+        </PageTransition>
         <Footer />
-      </Heading>
-    </>
-  );
-}
-
-const AboutWrapper = () => {
-  return (
-    <>
-      <div className="min-h-screen transition-all duration-500 bg-transparent">
-        <div className="fixed z-50 w-full">
-          <Navbar />
-        </div>
-        <div className="h-36 md:h-32"></div>
-        <div className="max-h-screen bg-transparent wrapper">
-          <About />
-        </div>
       </div>
     </>
   );
 };
 
-export default AboutWrapper;
+export default AboutPage;
