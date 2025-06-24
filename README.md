@@ -25,7 +25,3 @@ A modern, responsive portfolio website built with React, showcasing skills, proj
 - Framer Motion
 - GSAP
 - EmailJS (for contact form)
-
-## License
-
-This project is licensed under the MIT License.
