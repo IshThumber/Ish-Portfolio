@@ -4,8 +4,8 @@ import { FiMail, FiSend } from "react-icons/fi";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 import PageTransition from "../components/PageTransition";
-import Navbar from "./Navbar";
 
 const ContactForm = () => {
   const form = useRef();
@@ -83,7 +83,7 @@ const ContactForm = () => {
         <button
           type="submit"
           disabled={isLoading}
-          className="flex items-center justify-center gap-2 px-6 py-3 font-bold transition-all duration-300 rounded-lg shadow-lg w-fit bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-wild-sand-100 hover:shadow-purple-500/30 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="flex items-center justify-center gap-2 px-6 py-3 font-bold transition-all duration-300 rounded-lg shadow-lg w-fit bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-wild-sand-100 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isLoading ? (
             <>
@@ -120,67 +120,62 @@ const ContactForm = () => {
   );
 };
 
-// EDITED: The SocialLinks component is no longer needed in this file.
-
 const Contact = () => {
   return (
-    <>
-      <div className="min-h-screen transition-all duration-500">
-        <div className="fixed z-50 w-full">
-          <Navbar />
-        </div>
-        <PageTransition>
-          <div className="h-32" />
-
-          <div className="relative w-[97%] md:w-5/6 p-2 lg:p-6 font-gtReg text-wild-sand-200 mx-auto">
-            <div className="w-full m-auto mb-10 xl:w-full text-center md:text-left">
-              <h1 className="font-black tracking-tight font-urbanist text-7xl lg:text-9xl bg-gradient-to-r from-purple-400 to-genoa-300 inline-block text-transparent bg-clip-text xl:w-fit w-full">
-                Contact Me
-                <span className="block h-2 mt-4 md:mt-4 bg-gradient-to-r from-purple-400 to-genoa-300 w-28 md:w-40 mx-auto md:mx-0 rounded-full" />
-              </h1>
-            </div>
-
-            <div className="flex flex-col-reverse xl:flex-row justify-between items-center gap-12 ">
-              <section className="flex flex-col w-full gap-16 mt-8 xl:flex-row">
-                <div className="xl:w-2/5">
-                  <h2 className="text-3xl font-bold text-wild-sand-100">
-                    Let's Build Something Amazing.
-                  </h2>
-
-                  <p className="mt-4 text-wild-sand-200/80 leading-relaxed">
-                    Have a project, an idea, or an opportunity you'd like to
-                    discuss? I'm always open to new collaborations and creative
-                    challenges.
-                  </p>
-                  <p className="mt-4 text-wild-sand-200/80 leading-relaxed">
-                    The form is the quickest way to reach me, but you can also
-                    send a direct email.
-                  </p>
-
-                  <div className="mt-8">
-                    <a
-                      href="mailto:ishthumber343@gmail.com"
-                      className="inline-flex items-center gap-3 bg-blue-gray-800/70 border border-blue-gray-700/50 rounded-lg px-4 py-3 transition-all duration-300 hover:border-genoa-400/80 hover:bg-blue-gray-800/90 hover:shadow-lg hover:shadow-genoa-500/10 cursor-pointer"
-                    >
-                      <div className="text-genoa-300">
-                        <FiMail size={22} />
-                      </div>
-                      <span className="font-medium text-wild-sand-200">
-                        ishthumber343@gmail.com
-                      </span>
-                    </a>
-                  </div>
-                </div>
-                <div className="xl:w-3/5">
-                  <ContactForm />
-                </div>
-              </section>
-            </div>
-            <Footer />
-          </div>
-        </PageTransition>
+    <div className="min-h-screen transition-all duration-500">
+      <div className="fixed z-50 w-full">
+        <Navbar />
       </div>
-    </>
+      <PageTransition>
+        <div className="h-32" />
+
+        <div className="relative w-[97%] md:w-5/6 p-2 lg:p-6 font-gtReg text-wild-sand-200 mx-auto">
+          <div className="w-full m-auto mb-10 xl:w-full text-center md:text-left">
+            <h1 className="font-black tracking-tight font-urbanist text-7xl lg:text-9xl bg-gradient-to-r from-purple-300 to-genoa-300 inline-block text-transparent bg-clip-text xl:w-fit w-full">
+              Contact Me
+            </h1>
+          </div>
+
+          <div className="flex flex-col-reverse xl:flex-row justify-between items-center gap-12 ">
+            <section className="flex flex-col w-full gap-16 mt-8 xl:flex-row">
+              <div className="xl:w-2/5">
+                <h2 className="text-3xl font-bold text-wild-sand-100">
+                  Let's Build Something Amazing.
+                </h2>
+
+                <p className="mt-4 text-wild-sand-200/80 leading-relaxed">
+                  Have a project, an idea, or an opportunity you'd like to
+                  discuss? I'm always open to new collaborations and creative
+                  challenges.
+                </p>
+                <p className="mt-4 text-wild-sand-200/80 leading-relaxed">
+                  The form is the quickest way to reach me, but you can also
+                  send a direct email.
+                </p>
+
+                <div className="mt-8">
+                  <a
+                    href="mailto:ishthumber343@gmail.com"
+                    className="inline-flex items-center gap-3 bg-blue-gray-800/70 border border-blue-gray-700/50 rounded-lg px-4 py-3 transition-all duration-300 hover:border-genoa-400/80 hover:bg-blue-gray-800/90 hover:shadow-lg hover:shadow-genoa-500/10 cursor-pointer"
+                  >
+                    <div className="text-genoa-300">
+                      <FiMail size={22} />
+                    </div>
+                    <span className="font-medium text-wild-sand-200">
+                      ishthumber343@gmail.com
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div className="xl:w-3/5">
+                <ContactForm />
+              </div>
+            </section>
+          </div>
+          <Footer />
+        </div>
+      </PageTransition>
+    </div>
   );
 };
 

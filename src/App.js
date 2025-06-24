@@ -12,6 +12,7 @@ const ProjectWrapper = lazy(() => import("./sections/Projects"));
 const Contact = lazy(() => import("./sections/Contact"));
 const Error = lazy(() => import("./components/Error"));
 const AboutPage = lazy(() => import("./sections/About"));
+const Experience = lazy(() => import("./sections/Experiences"));
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -21,6 +22,7 @@ const AnimatedRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Wrapper />} />
         <Route path="/projects" element={<ProjectWrapper />} />
+        <Route path="/experience" element={<Experience />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="*" element={<Error />} />

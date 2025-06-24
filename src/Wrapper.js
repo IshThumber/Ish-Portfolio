@@ -1,6 +1,6 @@
-import Footer from "./components/Footer";
+import FooterV2 from './components/Footer';
+import Navbar from "./components/Navbar";
 import HeroMain from "./sections/HeroMain";
-import Navbar from "./sections/Navbar";
 
 const Wrapper = () => {
   return (
@@ -13,7 +13,10 @@ const Wrapper = () => {
         <div className="max-h-screen bg-transparent">
           <HeroMain />
         </div>
-        <Footer />
+        {/* <Footer /> */}
+
+
+        <FooterV2 />
       </div>
     </>
   );

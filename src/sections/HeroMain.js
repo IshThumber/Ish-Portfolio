@@ -1,7 +1,5 @@
 import { gsap } from "gsap";
 import React, { useEffect, useRef } from "react";
-import Footer from "../components/Footer";
-import Heading from "../components/Heading";
 import { Shapes } from "./Shaper";
 import "./general.css";
 
@@ -45,47 +43,44 @@ const HeroMain = () => {
 
   return (
     <>
-      <Heading>
-        <div className="flex flex-col items-center justify-center w-11/12 max-h-screen gap-8 m-auto lg:w-4/5 xl:flex-row-reverse">
-          <div className="w-full lg:w-2/5 sm:w-10/12">
-            <Shapes />
-          </div>
-          <div className="font-urbanist" data-speed=".2" ref={compoRef}>
-            <h1
-              className="mb-8 font-extrabold leading-none tracking-tight text-7xl lg:text-[8rem] 2xl:text-[10rem] sm:text-9xl w-full"
-              aria-label={`${firstName}+${lastName}`}
+      <div className="flex flex-col items-center justify-center w-11/12 max-h-screen gap-8 m-auto lg:w-4/5 xl:flex-row-reverse">
+        <div className="w-full lg:w-2/5 sm:w-10/12">
+          <Shapes />
+        </div>
+        <div className="font-urbanist" data-speed=".2" ref={compoRef}>
+          <h1
+            className="mb-8 font-extrabold leading-none tracking-tight text-7xl lg:text-[8rem] 2xl:text-[10rem] sm:text-9xl w-full"
+            aria-label={`${firstName}+${lastName}`}
+          >
+            <span className="block text-genoa-500/70">
+              {renderLetter(firstName, "first")}
+            </span>
+            <span className="block text-genoa-600/70">
+              {renderLetter(lastName, "last")}
+            </span>
+          </h1>
+          {/* <div className="hero-bg"></div> */}
+          <p className="text-2xl md:text-3xl text-shamrock-400 mb-6">
+            Cloud-native engineer building resilient infra & elegant apps.
+          </p>
+          <div className="flex gap-4 mt-4">
+            <a
+              href="/resume/Ish_Thumber_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <span className="block text-genoa-500/70">
-                {renderLetter(firstName, "first")}
-              </span>
-              <span className="block text-genoa-600/70">
-                {renderLetter(lastName, "last")}
-              </span>
-            </h1>
-            {/* <div className="hero-bg"></div> */}
-            <p className="text-2xl md:text-3xl text-shamrock-400 mb-6">
-              Cloud-native engineer building resilient infra & elegant apps.
-            </p>
-            <div className="flex gap-4 mt-4">
-              <a
-                href="/resume/Ish_Thumber_Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className="px-5 py-2 rounded-xl bg-purple-500 hover:bg-gradient-to-r from-purple-500 to-purple-700 text-black font-bold transition-all duration-300">
-                  View Resume
-                </button>
-              </a>
-              <a href="contact">
-                <button className="px-5 py-2 rounded-xl bg-genoa-400 hover:bg-genoa-600 text-black font-bold transition-all duration-300">
-                  Let’s Talk
-                </button>
-              </a>
-            </div>
+              <button className="px-5 py-2 rounded-xl bg-purple-400 hover:bg-gradient-to-r from-purple-400 to-purple-700 text-black font-bold transition-all duration-300">
+                View Resume
+              </button>
+            </a>
+            <a href="contact">
+              <button className="px-5 py-2 rounded-xl bg-genoa-400 hover:bg-genoa-600 text-black font-bold transition-all duration-300">
+                Let’s Talk
+              </button>
+            </a>
           </div>
         </div>
-        <Footer />
-      </Heading>
+      </div>
     </>
   );
 };

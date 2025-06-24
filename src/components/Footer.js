@@ -1,90 +1,82 @@
-import React from "react";
-import { FiTwitter } from "react-icons/fi";
-import { PiGithubLogo, PiLinkedinLogo, PiMediumLogo } from "react-icons/pi";
-import { Link, NavLink } from "react-router-dom";
-const Footer = () => {
-  const defaultClass =
-    "block px-4 py-1 duration-500 rounded-lg hover:bg-purple-400 hover:text-wild-sand-950 transition-color";
-  const linkClass =
-    "block px-4 py-1 duration-500 border-b-4 border-b-purple-400 transition-color";
+import React, { useEffect, useMemo, useState } from 'react';
+import { FaGithub, FaLinkedin, FaLocationDot, FaMedium, FaReact, FaXTwitter } from "react-icons/fa6";
+import { SiTailwindcss } from "react-icons/si";
+
+const FooterConcept2 = () => {
+  const [time, setTime] = useState('');
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(formatTime());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const formatTime = () => {
+    const options = { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', hour12: false };
+    return new Date().toLocaleTimeString('en-GB', options);
+  };
+
+  const socialLinks = useMemo(() => [
+    { name: 'GitHub', icon: <FaGithub size={22}/>, url: 'https://github.com/ishthumber' },
+    { name: 'LinkedIn', icon: <FaLinkedin size={22}/>, url: 'https://www.linkedin.com/in/ishthumber/' },
+    { name: 'Medium', icon: <FaMedium size={22}/>, url: 'https://medium.com/@ishthumber' },
+    { name: 'Twitter', icon: <FaXTwitter size={22}/>, url: 'https://twitter.com/ishthumber' },
+  ], []);
 
   return (
-    <div className="relative flex max-w-full max-h-full p-1 mt-20 font-semibold transition-all duration-500 font-gtReg text-wild-sand-200/60">
-      <div className="flex flex-col items-center justify-around w-8/12 gap-5 p-3 m-auto bg-transparent md:gap-8 lg:flex-row rounded-xl ">
-        <div className="flex flex-col items-center gap-0 lg:flex-row md:gap-2 ">
-          <NavLink to="/">
-            <span className="block text-lg transition-all duration-500 rounded-lg hover:underline hover:decoration-yellow-200 underline-offset-4 decoration-2">
-              Ish Thumber
-            </span>
-          </NavLink>
-          <span className="hidden text-5xl font-thin lg:block font-brandonLight">
-            /
+    <footer className="relative w-full max-w-7xl mx-auto sm:pt-12 pb-8 mt-48 font-gtReg">
+      <div className='relative bottom-12 sm:bottom-32 p-2 w-11/12 mx-auto items-center border-t border-blue-gray-800/50 sm:pt-10'>
+        <span className='font-black text-wild-sand-100 text-2xl tracking-wider hover:text-purple-400 transition-all duration-500 hover:underline underline-offset-8'>
+          Ish Thumber.
+        </span>
+      </div>
+
+      <div className="sm:absolute w-fit bottom-24 mx-auto sm:right-10 py-3 px-8 rounded-lg shadow-xl transform sm:-rotate-[4deg] transition-all duration-300 hover:rotate-0 hover:scale-105 cursor-pointer bg-blue-gray-800/40 border-blue-gray-700/50 border-2 backdrop-blur-xl shadow-purple-400/10">
+        <div className="flex items-center gap-3 mb-3">
+          <span className="relative flex h-2.5 w-2.5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
           </span>
-          <span className="block text-xs">©{new Date().getFullYear()} </span>
+          <p className="text-sm font-semibold text-gray-200">Available for Opportunities</p>
         </div>
-        <div className="flex flex-row items-center gap-1 text-md">
-          <NavLink
-            to="/about"
-            className={({ isActive }) => (isActive ? linkClass : defaultClass)}
-          >
-            <span>About</span>
-          </NavLink>
-          <span className="block text-5xl font-thin font-brandonLight">/</span>
-          <NavLink
-            to="/projects"
-            className={({ isActive }) => (isActive ? linkClass : defaultClass)}
-          >
-            <span>Projects</span>
-          </NavLink>
-          <span className="block text-5xl font-thin font-brandonLight">/</span>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) => (isActive ? linkClass : defaultClass)}
-          >
-            <span>Contact</span>
-          </NavLink>
-        </div>
-        <div className="flex flex-row items-center gap-4">
-          <Link
-            to="https://github.com/ishthumber"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className="items-center justify-center block p-2 text-lg duration-500 rounded-full bg-blue-gray-400 hover:bg-cyan-700 hover:text-wild-sand-950 transition-color hover:scale-125">
-              <PiGithubLogo />
-            </span>
-          </Link>
-          <Link
-            to="https://www.linkedin.com/in/ishthumber/>"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className="items-center justify-center block p-2 text-lg duration-500 rounded-full bg-blue-gray-400 hover:bg-cyan-700 hover:text-wild-sand-950 transition-color hover:scale-125">
-              <PiLinkedinLogo />
-            </span>
-          </Link>
-          <Link
-            to="https://twitter.com/ishthumber"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className="items-center justify-center block p-2 text-lg duration-500 rounded-full bg-blue-gray-400 hover:bg-cyan-700 hover:text-wild-sand-950 transition-color hover:scale-125">
-              <FiTwitter />
-            </span>
-          </Link>
-          <Link
-            to="https://medium.com/@ishthumber"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className="items-center justify-center block p-2 text-lg duration-500 rounded-full bg-blue-gray-400 hover:bg-cyan-700 hover:text-wild-sand-950 transition-color hover:scale-125">
-              <PiMediumLogo />
-            </span>
-          </Link>
+        <div className="border-t border-gray-700/50 pt-3 flex justify-between items-center">
+          <p className="font-mono text-base font-bold text-genoa-300 tracking-[0.15rem]">{time || '...'}</p>
+          <div className="flex items-center gap-1.5 text-xs text-gray-400">
+            <span><FaLocationDot size={12} /></span>
+            <span>Una, Gujarat, India</span>
+          </div>
         </div>
       </div>
-    </div>
+
+      <div className="mt-3 sm:mt-0 mx-auto w-fit sm:absolute bottom-44 sm:bottom-28 left-4 sm:left-10 p-4 bg-blue-gray-800/40 border-blue-gray-700/50 border-2 rounded-lg shadow-xl transform sm:rotate-3 transition-all duration-300 hover:rotate-0 hover:scale-105 cursor-pointer backdrop-blur-xl shadow-purple-500/10">
+        <div className="flex items-center gap-3 text-sm font-semibold text-gray-300">
+          Built with
+          <FaReact className="text-cyan-400" size={20} /> &
+          <SiTailwindcss className="text-[#38bdf8]" size={20} />
+        </div>
+      </div>
+
+      <div className="w-11/12 mx-auto pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p className="text-wild-sand-400 text-sm">
+          © {new Date().getFullYear()} All rights reserved.
+        </p>
+        <div className="flex gap-5">
+          {socialLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-genoa-400 hover:scale-125 transition-all duration-500 text-wild-sand-300"
+            >
+              {link.icon}
+            </a>
+          ))}
+        </div>
+      </div>
+    </footer>
   );
 };
 
-export default Footer;
+export default FooterConcept2;

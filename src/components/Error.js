@@ -1,41 +1,37 @@
 import React from "react";
-import error from "../assets/error.png";
-import { Button } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
+import errorImage from "../assets/error.png";
+import Navbar from "./Navbar";
 
 const Error = () => {
-  const windowLocation = window.location.href;
-
   return (
-    <>
-      <div className="w-full h-screen bg-[#F8F6F4]">
-        <div className="flex items-center justify-center h-screen">
-          <div className="flex flex-col items-center justify-center">
-            <img
-              className="w-5/6 p-3 border-2 border-gray-900 rounded-lg img-responsive md:w-1/2 shadowButton"
-              src={error}
-              alt="error"
-            />
-
-            <h1 className="font-thin text-md md:text-lg mt-14 font-ikaros">
-              <span className="underline ">{windowLocation}</span>
-              <span> does not exist.</span>
-            </h1>
-
-            <h1 className="font-thin text-md md:text-lg font-ikaros">
-              <span>Please check the URL or </span>
-            </h1>
-            <Button
-              variant="outlined"
-              className="shadowButton bg-green-100 hover:bg-green-600 text-blue-gray-800 hover:text-blue-gray-50 border-gray-900 border-2 py-3 rounded-md w-[150px] flex justify-center items-center gap-2 capitalize font-ikaros"
-            // className="px-4 py-2 font-bold text-white rounded bg-amber-400 hover:bg-amber-500"
-            >
-              <Link to="/">Go to Home</Link>
-            </Button>
-          </div>
+    <div className="min-h-screen transition-all duration-500">
+      <header className="fixed z-50 w-full">
+        <Navbar />
+      </header>
+      <div className="h-32" />
+      <main className="relative w-[97%] md:w-5/6 p-2 lg:p-6 font-gtReg text-wild-sand-200 mx-auto">
+        <div className="flex flex-col items-center justify-center gap-8 text-center">
+          <h1 className="font-black tracking-tight font-urbanist text-7xl lg:text-9xl bg-gradient-to-r from-purple-300 to-genoa-300 inline-block text-transparent bg-clip-text">
+            404
+          </h1>
+          <p className="text-2xl font-semibold text-wild-sand-300">
+            Oops! The page you're looking for doesn't exist.
+          </p>
+          <img
+            src={errorImage}
+            alt="Error"
+            className="w-64 h-64 object-cover rounded-full shadow-lg"
+          />
+          <Link
+            to="/"
+            className="px-5 py-3 rounded-xl bg-purple-500 hover:bg-gradient-to-r from-purple-500 to-purple-700 text-wild-sand-100 font-bold transition-all duration-300"
+          >
+            Go Home
+          </Link>
         </div>
-      </div>
-    </>
+      </main>
+    </div>
   );
 };
 

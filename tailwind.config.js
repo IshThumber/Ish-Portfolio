@@ -6,11 +6,20 @@ module.exports = withMT({
     "./src/**/*.{js,jsx,ts,tsx}",
     "path-to-your-node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}",
     "path-to-your-node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
-    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}"
+    // "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}"
   ],
   dark: "class",
   theme: {
     extend: {
+      animation: {
+        marquee: 'marquee 25s linear infinite',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
       aspectRatio: {
         "4/3": "4 / 3",
         "3/4": "3 / 4"
@@ -131,5 +140,5 @@ module.exports = withMT({
       }
     }
   },
-  plugins: [require("flowbite/plugin")]
+  // plugins: [require("flowbite/plugin")]
 });
