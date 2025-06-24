@@ -69,7 +69,7 @@ const Navbar = () => {
 					<div className="flex items-center justify-between text-wild-sand-300">
 						<Link
 							to="/"
-							className="text-2xl font-bold transition-colors text-gray-200 hover:text-purple-300"
+							className="text-2xl font-bold transition-colors text-gray-200 hover:text-yellow-300"
 							aria-label="Home"
 						>
 							Ish Thumber

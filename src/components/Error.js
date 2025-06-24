@@ -21,11 +21,11 @@ const Error = () => {
           <img
             src={errorImage}
             alt="Error"
-            className="w-64 h-64 object-cover rounded-full shadow-lg"
+            className="w-64 h-64 object-cover"
           />
           <Link
             to="/"
-            className="px-5 py-3 rounded-xl bg-purple-500 hover:bg-gradient-to-r from-purple-500 to-purple-700 text-wild-sand-100 font-bold transition-all duration-300"
+            className="px-7 py-3 rounded-xl bg-purple-500 hover:bg-gradient-to-r hover:text-wild-sand-100 from-purple-500 to-purple-700 text-wild-sand-100 font-bold transition-all duration-300"
           >
             Go Home
           </Link>

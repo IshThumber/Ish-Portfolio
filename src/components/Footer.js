@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { FaGithub, FaLinkedin, FaLocationDot, FaMedium, FaReact, FaXTwitter } from "react-icons/fa6";
 import { SiTailwindcss } from "react-icons/si";
 
-const FooterConcept2 = () => {
+const Footer = () => {
   const [time, setTime] = useState('');
 
   useEffect(() => {
@@ -79,4 +79,4 @@ const FooterConcept2 = () => {
   );
 };
 
-export default FooterConcept2;
+export default Footer;
