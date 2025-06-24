@@ -67,7 +67,7 @@ const ProjectWrapper = () => {
         <section className="relative w-[97%] md:w-5/6 p-2 lg:p-6 font-gtReg text-wild-sand-200 mx-auto">
           <div className="relative flex flex-col justify-between w-full m-auto gap-14">
             <div className="w-full m-auto mb xl:w-full md:w-11/12 text-center md:text-left">
-              <h1 className="font-black tracking-tight font-urbanist text-[5rem] md:text-8xl lg:text-9xl bg-gradient-to-r from-purple-300 to-genoa-300 inline-block text-transparent bg-clip-text md:w-fit w-full">
+              <h1 className="font-black tracking-tight font-urbanist text-7xl md:text-8xl lg:text-9xl bg-gradient-to-r from-purple-300 to-genoa-300 inline-block text-transparent bg-clip-text md:w-fit w-full">
                 Projects
               </h1>
             </div>

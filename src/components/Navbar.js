@@ -127,7 +127,7 @@ const Navbar = () => {
 							<div className="mt-auto">
 								<a
 									href="/contact"
-									className="px-5 py-3 rounded-xl bg-purple-500 hover:bg-gradient-to-r from-purple-500 to-purple-700 text-wild-sand-100 font-bold transition-all duration-300"
+									className="px-5 py-3 rounded-xl bg-purple-500 hover:bg-gradient-to-r hover:text-wild-sand-100 from-purple-500 to-purple-700 text-wild-sand-100 font-bold transition-all duration-300"
 									aria-label="Contact"
 								>
 									Get in Touch
