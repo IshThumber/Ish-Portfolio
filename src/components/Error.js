@@ -21,7 +21,7 @@ const Error = () => {
           <img
             src={errorImage}
             alt="Error"
-            className="w-64 h-64 object-cover"
+            className="w-64 h-64 object-cover shadow-lg border-2 border-wild-sand-200"
           />
           <Link
             to="/"
