@@ -74,7 +74,7 @@ const HeroMain = () => {
               </button>
             </a>
             <a href="contact">
-              <button className="px-5 py-2 rounded-xl bg-genoa-400 hover:bg-genoa-600 text-black font-bold transition-all duration-300">
+              <button className="px-5 py-2 rounded-xl bg-genoa-400 hover:bg-gradient-to-r from-genoa-400 to-genoa-700 text-black font-bold transition-all duration-300">
                 Let’s Talk
               </button>
             </a>

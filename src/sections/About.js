@@ -39,13 +39,7 @@ const ProfileSection = () => (
             AWS Community Builder
           </strong>
           , I work across{" "}
-          <strong className="font-semibold text-yellow-200">AWS</strong>
-          ,{" "}
-          <strong className="font-semibold text-yellow-200">GCP</strong>
-          , and{" "}
-          <strong className="font-semibold text-yellow-200">
-            Azure
-          </strong>{" "}
+          <strong className="font-semibold text-yellow-200">AWS {" "}</strong>
           — designing cloud architectures and automating infrastructure
           with tools like{" "}
           <strong className="font-semibold text-yellow-200">
@@ -74,18 +68,18 @@ const ProfileSection = () => (
           , bridging cloud and code to deliver end-to-end solutions.
         </p>
 
-        <p className="text-xl font-semibold text-genoa-200">
+        <p className="text-xl font-semibold text-genoa-400">
           Join me on this journey of innovation!
         </p>
       </div>
 
-      <div className="flex flex-col gap-4 text-base font-bold md:flex-row md:gap-6 mt-4">
+      <div className="flex flex-col gap-4 text-base font-bold sm:flex-row items-center sm:justify-between lg:justify-start md:gap-6 mt-4">
         <Link
           to="mailto:ishthumber343@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="px-5 py-3 rounded-xl bg-purple-500 hover:bg-gradient-to-r from-purple-500 to-purple-700 text-black font-bold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-blue-gray-700">
+          <button className="px-5 py-3 rounded-xl bg-purple-400 hover:bg-gradient-to-r from-purple-400 to-purple-700 text-black font-bold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-blue-gray-700">
             <span className="flex items-center gap-2">
               Say Hello 👋🏻
             </span>
@@ -97,7 +91,7 @@ const ProfileSection = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="px-5 py-3 rounded-xl text-wild-sand-200 bg-genoa-500 hover:bg-gradient-to-r from-genoa-500 to-genoa-700 font-bold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-genoa-400 focus:ring-offset-2 focus:ring-offset-blue-gray-700">
+          <button className="px-5 py-3 rounded-xl text-black bg-genoa-400 hover:bg-gradient-to-r from-genoa-400 to-genoa-700 font-bold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-genoa-400 focus:ring-offset-2 focus:ring-offset-blue-gray-700 items-center">
             <span className="flex flex-row items-center gap-2">
               <span>Web Resume</span>
               <FiArrowUpRight className="text-lg" />
@@ -133,7 +127,7 @@ const AboutPage = () => {
         <div className="h-32" />
         <main className="relative w-[97%] md:w-5/6 p-2 lg:p-6 font-gtReg text-wild-sand-200 mx-auto">
           <section className="w-full m-auto mb-10 xl:w-full text-center md:text-left">
-            <h1 className="font-black tracking-tight font-urbanist text-7xl lg:text-9xl bg-gradient-to-r from-purple-300 to-genoa-300 inline-block text-transparent bg-clip-text xl:w-fit w-full">
+            <h1 className="font-black tracking-tight font-urbanist text-[4rem] lg:text-9xl bg-gradient-to-r from-purple-300 to-genoa-300 inline-block text-transparent bg-clip-text xl:w-fit w-full">
               About Myself
             </h1>
           </section>

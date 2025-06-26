@@ -131,7 +131,7 @@ const Contact = () => {
 
         <div className="relative w-[97%] md:w-5/6 p-2 lg:p-6 font-gtReg text-wild-sand-200 mx-auto">
           <div className="w-full m-auto mb-10 xl:w-full text-center md:text-left">
-            <h1 className="font-black tracking-tight font-urbanist text-7xl lg:text-9xl bg-gradient-to-r from-purple-300 to-genoa-300 inline-block text-transparent bg-clip-text xl:w-fit w-full">
+            <h1 className="font-black tracking-tight font-urbanist text-[4rem] lg:text-9xl bg-gradient-to-r from-purple-300 to-genoa-300 inline-block text-transparent bg-clip-text xl:w-fit w-full">
               Contact Me
             </h1>
           </div>

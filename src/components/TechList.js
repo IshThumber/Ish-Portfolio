@@ -103,7 +103,7 @@ const TechList = () => (
                   key={tech.name}
                   name={tech.name}
                   icon={tech.icon}
-                  isPillar={tech.isPillar}
+                  // isPillar={tech.isPillar}
                 />
               ))}
             </div>
