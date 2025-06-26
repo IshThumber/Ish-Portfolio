@@ -6,7 +6,6 @@ import "react-toastify/dist/ReactToastify.css";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import PageTransition from "../components/PageTransition";
-
 const ContactForm = () => {
   const form = useRef();
   const [isLoading, setIsLoading] = useState(false);
@@ -16,12 +15,7 @@ const ContactForm = () => {
     setIsLoading(true);
 
     emailjs
-      .sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID || "service_kapjr0f",
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID || "template_0zncxjc",
-        form.current,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY || "SbxKwZ_SXmaMFw2s8"
-      )
+      .sendForm("service_kapjr0f", "template_0zncxjc", form.current, "SbxKwZ_SXmaMFw2s8")
       .then(
         result => {
           toast.success("Message sent successfully!");
