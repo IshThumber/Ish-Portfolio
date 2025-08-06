@@ -1,28 +1,35 @@
 import emailjs from "@emailjs/browser";
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { FiMail, FiSend } from "react-icons/fi";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import PageTransition from "../components/PageTransition";
+
 const ContactForm = () => {
   const form = useRef();
   const [isLoading, setIsLoading] = useState(false);
 
-  const sendEmail = e => {
+  const sendEmail = (e) => {
     e.preventDefault();
     setIsLoading(true);
 
     emailjs
-      .sendForm("service_kapjr0f", "template_0zncxjc", form.current, "SbxKwZ_SXmaMFw2s8")
+      .sendForm(
+        "service_kapjr0f",
+        "template_0zncxjc",
+        form.current,
+        "SbxKwZ_SXmaMFw2s8"
+      )
       .then(
-        result => {
+        (result) => {
           toast.success("Message sent successfully!");
           setIsLoading(false);
           e.target.reset();
         },
-        error => {
+        (error) => {
           toast.error("Failed to send message. Please try again.");
           setIsLoading(false);
         }
@@ -117,6 +124,34 @@ const ContactForm = () => {
 const Contact = () => {
   return (
     <div className="min-h-screen transition-all duration-500">
+      <Helmet>
+        <title>Contact | Ish Thumber Portfolio</title>
+        <meta
+          name="description"
+          content="Contact Ish Thumber for collaborations, opportunities, or questions."
+        />
+        <meta property="og:title" content="Contact | Ish Thumber Portfolio" />
+        <meta
+          property="og:description"
+          content="Contact Ish Thumber for collaborations, opportunities, or questions."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://ishthumber.vercel.app/contact"
+        />
+        <meta property="og:image" content="/profile.ico" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Contact | Ish Thumber Portfolio"
+        />
+        <meta
+          name="twitter:description"
+          content="Contact Ish Thumber for collaborations, opportunities, or questions."
+        />
+        <meta name="twitter:image" content="/profile.ico" />
+      </Helmet>
       <div className="fixed z-50 w-full">
         <Navbar />
       </div>

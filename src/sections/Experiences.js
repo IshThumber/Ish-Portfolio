@@ -1,6 +1,6 @@
-import React from 'react';
 // Using framer-motion for animations. Ensure it's installed: npm install framer-motion
 import { motion } from 'framer-motion';
+import { Helmet } from "react-helmet-async";
 import { FaAward } from "react-icons/fa";
 import { PiBriefcase } from "react-icons/pi";
 
@@ -58,6 +58,19 @@ const ExperienceItem = ({ experience }) => {
 const ExperiencePage = () => {
   return (
     <main className="min-h-screen transition-all duration-500">
+      <Helmet>
+        <title>Timeline | Ish Thumber Portfolio</title>
+        <meta name="description" content="Professional experience and timeline of Ish Thumber, Cloud Engineer and Developer." />
+        <meta property="og:title" content="Timeline | Ish Thumber Portfolio" />
+        <meta property="og:description" content="Professional experience and timeline of Ish Thumber, Cloud Engineer and Developer." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ishthumber.vercel.app/experience" />
+        <meta property="og:image" content="/profile.ico" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Timeline | Ish Thumber Portfolio" />
+        <meta name="twitter:description" content="Professional experience and timeline of Ish Thumber, Cloud Engineer and Developer." />
+        <meta name="twitter:image" content="/profile.ico" />
+      </Helmet>
       <header className='fixed z-50 w-full'>
         <Navbar />
       </header>

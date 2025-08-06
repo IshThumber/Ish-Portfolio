@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Helmet } from "react-helmet-async";
 import { PiGithubLogo, PiLink } from "react-icons/pi";
 import FooterConcept2 from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -59,6 +60,19 @@ const ProjectItem = ({ project }) => {
 const ProjectWrapper = () => {
   return (
     <main className="min-h-screen transition-all duration-500">
+      <Helmet>
+        <title>Projects | Ish Thumber Portfolio</title>
+        <meta name="description" content="A showcase of projects by Ish Thumber, Cloud Engineer and Developer." />
+        <meta property="og:title" content="Projects | Ish Thumber Portfolio" />
+        <meta property="og:description" content="A showcase of projects by Ish Thumber, Cloud Engineer and Developer." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ishthumber.vercel.app/projects" />
+        <meta property="og:image" content="/profile.ico" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Projects | Ish Thumber Portfolio" />
+        <meta name="twitter:description" content="A showcase of projects by Ish Thumber, Cloud Engineer and Developer." />
+        <meta name="twitter:image" content="/profile.ico" />
+      </Helmet>
       <header className="fixed z-50 w-full">
         <Navbar />
       </header>

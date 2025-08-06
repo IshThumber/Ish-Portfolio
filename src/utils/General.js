@@ -145,6 +145,24 @@ export const projects = [
   },
   {
     year: "2025",
+    name: "SmartCover AI: AI-Powered Cover Letter Generator",
+    description: "SmartCover AI is a production-ready React application that generates personalized cover letters using Gemini AI. Users can upload their resumes, enter job details, and generate polished, exportable cover letters within seconds — with Google Drive integration, advanced AI model options, persistent state, and full client-side privacy.",
+    liveUrl: "https://smartcover-xi.vercel.app/",
+    githubUrl: "https://github.com/IshThumber/SmartCover",
+    tech: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Gemini AI",
+      "Supabase Auth",
+      "Google Drive API",
+      "jsPDF",
+      "pdfjs-dist",
+      "mammoth.js"
+    ]
+  },
+  {
+    year: "2025",
     name: "Seamless DataSync Deployment",
     description:
       "Engineered a Python-based automation tool for AWS DataSync that eliminated 95% of manual configuration. The solution included an intuitive UI for rapid job deployment and optimized data transfers across regions, reducing setup time by 50%  and operational overhead by 30%.",
@@ -193,7 +211,7 @@ export const projects = [
     name: "NGO Website Redesign",
     description:
       "A complete redesign of an NGO's website to enhance user experience and engagement. The project involved modern UI/UX design principles, responsive layouts, and integration with backend services for dynamic content management.",
-    liveUrl: "https://paropkaree.vercel.app/", 
+    liveUrl: "https://paropkaree.vercel.app/",
     githubUrl: "https://github.com/IshThumber/parpkaree",
     tech: ["HTML", "CSS", "JavaScript", "Tailwind", "React.js"]
   }

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Helmet } from "react-helmet-async";
 import { FiArrowUpRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import profile from "../assets/Profile.png";
@@ -119,6 +120,19 @@ const ProfileSection = () => (
 const AboutPage = () => {
   return (
     <div className="min-h-screen transition-all duration-500">
+      <Helmet>
+        <title>About | Ish Thumber Portfolio</title>
+        <meta name="description" content="Learn more about Ish Thumber, Cloud Engineer, Developer, and AWS Community Builder." />
+        <meta property="og:title" content="About | Ish Thumber Portfolio" />
+        <meta property="og:description" content="Learn more about Ish Thumber, Cloud Engineer, Developer, and AWS Community Builder." />
+        <meta property="og:type" content="profile" />
+        <meta property="og:url" content="https://ishthumber.vercel.app/about" />
+        <meta property="og:image" content="/profile.ico" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About | Ish Thumber Portfolio" />
+        <meta name="twitter:description" content="Learn more about Ish Thumber, Cloud Engineer, Developer, and AWS Community Builder." />
+        <meta name="twitter:image" content="/profile.ico" />
+      </Helmet>
       <header className="fixed z-50 w-full">
         <Navbar />
       </header>
