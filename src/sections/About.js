@@ -134,8 +134,8 @@ const AboutPage = () => {
 
       <PageTransition>
         <div className="h-32" />
-        <main className="relative max-w-7xl md:w-5/6 p-2 lg:p-6 font-gtReg text-wild-sand-200 mx-auto border-2">
-          <section className="w-full m-auto mb-10 xl:w-full text-center md:text-left border-2">
+        <main className="relative max-w-7xl md:w-5/6 p-2 lg:p-6 font-gtReg text-wild-sand-200 mx-auto">
+          <section className="w-full m-auto mb-10 xl:w-full text-center md:text-left">
             <h1 className="font-black tracking-tight font-urbanist text-[4rem] lg:text-9xl bg-gradient-to-r from-purple-300 to-genoa-300 inline-block text-transparent bg-clip-text xl:w-fit w-full">
               About Myself
             </h1>
