@@ -50,14 +50,13 @@ export const experience = [
   //   ]
   // }
 
-
   {
     type: "community",
     name: "AWS Community Builder",
     company: "Amazon Web Services",
     year: "Community Recognition",
     description: [
-      "Selected for the DevTools category for my expertise and contributions to the cloud development and DevOps community.",
+      "Selected for the DevTools category for my expertise and contributions to the cloud development and DevOps community."
     ]
   },
   {
@@ -103,7 +102,7 @@ export const experience = [
       "Wrote Apache Spark queries to extract data from Azure ADLS.",
       "Created a Docker container of Python with PySpark, deployed on Kubernetes with cron jobs for routine deployment."
     ]
-  },
+  }
 ];
 
 export const skills = [
@@ -130,9 +129,27 @@ export const skills = [
 
 export const projects = [
   {
+    year: "Recent Development",
+    name: "RAG Flashcards",
+    description:
+      "RAG Flashcards is an AI-driven flashcard generator. It ingests documents (PDFs), extracts and chunks text, embeds content, and indexes it for retrieval. Users can upload study materials, generate flashcards, and interact with a chatbot for personalized learning. The backend leverages AWS (S3, OpenSearch), Bedrock models, and Claude for advanced retrieval-augmented generation.",
+    liveUrl: null,
+    githubUrl: "https://github.com/IshThumber/RAG-flashcards",
+    tech: [
+      "Python",
+      "FastAPI",
+      "AWS S3",
+      "AWS OpenSearch",
+      "Amazon Bedrock",
+      "Anthropic Claude",
+      "PDF Parsing"
+    ]
+  },
+  {
     year: "Recent Development - Working ...",
     name: "ContextCraft: Your AI-Powered Blog Companion",
-    description: "ContextCraft is an AI-powered blog writing assistant that helps writers streamline their content creation process for Medium. It remembers your past writing style, suggests trending and personalized topics, generates high-quality drafts, helps revise for SEO and tone, and reminds you when it’s time to publish — giving you total control and creative focus without the clutter.",
+    description:
+      "ContextCraft is an AI-powered blog writing assistant that helps writers streamline their content creation process for Medium. It remembers your past writing style, suggests trending and personalized topics, generates high-quality drafts, helps revise for SEO and tone, and reminds you when it’s time to publish — giving you total control and creative focus without the clutter.",
     liveUrl: null,
     githubUrl: "https://github.com/ishthumber/contextcraft",
     tech: [
@@ -140,13 +157,14 @@ export const projects = [
       "FastAPI",
       "Supabase",
       "Supabase Auth",
-      "OpenAI API / Nebius AI",
+      "OpenAI API / Nebius AI"
     ]
   },
   {
     year: "2025",
     name: "SmartCover AI: AI-Powered Cover Letter Generator",
-    description: "SmartCover AI is a production-ready React application that generates personalized cover letters using Gemini AI. Users can upload their resumes, enter job details, and generate polished, exportable cover letters within seconds — with Google Drive integration, advanced AI model options, persistent state, and full client-side privacy.",
+    description:
+      "SmartCover AI is a production-ready React application that generates personalized cover letters using Gemini AI. Users can upload their resumes, enter job details, and generate polished, exportable cover letters within seconds — with Google Drive integration, advanced AI model options, persistent state, and full client-side privacy.",
     liveUrl: "https://smartcover-xi.vercel.app/",
     githubUrl: "https://github.com/IshThumber/SmartCover",
     tech: [
@@ -175,7 +193,8 @@ export const projects = [
     name: "Terraform Cross-Account Pipeline",
     description:
       "Developed a CI/CD pipeline using AWS CodePipeline and Terraform to automate infrastructure provisioning across multiple AWS accounts. This accelerator eliminated 70% of manual effort  and cut deployment time by 50%  by standardizing state management and security checks.",
-    liveUrl: "https://ishthumber.medium.com/automating-cross-account-terraform-deployments-with-aws-codepipeline-e8f80e1ee137",
+    liveUrl:
+      "https://ishthumber.medium.com/automating-cross-account-terraform-deployments-with-aws-codepipeline-e8f80e1ee137",
     githubUrl: "Private",
     tech: ["Terraform", "AWS CodePipeline", "CodeBuild", "S3", "DynamoDB"]
   },
@@ -186,16 +205,16 @@ export const projects = [
       "A powerful data management application that simplifies CRUD operations with an intuitive UI, seamless integration, and email features for efficient data handling. This project showcases full-stack capabilities from database to frontend.",
     liveUrl: "https://crudsify.vercel.app/",
     githubUrl: "https://github.com/IshThumber/CRUDSify",
-    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "TailwindCSS"],
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "TailwindCSS"]
   },
   {
-    year: "",
+    year: "ND",
     name: "Personal Portfolio",
     description:
       "My personal corner of the internet. Designed with a modern aesthetic and built with React and TailwindCSS, this project is a testament to my passion for clean code, responsive design, and great user experience.",
     liveUrl: "https://ishthumber.vercel.app/",
     githubUrl: "https://github.com/IshThumber/Ish-Portfolio",
-    tech: ["React.js", "TailwindCSS", "Framer Motion", "GSAP"],
+    tech: ["React.js", "TailwindCSS", "Framer Motion", "GSAP"]
   },
   {
     year: "2022 - 2023",
@@ -204,7 +223,7 @@ export const projects = [
       "A comprehensive web portal for PhD admissions at Charusat University. The system streamlines the application process for students and provides robust management tools for faculty and administrators, handling complex workflows and data securely.",
     liveUrl: "https://charusatphd.vercel.app/",
     githubUrl: "Private",
-    tech: ["React.js", "Node.js", "Docker", "AWS", "PostgreSQL", "Prisma"],
+    tech: ["React.js", "Node.js", "Docker", "AWS", "PostgreSQL", "Prisma"]
   },
   {
     year: "2022 - 2023",
@@ -224,7 +243,7 @@ export const education = [
     degree: "B.Tech in Computer Science and Engineering",
     year: "2020 - 2024",
     description: "CGPA: 8.5/10.0"
-  },
+  }
   // {
   //   id: 2,
   //   name: "IPD School, Ahmedabad - Gujarat",

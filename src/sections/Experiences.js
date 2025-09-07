@@ -1,27 +1,27 @@
 // Using framer-motion for animations. Ensure it's installed: npm install framer-motion
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { FaAward } from "react-icons/fa";
 import { PiBriefcase } from "react-icons/pi";
 
-import FooterConcept2 from '../components/Footer';
-import Navbar from '../components/Navbar';
-import { experience } from '../utils/General';
-import PageTransition from './../components/PageTransition';
+import FooterConcept2 from "../components/Footer";
+import Navbar from "../components/Navbar";
+import { experience } from "../utils/General";
+import PageTransition from "./../components/PageTransition";
 
 const ExperienceItem = ({ experience }) => {
   const type = experience.type?.toLowerCase();
   const year = experience.year;
   let icon, iconStyle, yearStyle;
-  if (year === 'Current Role') {
+  if (year === "Current Role") {
     icon = <PiBriefcase size={22} />;
     iconStyle = "text-genoa-400 border-genoa-400";
     yearStyle = "text-genoa-400";
-  } else if (type === 'community') {
+  } else if (type === "community") {
     icon = <FaAward size={22} />;
     iconStyle = "border-yellow-300 text-yellow-300";
     yearStyle = "text-yellow-300";
-  } else if (year === 'Previous Role') {
+  } else if (year === "Previous Role") {
     icon = <PiBriefcase size={22} />;
     iconStyle = "border-purple-300 text-purple-300";
     yearStyle = "text-purple-400";
@@ -36,18 +36,28 @@ const ExperienceItem = ({ experience }) => {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="absolute left-0 flex flex-col items-center h-full">
-        <div className={`z-10 flex items-center justify-center w-12 h-12 rounded-full bg-blue-gray-800 border-2 ${iconStyle}`}>
+        <div
+          className={`z-10 flex items-center justify-center w-12 h-12 rounded-full bg-blue-gray-800 border-2 ${iconStyle}`}
+        >
           {icon}
         </div>
       </div>
 
       <div className="pl-8 pb-12 font-gtReg">
-        <p className={`text-sm font-semibold mb-1 ${yearStyle}`}>{experience.year}</p>
-        <h3 className="text-2xl font-bold font-gtReg text-wild-sand-100">{experience.name}</h3>
-        <h4 className="text-lg font-medium text-purple-300/80 mb-4">{experience.company}</h4>
+        <p className={`text-sm font-semibold mb-1 ${yearStyle}`}>
+          {experience.year}
+        </p>
+        <h3 className="text-2xl font-bold font-gtReg text-wild-sand-100">
+          {experience.name}
+        </h3>
+        <h4 className="text-lg font-medium text-purple-300/80 mb-4">
+          {experience.company}
+        </h4>
         <ul className="space-y-2 list-disc list-inside text-wild-sand-200/80">
           {experience.description.map((point, index) => (
-            <li key={index} className="text-wild-sand-300/90">{point}</li>
+            <li key={index} className="text-wild-sand-300/90">
+              {point}
+            </li>
           ))}
         </ul>
       </div>
@@ -60,24 +70,36 @@ const ExperiencePage = () => {
     <main className="min-h-screen transition-all duration-500">
       <Helmet>
         <title>Timeline | Ish Thumber Portfolio</title>
-        <meta name="description" content="Professional experience and timeline of Ish Thumber, Cloud Engineer and Developer." />
+        <meta
+          name="description"
+          content="Professional experience and timeline of Ish Thumber, Cloud Engineer and Developer."
+        />
         <meta property="og:title" content="Timeline | Ish Thumber Portfolio" />
-        <meta property="og:description" content="Professional experience and timeline of Ish Thumber, Cloud Engineer and Developer." />
+        <meta
+          property="og:description"
+          content="Professional experience and timeline of Ish Thumber, Cloud Engineer and Developer."
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ishthumber.vercel.app/experience" />
+        <meta
+          property="og:url"
+          content="https://ishthumber.vercel.app/experience"
+        />
         <meta property="og:image" content="/profile.ico" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Timeline | Ish Thumber Portfolio" />
-        <meta name="twitter:description" content="Professional experience and timeline of Ish Thumber, Cloud Engineer and Developer." />
+        <meta
+          name="twitter:description"
+          content="Professional experience and timeline of Ish Thumber, Cloud Engineer and Developer."
+        />
         <meta name="twitter:image" content="/profile.ico" />
       </Helmet>
-      <header className='fixed z-50 w-full'>
+      <header className="fixed z-50 w-full">
         <Navbar />
       </header>
 
       <PageTransition>
-        <div className='h-32 md:h-28' />
-        <section className="relative w-[97%] md:w-5/6 p-2 lg:p-6 font-gtReg text-wild-sand-200 mx-auto">
+        <div className="h-32 md:h-28" />
+        <section className="relative max-w-7xl md:w-5/6 p-2 lg:p-6 font-gtReg text-wild-sand-200 mx-auto">
           <div className="relative flex flex-col justify-between w-full m-auto gap-14">
             <div className="w-full m-auto mb xl:w-full md:w-11/12 text-center md:text-left">
               <h1 className="font-black tracking-tight font-urbanist text-[4rem] md:text-8xl lg:text-9xl bg-gradient-to-r from-purple-300 to-genoa-300 inline-block text-transparent bg-clip-text md:w-fit w-full">

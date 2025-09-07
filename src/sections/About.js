@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { FiArrowUpRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
@@ -14,7 +14,8 @@ const ProfileSection = () => (
     initial={{ opacity: 0, x: -50 }}
     whileInView={{ opacity: 1, x: 0 }}
     viewport={{ once: true, amount: 0.5 }}
-    transition={{ duration: 0.6, ease: "easeOut" }}>
+    transition={{ duration: 0.6, ease: "easeOut" }}
+  >
     <section className="flex flex-col justify-center w-full gap-8 text-base md:text-lg xl:w-[60%] p-2 text-wild-sand-200">
       <div className="flex flex-col gap-2">
         <h2 className="text-3xl font-semibold">
@@ -40,33 +41,20 @@ const ProfileSection = () => (
             AWS Community Builder
           </strong>
           , I work across{" "}
-          <strong className="font-semibold text-yellow-200">AWS {" "}</strong>
-          — designing cloud architectures and automating infrastructure
-          with tools like{" "}
-          <strong className="font-semibold text-yellow-200">
-            Terraform
-          </strong>{" "}
+          <strong className="font-semibold text-yellow-200">AWS </strong>—
+          designing cloud architectures and automating infrastructure with tools
+          like{" "}
+          <strong className="font-semibold text-yellow-200">Terraform</strong>{" "}
           and{" "}
-          <strong className="font-semibold text-yellow-200">
-            Kubernetes
-          </strong>
-          . I also build{" "}
-          <strong className="font-semibold text-yellow-200">
-            full-stack
-          </strong>{" "}
+          <strong className="font-semibold text-yellow-200">Kubernetes</strong>.
+          I also build{" "}
+          <strong className="font-semibold text-yellow-200">full-stack</strong>{" "}
           applications using{" "}
-          <strong className="font-semibold text-yellow-200">
-            React
-          </strong>
-          , Vite,{" "}
-          <strong className="font-semibold text-yellow-200">
-            Node.js
-          </strong>
-          , and{" "}
-          <strong className="font-semibold text-yellow-200">
-            Python
-          </strong>
-          , bridging cloud and code to deliver end-to-end solutions.
+          <strong className="font-semibold text-yellow-200">React</strong>,
+          Vite,{" "}
+          <strong className="font-semibold text-yellow-200">Node.js</strong>,
+          and <strong className="font-semibold text-yellow-200">Python</strong>,
+          bridging cloud and code to deliver end-to-end solutions.
         </p>
 
         <p className="text-xl font-semibold text-genoa-400">
@@ -81,9 +69,7 @@ const ProfileSection = () => (
           rel="noopener noreferrer"
         >
           <button className="px-5 py-3 rounded-xl bg-purple-400 hover:bg-gradient-to-r from-purple-400 to-purple-700 text-black font-bold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-blue-gray-700">
-            <span className="flex items-center gap-2">
-              Say Hello 👋🏻
-            </span>
+            <span className="flex items-center gap-2">Say Hello 👋🏻</span>
           </button>
         </Link>
 
@@ -122,15 +108,24 @@ const AboutPage = () => {
     <div className="min-h-screen transition-all duration-500">
       <Helmet>
         <title>About | Ish Thumber Portfolio</title>
-        <meta name="description" content="Learn more about Ish Thumber, Cloud Engineer, Developer, and AWS Community Builder." />
+        <meta
+          name="description"
+          content="Learn more about Ish Thumber, Cloud Engineer, Developer, and AWS Community Builder."
+        />
         <meta property="og:title" content="About | Ish Thumber Portfolio" />
-        <meta property="og:description" content="Learn more about Ish Thumber, Cloud Engineer, Developer, and AWS Community Builder." />
+        <meta
+          property="og:description"
+          content="Learn more about Ish Thumber, Cloud Engineer, Developer, and AWS Community Builder."
+        />
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://ishthumber.vercel.app/about" />
         <meta property="og:image" content="/profile.ico" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About | Ish Thumber Portfolio" />
-        <meta name="twitter:description" content="Learn more about Ish Thumber, Cloud Engineer, Developer, and AWS Community Builder." />
+        <meta
+          name="twitter:description"
+          content="Learn more about Ish Thumber, Cloud Engineer, Developer, and AWS Community Builder."
+        />
         <meta name="twitter:image" content="/profile.ico" />
       </Helmet>
       <header className="fixed z-50 w-full">
@@ -139,8 +134,8 @@ const AboutPage = () => {
 
       <PageTransition>
         <div className="h-32" />
-        <main className="relative w-[97%] md:w-5/6 p-2 lg:p-6 font-gtReg text-wild-sand-200 mx-auto">
-          <section className="w-full m-auto mb-10 xl:w-full text-center md:text-left">
+        <main className="relative max-w-7xl md:w-5/6 p-2 lg:p-6 font-gtReg text-wild-sand-200 mx-auto border-2">
+          <section className="w-full m-auto mb-10 xl:w-full text-center md:text-left border-2">
             <h1 className="font-black tracking-tight font-urbanist text-[4rem] lg:text-9xl bg-gradient-to-r from-purple-300 to-genoa-300 inline-block text-transparent bg-clip-text xl:w-fit w-full">
               About Myself
             </h1>
