@@ -12,7 +12,7 @@ const ContactForm = () => {
   const form = useRef();
   const [isLoading, setIsLoading] = useState(false);
 
-  const sendEmail = (e) => {
+  const sendEmail = e => {
     e.preventDefault();
     setIsLoading(true);
 
@@ -24,12 +24,12 @@ const ContactForm = () => {
         "SbxKwZ_SXmaMFw2s8"
       )
       .then(
-        (result) => {
+        result => {
           toast.success("Message sent successfully!");
           setIsLoading(false);
           e.target.reset();
         },
-        (error) => {
+        error => {
           toast.error("Failed to send message. Please try again.");
           setIsLoading(false);
         }
@@ -142,10 +142,7 @@ const Contact = () => {
         />
         <meta property="og:image" content="/profile.ico" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Contact | Ish Thumber Portfolio"
-        />
+        <meta name="twitter:title" content="Contact | Ish Thumber Portfolio" />
         <meta
           name="twitter:description"
           content="Contact Ish Thumber for collaborations, opportunities, or questions."
@@ -158,7 +155,7 @@ const Contact = () => {
       <PageTransition>
         <div className="h-32" />
 
-        <div className="relative w-[97%] md:w-5/6 p-2 lg:p-6 font-gtReg text-wild-sand-200 mx-auto">
+        <div className="relative max-w-7xl md:w-5/6 p-2 lg:p-6 font-gtReg text-wild-sand-200 mx-auto">
           <div className="w-full m-auto mb-10 xl:w-full text-center md:text-left">
             <h1 className="font-black tracking-tight font-urbanist text-[4rem] lg:text-9xl bg-gradient-to-r from-purple-300 to-genoa-300 inline-block text-transparent bg-clip-text xl:w-fit w-full">
               Contact Me

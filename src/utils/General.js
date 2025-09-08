@@ -129,7 +129,7 @@ export const skills = [
 
 export const projects = [
   {
-    year: "Recent Development",
+    year: "2025",
     name: "RAG Flashcards",
     description:
       "RAG Flashcards is an AI-driven flashcard generator. It ingests documents (PDFs), extracts and chunks text, embeds content, and indexes it for retrieval. Users can upload study materials, generate flashcards, and interact with a chatbot for personalized learning. The backend leverages AWS (S3, OpenSearch), Bedrock models, and Claude for advanced retrieval-augmented generation.",
@@ -146,7 +146,7 @@ export const projects = [
     ]
   },
   {
-    year: "Recent Development - Working ...",
+    year: "2025",
     name: "ContextCraft: Your AI-Powered Blog Companion",
     description:
       "ContextCraft is an AI-powered blog writing assistant that helps writers streamline their content creation process for Medium. It remembers your past writing style, suggests trending and personalized topics, generates high-quality drafts, helps revise for SEO and tone, and reminds you when it’s time to publish — giving you total control and creative focus without the clutter.",
@@ -217,7 +217,7 @@ export const projects = [
     tech: ["React.js", "TailwindCSS", "Framer Motion", "GSAP"]
   },
   {
-    year: "2022 - 2023",
+    year: "2022",
     name: "PhD Admission Portal",
     description:
       "A comprehensive web portal for PhD admissions at Charusat University. The system streamlines the application process for students and provides robust management tools for faculty and administrators, handling complex workflows and data securely.",
@@ -226,7 +226,7 @@ export const projects = [
     tech: ["React.js", "Node.js", "Docker", "AWS", "PostgreSQL", "Prisma"]
   },
   {
-    year: "2022 - 2023",
+    year: "2022",
     name: "NGO Website Redesign",
     description:
       "A complete redesign of an NGO's website to enhance user experience and engagement. The project involved modern UI/UX design principles, responsive layouts, and integration with backend services for dynamic content management.",

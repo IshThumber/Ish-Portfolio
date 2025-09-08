@@ -7,6 +7,7 @@ import PageTransition from "../components/PageTransition";
 import { projects } from "../utils/General";
 
 const ProjectItem = ({ project, spanClass = "", fullWidth = "" }) => {
+  let currentYear = new Date().getFullYear();
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -15,7 +16,9 @@ const ProjectItem = ({ project, spanClass = "", fullWidth = "" }) => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`bg-blue-gray-700/40 rounded-2xl p-6 lg:p-8 shadow-lg ${
         project.year === "ND" ? `bg-purple-700/30 ${fullWidth}` : ""
-      } ${spanClass}`}
+      } ${spanClass} ${
+        currentYear - project.year > 1 ? "border-b-2 border-b-purple-300" : ""
+      } backdrop-blur-sm hover:shadow-purple-400/20 transform transition-all duration-300`}
     >
       <div className="flex flex-col justify-between w-full h-full">
         {/* Year */}
@@ -29,7 +32,7 @@ const ProjectItem = ({ project, spanClass = "", fullWidth = "" }) => {
         </h3>
 
         {/* Description */}
-        <p className="text-wild-sand-200/80 leading-relaxed text-sm mt-4">
+        <p className="text-wild-sand-200/80 leading-relaxed text-sm mt-4 text-justify">
           {project.description}
         </p>
 

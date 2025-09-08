@@ -73,7 +73,7 @@ const ProfileSection = () => (
           </button>
         </Link>
 
-        <Link
+        {/* <Link
           to="https://ishthumber.notion.site/ishthumber/Ish-Thumber-66ae5352f54b4e5695d285fca4644542"
           target="_blank"
           rel="noopener noreferrer"
@@ -84,7 +84,7 @@ const ProfileSection = () => (
               <FiArrowUpRight className="text-lg" />
             </span>
           </button>
-        </Link>
+        </Link> */}
       </div>
     </section>
 

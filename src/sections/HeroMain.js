@@ -43,11 +43,15 @@ const HeroMain = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center w-11/12 max-h-screen gap-8 m-auto lg:w-4/5 xl:flex-row-reverse">
+      <div className="flex flex-col items-center justify-center max-w-7xl max-h-screen gap-8 m-auto lg:w-4/5 xl:flex-row-reverse lg:mt-24">
         <div className="w-full lg:w-2/5 sm:w-10/12">
           <Shapes />
         </div>
-        <div className="font-urbanist" data-speed=".2" ref={compoRef}>
+        <div
+          className="font-urbanist mx-3 sm:m-0"
+          data-speed=".2"
+          ref={compoRef}
+        >
           <h1
             className="mb-8 font-extrabold leading-none tracking-tight text-7xl lg:text-[8rem] 2xl:text-[10rem] sm:text-9xl w-full"
             aria-label={`${firstName}+${lastName}`}
