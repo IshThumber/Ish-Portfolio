@@ -1,6 +1,5 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import {
-  SiAmazonaws,
   SiCplusplus,
   SiDocker,
   SiExpress,
@@ -11,7 +10,6 @@ import {
   SiJavascript,
   SiJenkins,
   SiKubernetes,
-  SiMicrosoftazure,
   SiMongodb,
   SiNodedotjs,
   SiPostgresql,
@@ -21,6 +19,8 @@ import {
   SiTailwindcss,
   SiTerraform
 } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
+import { VscAzure } from "react-icons/vsc";
 
 const techCategories = {
   "Languages & Frontend": [
@@ -37,8 +37,8 @@ const techCategories = {
     { name: "PostgreSQL", icon: <SiPostgresql size={22} /> }
   ],
   "Cloud Platforms": [
-    { name: "AWS", icon: <SiAmazonaws size={22} />, isPillar: true },
-    { name: "Azure", icon: <SiMicrosoftazure size={22} /> },
+    { name: "AWS", icon: <FaAws size={22} />, isPillar: true },
+    { name: "Azure", icon: <VscAzure size={22} /> },
     { name: "GCP", icon: <SiGooglecloud size={22} /> }
   ],
   "DevOps & Infrastructure": [
@@ -61,10 +61,11 @@ const TechPill = ({ name, icon, isPillar }) => (
               transition-all duration-300 cursor-pointer 
               hover:bg-blue-gray-800/90 hover:shadow-lg 
               hover:-translate-y-0.5 
-              ${isPillar
-        ? "border border-yellow-400/50 hover:border-yellow-400 hover:shadow-yellow-500/10"
-        : "border border-blue-gray-700/50 hover:border-genoa-400/80 hover:shadow-genoa-500/10"
-      }`}
+              ${
+                isPillar
+                  ? "border border-yellow-400/50 hover:border-yellow-400 hover:shadow-yellow-500/10"
+                  : "border border-blue-gray-700/50 hover:border-genoa-400/80 hover:shadow-genoa-500/10"
+              }`}
   >
     <div className={`${isPillar ? "text-yellow-300" : "text-genoa-300"}`}>
       {icon}
@@ -75,10 +76,12 @@ const TechPill = ({ name, icon, isPillar }) => (
 
 const TechList = () => (
   <motion.section
-    className="relative w-full p-1 font-gtReg text-wild-sand-200" initial={{ opacity: 0, x: 50 }}
+    className="relative w-full p-1 font-gtReg text-wild-sand-200"
+    initial={{ opacity: 0, x: 50 }}
     whileInView={{ opacity: 1, x: 0 }}
     viewport={{ once: true, amount: 0.5 }}
-    transition={{ duration: 0.6, ease: "easeOut" }}>
+    transition={{ duration: 0.6, ease: "easeOut" }}
+  >
     <div className="relative flex flex-col items-center justify-between w-full m-auto gap-20 xl:w-11/12">
       <header className="text-center">
         <h2 className="font-black tracking-tight font-urbanist text-6xl inline-block xl:w-fit w-full">
@@ -92,7 +95,10 @@ const TechList = () => (
 
       <div className="w-full flex flex-col gap-12 mb-10">
         {Object.entries(techCategories).map(([category, techs]) => (
-          <article key={category} className="flex flex-col md:flex-row md:items-center gap-6">
+          <article
+            key={category}
+            className="flex flex-col md:flex-row md:items-center gap-6"
+          >
             <h3 className="md:w-1/4 text-2xl font-semibold text-wild-sand-300 sticky top-24 font-gtReg">
               {category}
             </h3>

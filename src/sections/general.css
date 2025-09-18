@@ -27,3 +27,24 @@
   background: #38948e;
   border-radius: 5px;
 }
+
+/* Utility: subtle card glow on hover */
+.card-glow:hover {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 0 25px -5px rgba(56, 148, 142, 0.35);
+  transition: box-shadow 250ms ease;
+}
+
+/* Utility: radial mask fade (can apply as className="radial-fade") */
+.radial-fade {
+  -webkit-mask-image: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.6),
+    transparent 70%
+  );
+  mask-image: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.6),
+    transparent 70%
+  );
+}

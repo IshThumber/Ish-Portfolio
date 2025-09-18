@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import { FiArrowUpRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import profile from "../assets/Profile.png";
 import FooterConcept2 from "../components/Footer";

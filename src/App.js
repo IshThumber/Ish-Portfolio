@@ -13,7 +13,7 @@ const Contact = lazy(() => import("./sections/Contact"));
 const Error = lazy(() => import("./components/Error"));
 const AboutPage = lazy(() => import("./sections/About"));
 const Experience = lazy(() => import("./sections/Experiences"));
-
+const Bento = lazy(() => import("./sections/Bento"));
 const AnimatedRoutes = () => {
   const location = useLocation();
 
@@ -25,6 +25,7 @@ const AnimatedRoutes = () => {
         <Route path="/experience" element={<Experience />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/bento-grid" element={<Bento />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </AnimatePresence>
