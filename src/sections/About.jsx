@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router";
 import { FiMail, FiFileText } from "react-icons/fi"; // Added icons for better UX
-import profile from "../assets/Profile.png";
+import profile from "../assets/profile.png";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import PageTransition from "../components/PageTransition";
