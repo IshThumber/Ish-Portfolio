@@ -96,7 +96,7 @@ const Navbar = () => {
             {/* CTA Button */}
             <div className="hidden md:block">
               <a
-                href="/contact"
+                href="/contact-me"
                 className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-purple-500 to-indigo-600 text-white text-sm font-semibold shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 hover:scale-105 transition-all duration-300"
               >
                 <span>Get in Touch</span>
