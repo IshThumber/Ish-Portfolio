@@ -1,7 +1,6 @@
 import { gsap } from "gsap";
 import React, { useEffect, useRef } from "react";
 import { Shapes } from "./Shaper";
-// import "./general.css";
 
 const HeroMain = () => {
   const compoRef = useRef(null);
