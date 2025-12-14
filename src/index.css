@@ -1,0 +1,204 @@
+@import url("https://db.onlinewebfonts.com/c/768446cc3d04d6dd3289ae1715bdb682?family=GT+Walsheim+Regular");
+@import url("https://db.onlinewebfonts.com/c/2508aff8605749b70637c38fc364e949?family=Brandon+Text+Medium");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://db.onlinewebfonts.com/c/099fd061ccdebac1133a7ddf34f803f6?family=fourHand+W29+regular");
+@import "tailwindcss";
+
+:root {
+  --background-color: #0000;
+
+  --font-primary: "Urbanist", sans-serif;
+  --font-heading: "GT Walsheim Regular", sans-serif;
+  --font-accent: "Brandon Text Medium", sans-serif;
+  --font-signature: "fourHand W29 regular";
+
+  --primary-color: #4682a9;
+  --light-background-color: #131f2a;
+  --color-wedgewood-50: #f4f7fb;
+  --color-wedgewood-100: #e8eff6;
+  --color-wedgewood-200: #ccddeb;
+  --color-wedgewood-300: #9fc2da;
+  --color-wedgewood-400: #6ba1c5;
+  --color-wedgewood-500: #4682a9;
+  --color-wedgewood-600: #366b93;
+  --color-wedgewood-700: #2d5777;
+  --color-wedgewood-800: #294a63;
+  --color-wedgewood-900: #263f54;
+  --color-wedgewood-950: #192938;
+
+  --color-mantle-50: #f6f7f7;
+  --color-mantle-100: #e0e7e4;
+  --color-mantle-200: #c1cec8;
+  --color-mantle-300: #9aaea7;
+  --color-mantle-400: #81968f;
+  --color-mantle-500: #5b716a;
+  --color-mantle-600: #475a54;
+  --color-mantle-700: #3b4a45;
+  --color-mantle-800: #323d3a;
+  --color-mantle-900: #2c3532;
+  --color-mantle-950: #171c1b;
+
+  --color-hopbush-50: #faf5f9;
+  --color-hopbush-100: #f6edf4;
+  --color-hopbush-200: #eedceb;
+  --color-hopbush-300: #e1c0da;
+  --color-hopbush-400: #cd99c1;
+  --color-hopbush-500: #b874a7;
+  --color-hopbush-600: #a55d8f;
+  --color-hopbush-700: #8c4a76;
+  --color-hopbush-800: #753f63;
+  --color-hopbush-900: #633854;
+  --color-hopbush-950: #3a1d30;
+
+  --color-kimberly-50: #f3f6fa;
+  --color-kimberly-100: #e9eef6;
+  --color-kimberly-200: #d8deed;
+  --color-kimberly-300: #bfc9e2;
+  --color-kimberly-400: #a5aed4;
+  --color-kimberly-500: #8e95c6;
+  --color-kimberly-600: #6a6eae;
+  --color-kimberly-700: #64669e;
+  --color-kimberly-800: #535580;
+  --color-kimberly-900: #474a68;
+  --color-kimberly-950: #2a2b3c;
+
+  --color-loblolly-50: #f5f7f9;
+  --color-loblolly-100: #e9ecf0;
+  --color-loblolly-200: #d8dee5;
+  --color-loblolly-300: #c8d1da;
+  --color-loblolly-400: #9dacbd;
+  --color-loblolly-500: #8695ab;
+  --color-loblolly-600: #74819c;
+  --color-loblolly-700: #68728d;
+  --color-loblolly-800: #586075;
+  --color-loblolly-900: #49505f;
+  --color-loblolly-950: #2f323c;
+
+  --color-careys-pink-50: #fbf5f5;
+  --color-careys-pink-100: #f8ebec;
+  --color-careys-pink-200: #f1dadd;
+  --color-careys-pink-300: #e5bcc1;
+  --color-careys-pink-400: #d89ca4;
+  --color-careys-pink-500: #c3707d;
+  --color-careys-pink-600: #ac5265;
+  --color-careys-pink-700: #904053;
+  --color-careys-pink-800: #793849;
+  --color-careys-pink-900: #683342;
+  --color-careys-pink-950: #391821;
+
+  --color-gigas-50: #faf7fd;
+  --color-gigas-100: #f2ecfb;
+  --color-gigas-200: #e7dcf8;
+  --color-gigas-300: #d4c0f2;
+  --color-gigas-400: #ba98e8;
+  --color-gigas-500: #9f70dc;
+  --color-gigas-600: #8951cc;
+  --color-gigas-700: #733eb2;
+  --color-gigas-800: #5e358c;
+  --color-gigas-900: #512e75;
+  --color-gigas-950: #341655;
+
+  --color-kashmir-blue-50: #f5f7fa;
+  --color-kashmir-blue-100: #eaedf4;
+  --color-kashmir-blue-200: #d0d9e7;
+  --color-kashmir-blue-300: #a7b9d2;
+  --color-kashmir-blue-400: #7894b8;
+  --color-kashmir-blue-500: #5777a0;
+  --color-kashmir-blue-600: #445f85;
+  --color-kashmir-blue-700: #384d6c;
+  --color-kashmir-blue-800: #31415b;
+  --color-kashmir-blue-900: #2d394d;
+  --color-kashmir-blue-950: #1e2633;
+
+  --color-purple-400: #a855f7;
+  --color-purple-500: #8b5cf6;
+  --color-purple-700: #6d28d9;
+  --color-genoa-300: #10b981;
+  --color-genoa-400: #059669;
+  --color-genoa-500: #047857;
+  --color-genoa-600: #065f46;
+  --color-wild-sand-100: #f5f5f5;
+  --color-wild-sand-200: #e5e5e5;
+  --color-wild-sand-300: #d4d4d4;
+  --color-blue-gray-600: #4b5563;
+  --color-blue-gray-700: #374151;
+  --color-blue-gray-800: #1f2937;
+  --color-blue-gray-900: #111827;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-blue-gray-900);
+  color: var(--color-wild-sand-100);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-accent {
+  font-family: var(--font-accent);
+}
+
+.font-signature {
+  font-family: var(--font-signature);
+}
+
+@layer utilities {
+  .text-wedgewood-400 {
+    color: var(--color-wedgewood-400);
+  }
+  .text-wedgewood-500 {
+    color: var(--color-wedgewood-500);
+  }
+
+  .text-hopbush-400 {
+    color: var(--color-hopbush-400);
+  }
+  .text-hopbush-500 {
+    color: var(--color-hopbush-500);
+  }
+
+  .text-careys-pink-400 {
+    color: var(--color-careys-pink-400);
+  }
+  .text-careys-pink-500 {
+    color: var(--color-careys-pink-500);
+  }
+
+  .text-gigas-400 {
+    color: var(--color-gigas-400);
+  }
+  .text-gigas-500 {
+    color: var(--color-gigas-500);
+  }
+
+  .text-kashmir-blue-400 {
+    color: var(--color-kashmir-blue-400);
+  }
+  .text-kashmir-blue-500 {
+    color: var(--color-kashmir-blue-500);
+  }
+
+  .gradient-about {
+    background-image: linear-gradient(to right, var(--color-gigas-200), var(--color-gigas-500));
+  }
+
+  .gradient-experiences {
+    background-image: linear-gradient(to right, var(--color-wedgewood-200), var(--color-wedgewood-500));
+  }
+
+  .gradient-projects {
+    background-image: linear-gradient(to right, var(--color-hopbush-200), var(--color-hopbush-500));
+  }
+
+  .gradient-contact {
+    background-image: linear-gradient(to right, var(--color-careys-pink-200), var(--color-careys-pink-500));
+  }
+
+  /* bg-gradient-to-br from-[#d89ca4] to-[#8c4a76] border-2 border-white/50 */
+  .footer-gradient {
+    background-image: linear-gradient(to bottom right, var(--color-careys-pink-400), var(--color-hopbush-700));
+    border: 2px solid rgba(255, 255, 255, 0.5);
+  }
+}
