@@ -107,14 +107,12 @@ const ProfileSection = () => (
         </Link>
 
         {/* Re-enabled and styled Resume Button */}
-        <a
-          href="/resume.pdf" // Ensure you actually have this route or file
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/resume"
           className="group px-6 py-3.5 rounded-xl bg-gray-800 text-gray-200 font-bold border border-gray-700 hover:border-green-400/50 hover:text-green-300 transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
         >
           <FiFileText className="text-xl" /> View Resume
-        </a>
+        </Link>
       </div>
     </section>
 

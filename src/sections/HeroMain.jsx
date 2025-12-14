@@ -1,6 +1,8 @@
 import { gsap } from "gsap";
 import React, { useEffect, useRef } from "react";
 import { Shapes } from "./Shaper";
+import { Link } from "react-router";
+import { FiArrowRight, FiFileText } from "react-icons/fi";
 
 const HeroMain = () => {
   const compoRef = useRef(null);
@@ -45,21 +47,30 @@ const HeroMain = () => {
         </div>
         <div className="font-urbanist mx-3 sm:m-0" data-speed=".2" ref={compoRef}>
           <h1 className="mb-8 font-extrabold leading-none tracking-tight text-7xl lg:text-[8rem] 2xl:text-[10rem] sm:text-9xl w-full" aria-label={`${firstName}+${lastName}`}>
-            <span className="block text-green-500/70">{renderLetter(firstName, "first")}</span>
-            <span className="block text-green-600/70">{renderLetter(lastName, "last")}</span>
+            <span className="block text-wedgewood-500">{renderLetter(firstName, "first")}</span>
+            <span className="block text-wedgewood-500">{renderLetter(lastName, "last")}</span>
           </h1>
           {/* <div className="hero-bg"></div> */}
-          <p className="text-2xl md:text-3xl text-shamrock-400 mb-6">Cloud-native engineer building resilient infra & elegant apps.</p>
-          <div className="flex gap-4 mt-4">
-            <a href="/resume/Ish_Thumber_Resume.pdf" target="_blank" rel="noopener noreferrer">
-              <button className="px-5 py-2 rounded-xl bg-purple-400 hover:bg-gradient-to-r from-purple-400 to-purple-700 text-black font-bold transition-all duration-300">
-                View Resume
-              </button>
+          <p className="hero-tagline text-xl sm:text-2xl text-gray-400 max-w-2xl mb-10 leading-relaxed font-signature tracking-wider">
+            Cloud-native engineer architecting <span className="text-purple-300 font-semibold">resilient infrastructure</span> & building{" "}
+            <span className="text-green-300 font-semibold">elegant applications</span>.
+          </p>
+
+          <div className="flex flex-wrap justify-center lg:justify-start gap-4">
+            <a
+              href="/resume"
+              className="hero-btn group relative px-6 py-3 rounded-xl bg-gray-800 text-gray-200 font-bold border border-gray-700 hover:border-purple-500/50 transition-all duration-300 flex hover:scale-105 items-center gap-2"
+            >
+              <FiFileText />
+              <span>Resume</span>
             </a>
-            <a href="contact">
-              <button className="px-5 py-2 rounded-xl bg-green-400 hover:bg-gradient-to-r from-green-400 to-green-700 text-black font-bold transition-all duration-300">
-                Let’s Talk
-              </button>
+
+            <a
+              href="/contact"
+              className="hero-btn group relative px-6 py-3 rounded-xl bg-green-500 border border-gray-700 hover:border-green-400/50 hover:text-green-300 text-gray-200 font-bold transition-all duration-300 hover:scale-105 flex items-center gap-2"
+            >
+              <span>Let's Talk</span>
+              <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
         </div>
