@@ -13,8 +13,8 @@ const CustomHeadings = ({ heading, subHeading, description, gradientColor }: { h
         >
           {heading}
         </motion.h1>
-        <motion.div className="-mt-12 md:-mt-20 lg:-mt-24 ml-2" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.8 }}>
-          <span className={`text-4xl md:text-6xl ml-5 font-bold bg-clip-text text-transparent font-signature tracking-wider ${gradientColor}`}>{subHeading}</span>
+        <motion.div className="-mt-12 md:-mt-20 lg:-mt-24" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.8 }}>
+          <span className={`text-4xl md:text-6xl font-bold bg-clip-text text-transparent font-signature tracking-wider ${gradientColor}`}>{subHeading}</span>
           <p className="mt-4 text-gray-400 max-w-4xl text-lg text-center lg:text-left">{description}</p>
         </motion.div>
       </section>

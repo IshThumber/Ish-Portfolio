@@ -53,7 +53,8 @@ const Navbar = () => {
     { label: "About", to: "/about" },
     { label: "Projects", to: "/projects" },
     { label: "Experience", to: "/experience" },
-    { label: "Bento Grid", to: "/bento-grid" },
+    // { label: "Bento Grid", to: "/bento-grid" },
+    { label: "Resume", to: "/resume" },
   ];
 
   return (
@@ -75,7 +76,7 @@ const Navbar = () => {
             className={`
                relative flex items-center justify-between px-5 py-3
                rounded-2xl transition-all duration-300
-               ${isScrolled ? "bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 shadow-2xl shadow-purple-900/10" : "bg-pink-800 border border-transparent"}
+               ${isScrolled ? "bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 shadow-2xl shadow-purple-900/10" : "bg-transparent border border-transparent"}
              `}
           >
             {/* Logo */}

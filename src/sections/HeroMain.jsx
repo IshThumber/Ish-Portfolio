@@ -39,7 +39,7 @@ const HeroMain = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center max-w-7xl max-h-screen gap-8 m-auto lg:w-4/5 xl:flex-row-reverse lg:mt-24">
+      <div className="flex flex-col items-center justify-center max-w-7xl max-h-screen gap-8 m-auto lg:w-4/5 xl:flex-row-reverse lg:mt-24 mb-24">
         <div className="w-full lg:w-2/5 sm:w-10/12">
           <Shapes />
         </div>

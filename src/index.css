@@ -196,6 +196,10 @@ body {
     background-image: linear-gradient(to right, var(--color-careys-pink-200), var(--color-careys-pink-500));
   }
 
+  .gradient-resume {
+    background-image: linear-gradient(to right, var(--color-kimberly-200), var(--color-kimberly-500));
+  }
+
   /* bg-gradient-to-br from-[#d89ca4] to-[#8c4a76] border-2 border-white/50 */
   .footer-gradient {
     background-image: linear-gradient(to bottom right, var(--color-careys-pink-400), var(--color-hopbush-700));
