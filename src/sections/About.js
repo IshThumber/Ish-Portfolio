@@ -9,7 +9,7 @@ import TechList from "../components/TechList";
 
 const ProfileSection = () => (
   <motion.article
-    className="flex flex-col-reverse xl:flex-row justify-between items-center gap-12 bg-blue-gray-700/40 backdrop-blur-sm rounded-2xl shadow-xl p-6 lg:p-10 border border-blue-gray-600/30"
+    className="flex flex-col-reverse xl:flex-row justify-between items-center gap-12 bg-blue-700/40 backdrop-blur-sm rounded-2xl shadow-xl p-6 lg:p-10 border border-blue-600/30"
     initial={{ opacity: 0, x: -50 }}
     whileInView={{ opacity: 1, x: 0 }}
     viewport={{ once: true, amount: 0.5 }}
@@ -95,7 +95,7 @@ const ProfileSection = () => (
         <img
           src={profile}
           alt="Ish Thumber"
-          className="relative h-64 w-64 sm:h-80 sm:w-80 object-cover rounded-2xl shadow-2xl border-4 border-blue-gray-800/80 transition-all duration-500 group-hover:shadow-purple-500/20"
+          className="relative h-64 w-64 sm:h-80 sm:w-80 object-cover rounded-2xl shadow-2xl border-4 border-blue-800/80 transition-all duration-500 group-hover:shadow-purple-500/20"
         />
       </div>
     </figure>
