@@ -86,7 +86,7 @@ const ProjectItem = ({ project, spanClass = "" }) => {
       <div className="mt-6 pt-4 border-t border-gray-700/50">
         <div className="flex flex-wrap gap-2">
           {project.tech.map((tech) => (
-            <span key={tech} className="px-2.5 py-1 text-xs font-medium rounded-md bg-gray-700/50 text-green-200 border border-gray-600/30">
+            <span key={tech} className="px-2.5 py-1 text-xs font-medium rounded-md bg-gray-700/50 text-hopbush-500 border border-gray-600/30">
               {tech}
             </span>
           ))}

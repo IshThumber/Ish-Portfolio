@@ -1,6 +1,6 @@
 // import { useMemo } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { FiMail, FiFileText } from "react-icons/fi"; // Added icons for better UX
 import profile from "../assets/profile.png";
 import Footer from "../components/Footer";

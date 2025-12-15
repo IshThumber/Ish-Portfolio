@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 import React, { useEffect, useRef } from "react";
 import { Shapes } from "./Shaper";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { FiArrowRight, FiFileText } from "react-icons/fi";
 
 const HeroMain = () => {
@@ -21,7 +21,7 @@ const HeroMain = () => {
           duration: 1,
           transformOrigin: "left top",
           stagger: { each: 0.1, from: "random" },
-        }
+        },
       );
     }, compoRef);
     return () => ctx.revert();

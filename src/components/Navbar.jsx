@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import { Link, NavLink, useLocation } from "react-router";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { FiMenu, FiX, FiArrowUpRight } from "react-icons/fi";
 
 const MenuIcon = () => <FiMenu size={24} />;

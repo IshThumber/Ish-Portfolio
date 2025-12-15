@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { FiHome } from "react-icons/fi";
 import errorImage from "../assets/error.png"; // Ensure this asset exists, or use a placeholder/icon if preferred
 import Navbar from "./Navbar";
