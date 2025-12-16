@@ -1,7 +1,6 @@
-import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
-const CustomHeadings = ({ heading, subHeading, description, gradientColor }: { heading: string; subHeading: string; description: string; gradientColor: string }) => {
+const CustomHeadings = ({ heading, subHeading, description, gradientColor }) => {
   return (
     <>
       <section className="mb-12 text-center lg:text-left">

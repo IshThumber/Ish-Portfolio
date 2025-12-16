@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import React, { useState } from "react";
 import { FiDownload, FiExternalLink, FiEye, FiFileText, FiMaximize2 } from "react-icons/fi";
 import Footer from "../components/Footer";

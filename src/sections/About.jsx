@@ -1,6 +1,6 @@
 // import { useMemo } from "react";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { motion } from "motion/react";
+import { Link } from "react-router";
 import { FiMail, FiFileText } from "react-icons/fi"; // Added icons for better UX
 import profile from "../assets/profile.png";
 import Footer from "../components/Footer";
@@ -11,7 +11,6 @@ import { projects } from "../utils/General";
 import CustomHeadings from "../components/CustomHeadings";
 
 // --- Components ---
-
 // 1. Stats Component: specific metrics give instant credibility
 const StatItem = ({ label, value }) => (
   <div className="flex flex-col">
@@ -148,14 +147,13 @@ const AboutPage = () => {
           </div>
 
           {/* Tech Stack Section */}
-          {/* <section className="mt-24">
+          <section className="mt-24">
             <div className="flex items-center gap-4 mb-12">
               <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gray-600 to-transparent" />
-              <span className="text-gray-400 text-2xl tracking-normal font-signature">My Toolkit</span>
               <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gray-600 to-transparent" />
             </div>
             <TechList />
-          </section> */}
+          </section>
         </main>
       </PageTransition>
 

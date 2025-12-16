@@ -1,8 +1,8 @@
-// import emailjs from "@emailjs/browser";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
+import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import { FiMail, FiSend, FiUser, FiMessageSquare, FiType } from "react-icons/fi";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -17,22 +17,28 @@ const ContactForm = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    // emailjs.sendForm("service_kapjr0f", "template_0zncxjc", form.current, "SbxKwZ_SXmaMFw2s8").then(
-    //   (result) => {
-    //     toast.success("Message sent successfully!");
-    //     setIsLoading(false);
-    //     e.target.reset();
-    //   },
-    //   (error) => {
-    //     toast.error("Failed to send message. Please try again.");
-    //     setIsLoading(false);
-    //   }
-    // );
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || "";
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "";
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "";
+
+    emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
+      (result) => {
+        toast.success("Message sent successfully!", result);
+        setIsLoading(false);
+        e.target.reset();
+      },
+      (error) => {
+        console.error("EmailJS Error:", error);
+        toast.error("Failed to send message. Please try again.");
+        setIsLoading(false);
+      }
+    );
   };
 
   return (
     <>
-      <ToastContainer theme="dark" position="top-right" autoClose={3000} />
+      <ToastContainer theme="dark" position="bottom-center" autoClose={3000} className="" />
+
       <motion.form
         ref={form}
         onSubmit={sendEmail}
@@ -49,45 +55,65 @@ const ContactForm = () => {
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
           <div className="relative group/input">
-            <FiUser className="absolute left-4 top-4 text-gray-500 group-focus-within/input:text-purple-400 transition-colors" />
+            <FiUser className="absolute left-4 top-4 text-gray-500 group-focus-within/input:text-purple-400 transition-colors" aria-hidden="true" />
+            <label htmlFor="from_name" className="sr-only">
+              Your Name
+            </label>
             <input
+              id="from_name"
               type="text"
               name="from_name"
               placeholder="Your Name"
               required
+              aria-required="true"
               className="w-full pl-11 pr-4 py-3.5 bg-gray-900/50 border border-gray-700/50 rounded-xl outline-none text-gray-200 placeholder:text-gray-500 focus:border-purple-500/50 focus:bg-gray-900/80 transition-all duration-300"
             />
           </div>
           <div className="relative group/input">
-            <FiMail className="absolute left-4 top-4 text-gray-500 group-focus-within/input:text-purple-400 transition-colors" />
+            <FiMail className="absolute left-4 top-4 text-gray-500 group-focus-within/input:text-purple-400 transition-colors" aria-hidden="true" />
+            <label htmlFor="user_email" className="sr-only">
+              Your Email
+            </label>
             <input
+              id="user_email"
               type="email"
               name="user_email"
               placeholder="Your Email"
               required
+              aria-required="true"
               className="w-full pl-11 pr-4 py-3.5 bg-gray-900/50 border border-gray-700/50 rounded-xl outline-none text-gray-200 placeholder:text-gray-500 focus:border-purple-500/50 focus:bg-gray-900/80 transition-all duration-300"
             />
           </div>
         </div>
 
         <div className="relative group/input">
-          <FiType className="absolute left-4 top-4 text-gray-500 group-focus-within/input:text-purple-400 transition-colors" />
+          <FiType className="absolute left-4 top-4 text-gray-500 group-focus-within/input:text-purple-400 transition-colors" aria-hidden="true" />
+          <label htmlFor="subject" className="sr-only">
+            Subject
+          </label>
           <input
+            id="subject"
             type="text"
             name="subject"
             placeholder="Subject"
             required
+            aria-required="true"
             className="w-full pl-11 pr-4 py-3.5 bg-gray-900/50 border border-gray-700/50 rounded-xl outline-none text-gray-200 placeholder:text-gray-500 focus:border-purple-500/50 focus:bg-gray-900/80 transition-all duration-300"
           />
         </div>
 
         <div className="relative group/input">
-          <FiMessageSquare className="absolute left-4 top-4 text-gray-500 group-focus-within/input:text-purple-400 transition-colors" />
+          <FiMessageSquare className="absolute left-4 top-4 text-gray-500 group-focus-within/input:text-purple-400 transition-colors" aria-hidden="true" />
+          <label htmlFor="message" className="sr-only">
+            Your Message
+          </label>
           <textarea
+            id="message"
             name="message"
             placeholder="Your Message"
             rows="5"
             required
+            aria-required="true"
             className="w-full pl-11 pr-4 py-3.5 bg-gray-900/50 border border-gray-700/50 rounded-xl outline-none text-gray-200 placeholder:text-gray-500 focus:border-purple-500/50 focus:bg-gray-900/80 transition-all duration-300 resize-none"
           ></textarea>
         </div>
@@ -117,9 +143,6 @@ const ContactForm = () => {
 const Contact = () => {
   return (
     <div className="min-h-screen bg-gray-900 selection:bg-purple-500/30 selection:text-purple-200">
-      <title>Contact | Ish Thumber</title>
-      <meta name="description" content="Contact Ish Thumber for collaborations, opportunities, or questions." />
-
       <Navbar />
 
       <PageTransition>

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { FiExternalLink, FiGithub, FiLock } from "react-icons/fi";
 import FooterConcept2 from "../components/Footer";
 import Navbar from "../components/Navbar";

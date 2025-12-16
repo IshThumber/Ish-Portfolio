@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 import React, { useEffect, useRef } from "react";
 import { Shapes } from "./Shaper";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { FiArrowRight, FiFileText } from "react-icons/fi";
 
 const HeroMain = () => {
@@ -21,7 +21,7 @@ const HeroMain = () => {
           duration: 1,
           transformOrigin: "left top",
           stagger: { each: 0.1, from: "random" },
-        },
+        }
       );
     }, compoRef);
     return () => ctx.revert();
@@ -47,8 +47,8 @@ const HeroMain = () => {
         </div>
         <div className="font-urbanist mx-3 sm:m-0" data-speed=".2" ref={compoRef}>
           <h1 className="mb-8 font-extrabold leading-none tracking-tight text-7xl lg:text-[8rem] 2xl:text-[10rem] sm:text-9xl w-full" aria-label={`${firstName}+${lastName}`}>
-            <span className="block text-wedgewood-500">{renderLetter(firstName, "first")}</span>
-            <span className="block text-wedgewood-500">{renderLetter(lastName, "last")}</span>
+            <span className="block text-kimberly-500">{renderLetter(firstName, "first")}</span>
+            <span className="block text-kimberly-500">{renderLetter(lastName, "last")}</span>
           </h1>
           {/* <div className="hero-bg"></div> */}
           <p className="hero-tagline text-xl sm:text-2xl text-gray-400 max-w-2xl mb-10 leading-relaxed font-signature tracking-wider">

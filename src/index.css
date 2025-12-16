@@ -183,6 +183,10 @@ body {
     color: var(--color-kashmir-blue-500);
   }
 
+  .text-kimberly-500 {
+    color: var(--color-kimberly-500);
+  }
+
   .gradient-about {
     background-image: linear-gradient(to right, var(--color-gigas-200), var(--color-gigas-500));
   }
@@ -203,9 +207,13 @@ body {
     background-image: linear-gradient(to right, var(--color-kimberly-200), var(--color-kimberly-500));
   }
 
+  .gradient-hero {
+    background-image: linear-gradient(to right, var(--color-kimberly-500), var(--color-kimberly-900));
+  }
+
   /* bg-gradient-to-br from-[#d89ca4] to-[#8c4a76] border-2 border-white/50 */
   .footer-gradient {
-    background-image: linear-gradient(to bottom, var(--color-careys-pink-400), var(--color-hopbush-700));
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    background-image: linear-gradient(to bottom, var(--color-kashmir-blue-400), var(--color-kashmir-blue-900));
+    /* border: 2px solid rgba(255, 255, 255, 0.5); */
   }
 }

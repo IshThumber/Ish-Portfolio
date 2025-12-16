@@ -1,6 +1,6 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import React, { useEffect, useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router";
 import { FiMenu, FiX, FiArrowUpRight } from "react-icons/fi";
 
 const MenuIcon = () => <FiMenu size={24} />;
@@ -50,7 +50,7 @@ const Navbar = () => {
   useEffect(() => setIsOpen(false), [location]);
 
   const links = [
-    { label: "About", to: "/about" },
+    { label: "About", to: "/about-me" },
     { label: "Projects", to: "/projects" },
     { label: "Experience", to: "/experience" },
     // { label: "Bento Grid", to: "/bento-grid" },
@@ -60,7 +60,7 @@ const Navbar = () => {
   return (
     <>
       <header className={`fixed top-0 left-0 z-50 w-full transition-all duration-500 ${isScrolled ? "py-4" : "py-6"}`}>
-        <nav className="mx-auto max-w-7xl px-4 md:px-6">
+        <nav className="mx-auto max-w-6xl px-4 md:px-6">
           {/* <motion.div
             initial={{ y: -40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -80,7 +80,7 @@ const Navbar = () => {
              `}
           >
             {/* Logo */}
-            <Link to="/" className="font-urbanist text-xl font-bold tracking-tight text-white hover:opacity-80 transition-opacity">
+            <Link to="/" className="font-urbanist text-3xl font-bold tracking-tight text-white hover:opacity-80 transition-opacity">
               Ish<span className="text-gigas-400">.</span>
             </Link>
 
@@ -96,7 +96,7 @@ const Navbar = () => {
             {/* CTA Button */}
             <div className="hidden md:block">
               <a
-                href="/contact-me"
+                href="/contact"
                 className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-purple-500 to-indigo-600 text-white text-sm font-semibold shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 hover:scale-105 transition-all duration-300"
               >
                 <span>Get in Touch</span>

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { FaAward } from "react-icons/fa";
 import { PiBriefcaseFill, PiBriefcase } from "react-icons/pi"; // Updated icons
 
