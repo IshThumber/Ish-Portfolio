@@ -175,7 +175,7 @@ const TechList = () => (
         heading="TECH STACK"
         subHeading="My Toolkit"
         description="The primary technologies I leverage to architect, build, and deploy robust solutions."
-        gradientColor="gradient-about"
+        gradientType="about"
       />
     </div>
 

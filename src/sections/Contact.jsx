@@ -157,7 +157,7 @@ const Contact = () => {
         <main className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-20 mt-4">
           {/* Header Section */}
 
-          <CustomHeadings heading="Contact" subHeading="Get in Touch" description="I'm here to help you turn your ideas into reality." gradientColor="gradient-contact" />
+          <CustomHeadings heading="Contact" subHeading="Get in Touch" description="I'm here to help you turn your ideas into reality." gradientType="contact" />
           {/* <section className="mb-12 text-center lg:text-left">
             <motion.h1
               className="font-black font-heading text-6xl md:text-8xl lg:text-9xl tracking-tighter text-gray-100 opacity-10 uppercase select-none"

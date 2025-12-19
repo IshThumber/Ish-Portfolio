@@ -127,7 +127,7 @@ const ExperiencePage = () => {
             heading="Career"
             subHeading="My Journey"
             description="The path I've taken, the communities I've built, and the work I'm proud of."
-            gradientColor="gradient-experiences"
+            gradientType="experiences"
           />
 
           {/* Timeline Container */}

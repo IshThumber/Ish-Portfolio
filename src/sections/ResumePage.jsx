@@ -133,7 +133,7 @@ const ResumePage = () => {
         <div className="h-24 lg:h-32" />
 
         <main className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 mt-4">
-          <CustomHeadings heading="Resume" subHeading="Curriculum Vitae" description="A detailed look at my professional journey and skills." gradientColor="gradient-resume" />
+          <CustomHeadings heading="Resume" subHeading="Curriculum Vitae" description="A detailed look at my professional journey and skills." gradientType="resume" />
 
           <div className="flex flex-col lg:flex-row gap-6 mt-8 h-full min-h-[600px]">
             {/* Sidebar Column */}

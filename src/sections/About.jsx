@@ -139,7 +139,7 @@ const AboutPage = () => {
         <div className="h-24 lg:h-32" /> {/* Spacer */}
         <main className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-20 mt-4">
           {/* Main Title Section */}
-          <CustomHeadings heading="ABOUT" subHeading="My Story" description="A short breif of me and my tools that I use to build." gradientColor="gradient-about" />
+          <CustomHeadings heading="ABOUT" subHeading="My Story" description="A short breif of me and my tools that I use to build." gradientType="about" />
 
           {/* Profile Card Container - Glassmorphism */}
           <div className="bg-gray-800/30 backdrop-blur-xl border border-gray-700/50 rounded-4xl p-6 md:p-12 shadow-2xl">

@@ -174,7 +174,7 @@ const Footer = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
               </span>
-              <p className="text-base font-signature font-bold text-gray-100 tracking-wider">Open to Opportunities</p>
+              <p className="text-base font-signature leading-tight font-bold text-gray-100 tracking-wider">Open to Opportunities</p>
             </div>
 
             <div className="h-px w-full bg-gray-700/50 my-2" />
@@ -193,7 +193,7 @@ const Footer = () => {
         <div className="group relative w-full md:w-auto transform md:translate-y-8 select-none">
           <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
           <div className="relative flex items-center gap-4 p-4 bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-xl hover:-translate-y-1 transition-transform duration-300">
-            <span className="text-base font-signature font-medium text-gray-400 tracking-wider">Built with</span>
+            <span className="text-base font-signature leading-tight font-medium text-gray-400 tracking-wider">Built with</span>
             <div className="h-4 w-px bg-gray-700" />
             <div className="flex items-center gap-3">
               <FaReact className="text-cyan-400 animate-spin-slow" size={20} title="React" />

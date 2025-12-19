@@ -1,6 +1,16 @@
 import { motion } from "motion/react";
 
-const CustomHeadings = ({ heading, subHeading, description, gradientColor }) => {
+const CustomHeadings = ({ heading, subHeading, description, gradientType }) => {
+  // Determine the gradient class - all classes must be explicitly listed for Tailwind v4
+  const getGradientClass = () => {
+    if (gradientType === "about") return "gradient-about";
+    if (gradientType === "projects") return "gradient-projects";
+    if (gradientType === "contact") return "gradient-contact";
+    if (gradientType === "experiences") return "gradient-experiences";
+    if (gradientType === "resume") return "gradient-resume";
+    return "gradient-about"; // fallback
+  };
+
   return (
     <>
       <section className="mb-12 text-center lg:text-left">
@@ -13,8 +23,10 @@ const CustomHeadings = ({ heading, subHeading, description, gradientColor }) => 
           {heading}
         </motion.h1>
         <motion.div className="-mt-12 md:-mt-20 lg:-mt-24" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.8 }}>
-          <span className={`text-4xl md:text-6xl font-bold bg-clip-text text-transparent font-signature tracking-wider ${gradientColor}`}>{subHeading}</span>
-          <p className="mt-4 text-gray-400 max-w-4xl text-lg text-center lg:text-left">{description}</p>
+          <span className={`block text-4xl md:text-6xl font-signature font-bold bg-clip-text text-transparent tracking-wider leading-relaxed ${getGradientClass()}`}>
+            {subHeading}
+          </span>
+          <p className="mt-4 text-gray-400 max-w-4xl text-lg">{description}</p>
         </motion.div>
       </section>
     </>

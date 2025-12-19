@@ -1,16 +1,37 @@
-@import url("https://db.onlinewebfonts.com/c/768446cc3d04d6dd3289ae1715bdb682?family=GT+Walsheim+Regular");
-@import url("https://db.onlinewebfonts.com/c/2508aff8605749b70637c38fc364e949?family=Brandon+Text+Medium");
-@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://db.onlinewebfonts.com/c/099fd061ccdebac1133a7ddf34f803f6?family=fourHand+W29+regular");
 @import "tailwindcss";
+
+@font-face {
+  font-family: "GT Walsheim";
+  src: url("/fonts/GT-Walsheim-Regular.woff2") format("woff2"), url("/fonts/GT-Walsheim-Regular.woff") format("woff");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Brandon Text";
+  src: url("/fonts/BrandonText-Medium.woff2") format("woff2"), url("/fonts/BrandonText-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "fourHand W29";
+  src: url("/fonts/fourHand-W29-Regular.woff2") format("woff2"), url("/fonts/fourHand-W29-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --background-color: #0000;
 
+  /* Fonts */
   --font-primary: "Urbanist", sans-serif;
-  --font-heading: "GT Walsheim Regular", sans-serif;
-  --font-accent: "Brandon Text Medium", sans-serif;
-  --font-signature: "fourHand W29 regular";
+  --font-heading: "GT Walsheim", sans-serif;
+  --font-accent: "Brandon Text", sans-serif;
+  --font-signature: "fourHand W29", cursive;
 
   --primary-color: #4682a9;
   --light-background-color: #131f2a;
@@ -130,6 +151,8 @@ body {
   font-family: var(--font-primary);
   background-color: var(--color-blue-gray-900);
   color: var(--color-wild-sand-100);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .font-heading {

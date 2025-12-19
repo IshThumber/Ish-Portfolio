@@ -122,7 +122,7 @@ const Projects = () => {
             heading="WORK"
             subHeading="Selected Projects"
             description="A collection of tools, accelerators, and applications designed to solve real-world problems."
-            gradientColor="gradient-projects"
+            gradientType="projects"
           />
 
           {/* Projects Grid */}
