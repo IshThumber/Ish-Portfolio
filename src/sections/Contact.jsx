@@ -49,13 +49,13 @@ const ContactForm = () => {
         className="flex flex-col gap-5 p-8 bg-gray-800/30 backdrop-blur-xl border border-gray-700/50 rounded-3xl shadow-2xl relative overflow-hidden group"
       >
         {/* Subtle Gradient Background for Form */}
-        <div className="absolute top-0 right-0 -z-10 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl opacity-50 group-hover:opacity-75 transition-opacity duration-700" />
+        <div className="absolute top-0 right-0 -z-10 w-64 h-64 bg-careys-pink-500/10 rounded-full blur-3xl opacity-50 group-hover:opacity-75 transition-opacity duration-700" />
 
         <h3 className="text-2xl font-bold font-urbanist text-gray-100 mb-2">Send me a message</h3>
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
           <div className="relative group/input">
-            <FiUser className="absolute left-4 top-4 text-gray-500 group-focus-within/input:text-purple-400 transition-colors" aria-hidden="true" />
+            <FiUser className="absolute left-4 top-4 text-gray-500 group-focus-within/input:text-careys-pink-400 transition-colors" aria-hidden="true" />
             <label htmlFor="from_name" className="sr-only">
               Your Name
             </label>
@@ -66,11 +66,11 @@ const ContactForm = () => {
               placeholder="Your Name"
               required
               aria-required="true"
-              className="w-full pl-11 pr-4 py-3.5 bg-gray-900/50 border border-gray-700/50 rounded-xl outline-none text-gray-200 placeholder:text-gray-500 focus:border-purple-500/50 focus:bg-gray-900/80 transition-all duration-300"
+              className="w-full pl-11 pr-4 py-3.5 bg-gray-900/50 border border-gray-700/50 rounded-xl outline-none text-gray-200 placeholder:text-gray-500 focus:border-careys-pink-500/50 focus:bg-gray-900/80 transition-all duration-300"
             />
           </div>
           <div className="relative group/input">
-            <FiMail className="absolute left-4 top-4 text-gray-500 group-focus-within/input:text-purple-400 transition-colors" aria-hidden="true" />
+            <FiMail className="absolute left-4 top-4 text-gray-500 group-focus-within/input:text-careys-pink-400 transition-colors" aria-hidden="true" />
             <label htmlFor="user_email" className="sr-only">
               Your Email
             </label>
@@ -81,13 +81,13 @@ const ContactForm = () => {
               placeholder="Your Email"
               required
               aria-required="true"
-              className="w-full pl-11 pr-4 py-3.5 bg-gray-900/50 border border-gray-700/50 rounded-xl outline-none text-gray-200 placeholder:text-gray-500 focus:border-purple-500/50 focus:bg-gray-900/80 transition-all duration-300"
+              className="w-full pl-11 pr-4 py-3.5 bg-gray-900/50 border border-gray-700/50 rounded-xl outline-none text-gray-200 placeholder:text-gray-500 focus:border-careys-pink-500/50 focus:bg-gray-900/80 transition-all duration-300"
             />
           </div>
         </div>
 
         <div className="relative group/input">
-          <FiType className="absolute left-4 top-4 text-gray-500 group-focus-within/input:text-purple-400 transition-colors" aria-hidden="true" />
+          <FiType className="absolute left-4 top-4 text-gray-500 group-focus-within/input:text-careys-pink-400 transition-colors" aria-hidden="true" />
           <label htmlFor="subject" className="sr-only">
             Subject
           </label>
@@ -98,12 +98,12 @@ const ContactForm = () => {
             placeholder="Subject"
             required
             aria-required="true"
-            className="w-full pl-11 pr-4 py-3.5 bg-gray-900/50 border border-gray-700/50 rounded-xl outline-none text-gray-200 placeholder:text-gray-500 focus:border-purple-500/50 focus:bg-gray-900/80 transition-all duration-300"
+            className="w-full pl-11 pr-4 py-3.5 bg-gray-900/50 border border-gray-700/50 rounded-xl outline-none text-gray-200 placeholder:text-gray-500 focus:border-careys-pink-500/50 focus:bg-gray-900/80 transition-all duration-300"
           />
         </div>
 
         <div className="relative group/input">
-          <FiMessageSquare className="absolute left-4 top-4 text-gray-500 group-focus-within/input:text-purple-400 transition-colors" aria-hidden="true" />
+          <FiMessageSquare className="absolute left-4 top-4 text-gray-500 group-focus-within/input:text-careys-pink-400 transition-colors" aria-hidden="true" />
           <label htmlFor="message" className="sr-only">
             Your Message
           </label>
@@ -114,14 +114,17 @@ const ContactForm = () => {
             rows="5"
             required
             aria-required="true"
-            className="w-full pl-11 pr-4 py-3.5 bg-gray-900/50 border border-gray-700/50 rounded-xl outline-none text-gray-200 placeholder:text-gray-500 focus:border-purple-500/50 focus:bg-gray-900/80 transition-all duration-300 resize-none"
+            className="w-full pl-11 pr-4 py-3.5 bg-gray-900/50 border border-gray-700/50 rounded-xl outline-none text-gray-200 placeholder:text-gray-500 focus:border-careys-pink-500/50 focus:bg-gray-900/80 transition-all duration-300 resize-none"
           ></textarea>
         </div>
 
         <button
           type="submit"
           disabled={isLoading}
-          className="group flex items-center justify-center gap-2 px-8 py-4 mt-2 font-bold transition-all duration-300 rounded-xl shadow-lg w-full sm:w-fit bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white disabled:opacity-50 disabled:cursor-not-allowed transform active:scale-95"
+          className="group flex items-center justify-center gap-2 px-8 py-4 mt-2 font-bold transition-all duration-300 rounded-xl shadow-lg w-full sm:w-fit text-white disabled:opacity-50 disabled:cursor-not-allowed transform active:scale-95"
+          style={{
+            backgroundImage: "linear-gradient(to right, var(--color-careys-pink-500), var(--color-careys-pink-600))",
+          }}
         >
           {isLoading ? (
             <>
@@ -142,7 +145,7 @@ const ContactForm = () => {
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-gray-900 selection:bg-purple-500/30 selection:text-purple-200">
+    <div className="min-h-screen bg-gray-900 selection:bg-careys-pink-500/30 selection:text-careys-pink-200">
       <Navbar />
 
       <PageTransition>
@@ -186,14 +189,14 @@ const Contact = () => {
               <div className="space-y-6">
                 <a
                   href="mailto:ishthumber343@gmail.com"
-                  className="group flex items-center gap-4 p-4 rounded-2xl bg-gray-800/40 border border-gray-700/50 hover:bg-gray-800/60 hover:border-purple-500/30 transition-all duration-300"
+                  className="group flex items-center gap-4 p-4 rounded-2xl bg-gray-800/40 border border-gray-700/50 hover:bg-gray-800/60 hover:border-careys-pink-500/30 transition-all duration-300"
                 >
-                  <div className="p-3 rounded-xl bg-purple-500/10 text-purple-400 group-hover:bg-purple-500/20 group-hover:scale-110 transition-all duration-300">
+                  <div className="p-3 rounded-xl bg-careys-pink-500/10 text-careys-pink-400 group-hover:bg-careys-pink-500/20 group-hover:scale-110 transition-all duration-300">
                     <FiMail size={24} />
                   </div>
                   <div>
                     <p className="text-sm text-gray-400 font-medium mb-0.5">Mail me at</p>
-                    <span className="text-lg font-bold text-gray-200 group-hover:text-purple-300 transition-colors">ishthumber343@gmail.com</span>
+                    <span className="text-lg font-bold text-gray-200 group-hover:text-careys-pink-400 transition-colors">ishthumber343@gmail.com</span>
                   </div>
                 </a>
               </div>

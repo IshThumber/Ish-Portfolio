@@ -7,7 +7,7 @@ import PageTransition from "../components/PageTransition";
 import CustomHeadings from "../components/CustomHeadings";
 
 // OPTION 1: If your PDF is in 'src/assets', import it (Recommended for Vite/Webpack)
-import resumePdf from "../assets/IshThumber-Software-Resume.pdf";
+import resumePdf from "../assets/IshThumber_Resume.pdf";
 
 // OPTION 2: If your PDF is in the 'public' folder, use the string path
 // const resumePdf = "src/assets/IshThumber-Software-Resume.pdf";
@@ -15,11 +15,11 @@ import resumePdf from "../assets/IshThumber-Software-Resume.pdf";
 const SidebarContent = ({ resumeUrl }) => (
   <>
     {/* Decorative Glow */}
-    <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl opacity-50 group-hover:opacity-75 transition-opacity duration-700" />
+    <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-kimberly-500/20 rounded-full blur-3xl opacity-50 group-hover:opacity-75 transition-opacity duration-700" />
 
     <div className="relative z-10 w-full">
       <div className="flex items-center gap-4 mb-6">
-        <span className="p-3 rounded-2xl bg-gradient-to-br from-purple-500/20 to-blue-500/20 text-purple-300 border border-purple-500/30">
+        <span className="p-3 rounded-2xl bg-gradient-to-br from-kimberly-500/20 to-kimberly-600/20 text-kimberly-500 border border-kimberly-500/30">
           <FiFileText size={28} />
         </span>
         <div>
@@ -48,7 +48,11 @@ const SidebarContent = ({ resumeUrl }) => (
         <a
           href={resumeUrl}
           download="Ish_Thumber_Resume.pdf"
-          className="flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white shadow-lg shadow-purple-500/25 transition-all hover:scale-[1.02] active:scale-95 hover:shadow-purple-500/40 w-full"
+          className="flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-white shadow-lg transition-all hover:scale-[1.02] active:scale-95 w-full"
+          style={{
+            backgroundImage: "linear-gradient(to right, var(--color-kimberly-600), var(--color-kimberly-700))",
+            boxShadow: "0 10px 15px -3px color-mix(in srgb, var(--color-kimberly-500) 25%, transparent)",
+          }}
         >
           <FiDownload className="animate-bounce" />
           <span className="font-bold tracking-wide">Download CV</span>
@@ -83,7 +87,7 @@ const ViewerContent = ({ resumeUrl, isHovered, isLoading, setIsLoading }) => (
     {/* Loading State */}
     {isLoading && (
       <div className="absolute inset-0 z-10 flex items-center justify-center bg-gray-900/50 backdrop-blur-sm">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-500"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-kimberly-500"></div>
       </div>
     )}
 
@@ -97,7 +101,7 @@ const ViewerContent = ({ resumeUrl, isHovered, isLoading, setIsLoading }) => (
     {/* Mobile/Fallback Overlay */}
     <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center p-8 bg-gray-900/80 backdrop-blur-md lg:hidden">
       <div className="p-4 rounded-full bg-gray-800 border border-gray-700 mb-4 shadow-xl">
-        <FiMaximize2 size={32} className="text-purple-400" />
+        <FiMaximize2 size={32} className="text-kimberly-400" />
       </div>
       <h3 className="text-xl font-bold text-white mb-2">View Full Resume</h3>
       <p className="text-gray-400 mb-6 max-w-xs mx-auto text-sm">For the best experience, open the PDF in your native viewer.</p>
@@ -105,7 +109,7 @@ const ViewerContent = ({ resumeUrl, isHovered, isLoading, setIsLoading }) => (
         href={resumeUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="px-6 py-3 rounded-xl bg-purple-600 text-white font-bold shadow-lg active:scale-95 transition-transform"
+        className="px-6 py-3 rounded-xl bg-kimberly-600 text-white font-bold shadow-lg active:scale-95 transition-transform"
       >
         Open PDF
       </a>
@@ -118,7 +122,7 @@ const ResumePage = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="min-h-screen bg-gray-900 selection:bg-purple-500/30 selection:text-purple-200 font-gtReg">
+    <div className="min-h-screen bg-gray-900 selection:bg-kimberly-500/30 selection:text-kimberly-200 font-gtReg">
       <title>Resume | Ish Thumber</title>
       <meta name="description" content="View and download Ish Thumber's professional resume." />
 

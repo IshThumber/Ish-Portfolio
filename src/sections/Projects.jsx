@@ -37,14 +37,14 @@ const ProjectItem = ({ project, spanClass = "" }) => {
       className={`group relative flex flex-col justify-between
         bg-gray-800/30 backdrop-blur-md rounded-2xl p-6 lg:p-8
         border border-gray-700/50 shadow-xl
-        hover:border-purple-500/30 hover:shadow-purple-500/10 hover:-translate-y-1
+        hover:border-hopbush-500/30 hover:shadow-hopbush-500/10 hover:-translate-y-1
         transition-all duration-300 ${spanClass}`}
     >
       {/* Top Section: Year & Links */}
       <div className="flex justify-between items-start mb-4">
         <span
           className={`text-xs font-bold px-2 py-1 rounded-md tracking-wide
-          ${project.year === "ND" ? "bg-purple-500/20 text-purple-300" : "bg-gray-700 text-gray-400"}`}
+          ${project.year === "ND" ? "bg-hopbush-500/20 text-hopbush-400" : "bg-gray-700 text-gray-400"}`}
         >
           {project.year === "ND" ? "FEATURED" : project.year}
         </span>
@@ -70,13 +70,13 @@ const ProjectItem = ({ project, spanClass = "" }) => {
 
       {/* Content Section */}
       <div>
-        <h3 className="text-2xl md:text-3xl font-bold text-gray-100 group-hover:text-purple-300 transition-colors duration-300">{project.name}</h3>
+        <h3 className="text-2xl md:text-3xl font-bold text-gray-100 group-hover:text-hopbush-400 transition-colors duration-300">{project.name}</h3>
 
         <motion.p
           layout
-          onHoverStart={() => setExpanded(true)}
-          onHoverEnd={() => setExpanded(false)}
-          className={`mt-4 text-gray-400 leading-relaxed text-xs md:text-base ${expanded ? "" : "line-clamp-4"}`}
+          transition={{ type: "tween", duration: 0.2, ease: "easeOut" }}
+          onClick={() => setExpanded(!expanded)}
+          className={`mt-4 text-gray-400 leading-relaxed text-xs md:text-base cursor-pointer ${expanded ? "" : "line-clamp-4"}`}
         >
           {project.description}
         </motion.p>
@@ -98,7 +98,7 @@ const ProjectItem = ({ project, spanClass = "" }) => {
 
 const Projects = () => {
   return (
-    <div className="min-h-screen bg-gray-900 selection:bg-purple-500/30 selection:text-purple-200">
+    <div className="min-h-screen bg-gray-900 selection:bg-hopbush-500/30 selection:text-hopbush-200">
       <title>Projects | Ish Thumber</title>
       <meta name="description" content="Showcase of cloud engineering and full-stack development projects." />
 

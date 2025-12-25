@@ -14,7 +14,9 @@ import CustomHeadings from "../components/CustomHeadings";
 // 1. Stats Component: specific metrics give instant credibility
 const StatItem = ({ label, value }) => (
   <div className="flex flex-col">
-    <span className="text-2xl font-bold text-yellow-300 ">{value}</span>
+    <span className="text-2xl font-bold" style={{ color: "var(--color-gigas-300)" }}>
+      {value}
+    </span>
     <span className="text-sm text-gray-400 uppercase tracking-wider font-semibold">{label}</span>
   </div>
 );
@@ -27,12 +29,21 @@ const projectCount = projects.length - 1;
 const ProfileImage = () => (
   <figure className="relative xl:w-[40%] flex justify-center items-center group">
     {/* Animated Background Blobs */}
-    <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-green-400/20 rounded-full blur-3xl opacity-50 group-hover:opacity-75 transition-opacity duration-700" />
+    <div
+      className="absolute inset-0 rounded-full blur-3xl opacity-50 group-hover:opacity-75 transition-opacity duration-700"
+      style={{ backgroundImage: "linear-gradient(to top right, var(--color-gigas-600), var(--color-gigas-300))" }}
+    />
 
     <div className="relative z-10 w-64 h-64 sm:w-80 sm:h-80">
       {/* Decorative Border Frame */}
-      <div className="absolute inset-0 border-2 border-dashed border-purple-400/30 rounded-2xl transform rotate-6 transition-transform duration-500 group-hover:rotate-12" />
-      <div className="absolute inset-0 border-2 border-green-400/30 rounded-2xl transform -rotate-6 transition-transform duration-500 group-hover:-rotate-12" />
+      <div
+        className="absolute inset-0 border-2 border-dashed rounded-2xl transform rotate-6 transition-transform duration-500 group-hover:rotate-12"
+        style={{ borderColor: "color-mix(in srgb, var(--color-gigas-400) 40%, transparent)" }}
+      />
+      <div
+        className="absolute inset-0 border-2 rounded-2xl transform -rotate-6 transition-transform duration-500 group-hover:-rotate-12"
+        style={{ borderColor: "color-mix(in srgb, var(--color-genoa-400) 40%, transparent)" }}
+      />
 
       {/* Main Image */}
       <img
@@ -63,13 +74,24 @@ const ProfileSection = () => (
         <h2 className="text-4xl md:text-5xl font-bold leading-tight">
           <span className="text-4xl">Wait, who is </span>
           <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-green-400">Ish Thumber?</span>
+          <span
+            className="text-transparent bg-clip-text"
+            style={{
+              backgroundImage: "linear-gradient(to right, var(--color-gigas-300), var(--color-genoa-400))",
+            }}
+          >
+            Ish Thumber?
+          </span>
         </h2>
 
         <h3 className="flex flex-wrap items-center gap-3 text-lg font-medium text-gray-400">
-          <span className="bg-gray-800/50 px-3 py-1 rounded-full border border-gray-700 text-purple-300">Cloud Engineer</span>
-          <span className="bg-gray-800/50 px-3 py-1 rounded-full border border-gray-700 text-green-300">Full Stack Dev</span>
-          <span className="bg-gray-800/50 px-3 py-1 rounded-full border border-gray-700 text-yellow-300">AWS Community Builder</span>
+          <span className="bg-gray-800/50 px-3 py-1 rounded-full border border-gray-700" style={{ color: "var(--color-gigas-400)" }}>
+            Cloud Engineer
+          </span>
+          <span className="bg-gray-800/50 px-3 py-1 rounded-full border border-gray-700" style={{ color: "var(--color-genoa-400)" }}>
+            Full Stack Dev
+          </span>
+          <span className="bg-gray-800/50 px-3 py-1 rounded-full border border-gray-700 text-amber-400">AWS Community Builder</span>
         </h3>
       </div>
 
@@ -78,7 +100,8 @@ const ProfileSection = () => (
         <p>
           I'm a builder at heart. My day job involves architecting
           <strong className="text-gray-100 font-semibold"> scalable cloud infrastructure </strong>
-          on AWS, but my passion lies in bridging the gap between <span className="text-yellow-300">Dev</span> and <span className="text-purple-300">Ops</span>.
+          on AWS, but my passion lies in bridging the gap between <span style={{ color: "var(--color-genoa-400)" }}>Dev</span> and{" "}
+          <span style={{ color: "var(--color-gigas-400)" }}>Ops</span>.
         </p>
         <p>
           Whether I'm writing Terraform modules, orchestrating Kubernetes clusters, or building a React frontend to visualize it all - I thrive on solving complex problems with
@@ -97,9 +120,13 @@ const ProfileSection = () => (
       <div className="flex flex-col sm:flex-row gap-4 mt-2">
         <Link
           to="mailto:ishthumber343@gmail.com"
-          className="group relative px-6 py-3.5 rounded-xl bg-purple-500 text-white font-bold overflow-hidden shadow-lg shadow-purple-500/25 transition-all hover:scale-105 active:scale-95"
+          className="group relative px-6 py-3.5 rounded-xl text-white font-bold overflow-hidden shadow-lg transition-all hover:scale-105 active:scale-95"
+          style={{
+            backgroundColor: "var(--color-gigas-500)",
+            boxShadow: "0 10px 15px -3px color-mix(in srgb, var(--color-gigas-500) 25%, transparent)",
+          }}
         >
-          <div className="absolute inset-0 bg-white/20 trangray-y-full group-hover:trangray-y-0 transition-transform duration-300" />
+          <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
           <span className="relative flex items-center gap-2">
             <FiMail className="text-xl" /> Say Hello
           </span>
@@ -108,7 +135,18 @@ const ProfileSection = () => (
         {/* Re-enabled and styled Resume Button */}
         <Link
           to="/resume"
-          className="group px-6 py-3.5 rounded-xl bg-gray-800 text-gray-200 font-bold border border-gray-700 hover:border-green-400/50 hover:text-green-300 transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
+          className="group px-6 py-3.5 rounded-xl bg-gray-800 text-gray-200 font-bold border border-gray-700 transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
+          style={{
+            "--hover-border": "color-mix(in srgb, var(--color-gigas-400) 50%, transparent)",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.borderColor = "var(--color-gigas-400)";
+            e.currentTarget.style.color = "var(--color-gigas-400)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.borderColor = "";
+            e.currentTarget.style.color = "";
+          }}
         >
           <FiFileText className="text-xl" /> View Resume
         </Link>
@@ -121,7 +159,7 @@ const ProfileSection = () => (
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen bg-gray-900 selection:bg-purple-500/30 selection:text-purple-200">
+    <div className="min-h-screen bg-gray-900 selection:bg-gigas-500/30 selection:text-gigas-200">
       <title>About | Ish Thumber</title>
       <meta name="description" content="Cloud Engineer & Developer Portfolio" />
 

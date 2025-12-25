@@ -23,7 +23,7 @@ const NavItem = ({ to, children, onClick }) => {
           <motion.div
             layoutId="active-nav-pill"
             className="absolute inset-0 bg-white/10 rounded-xl backdrop-blur-sm border border-white/5 shadow-inner"
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            transition={{ type: "tween", duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
           />
         )}
         <span className="relative z-10">{children}</span>
@@ -66,16 +66,17 @@ const Navbar = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }} */}
           <motion.div
-            initial={{ y: -40, opacity: 0 }}
+            initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{
               type: "spring",
-              stiffness: 120,
-              damping: 20,
+              stiffness: 100,
+              damping: 18,
+              mass: 0.8,
             }}
             className={`
                relative flex items-center justify-between px-5 py-3
-               rounded-2xl transition-all duration-300
+               rounded-2xl transition-[background-color,border-color,box-shadow] duration-500 ease-out
                ${isScrolled ? "bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 shadow-2xl shadow-purple-900/10" : "bg-transparent border border-transparent"}
              `}
           >

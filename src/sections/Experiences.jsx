@@ -51,10 +51,10 @@ const ExperienceItem = ({ experience, isLast }) => {
   } else {
     // Previous Roles
     icon = <PiBriefcase size={22} />;
-    iconBg = "bg-purple-400/20 text-purple-300";
-    borderColor = "border-purple-400/30";
-    titleColor = "text-purple-300";
-    glowColor = "shadow-purple-400/10";
+    iconBg = "bg-wedgewood-400/20 text-wedgewood-400";
+    borderColor = "border-wedgewood-400/30";
+    titleColor = "text-wedgewood-400";
+    glowColor = "shadow-wedgewood-400/10";
   }
 
   return (
@@ -91,7 +91,7 @@ const ExperienceItem = ({ experience, isLast }) => {
         <ul className="mt-2 space-y-2">
           {experience.description.map((point, i) => (
             <li key={i} className="text-gray-400 text-sm md:text-base leading-relaxed flex items-start gap-2">
-              <span className={`mt-2 h-1.5 w-1.5 rounded-full flex-shrink-0 ${year === "Current Role" ? "bg-green-400" : "bg-purple-400/50"}`} />
+              <span className={`mt-2 h-1.5 w-1.5 rounded-full flex-shrink-0 ${year === "Current Role" ? "bg-green-400" : "bg-wedgewood-400/50"}`} />
               <span>{point}</span>
             </li>
           ))}
@@ -103,7 +103,7 @@ const ExperienceItem = ({ experience, isLast }) => {
 
 const ExperiencePage = () => {
   return (
-    <div className="min-h-screen bg-gray-900 selection:bg-purple-500/30 selection:text-purple-200">
+    <div className="min-h-screen bg-gray-900 selection:bg-wedgewood-500/30 selection:text-wedgewood-200">
       <title>Timeline | Ish Thumber</title>
       <meta name="description" content="Professional experience and timeline of Ish Thumber, Cloud Engineer and Developer." />
 

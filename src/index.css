@@ -198,6 +198,54 @@ body {
   .text-gigas-500 {
     color: var(--color-gigas-500);
   }
+  .text-gigas-300 {
+    color: var(--color-gigas-300);
+  }
+  .bg-gigas-500 {
+    background-color: var(--color-gigas-500);
+  }
+  .bg-gigas-500\/20 {
+    background-color: color-mix(in srgb, var(--color-gigas-500) 20%, transparent);
+  }
+  .bg-gigas-300\/20 {
+    background-color: color-mix(in srgb, var(--color-gigas-300) 20%, transparent);
+  }
+  .from-gigas-500\/20 {
+    --tw-gradient-from: color-mix(in srgb, var(--color-gigas-500) 20%, transparent);
+  }
+  .to-gigas-300\/20 {
+    --tw-gradient-to: color-mix(in srgb, var(--color-gigas-300) 20%, transparent);
+  }
+  .from-gigas-300 {
+    --tw-gradient-from: var(--color-gigas-300);
+  }
+  .to-gigas-500 {
+    --tw-gradient-to: var(--color-gigas-500);
+  }
+  .border-gigas-400\/30 {
+    border-color: color-mix(in srgb, var(--color-gigas-400) 30%, transparent);
+  }
+  .border-gigas-300\/30 {
+    border-color: color-mix(in srgb, var(--color-gigas-300) 30%, transparent);
+  }
+  .border-gigas-400\/50 {
+    border-color: color-mix(in srgb, var(--color-gigas-400) 50%, transparent);
+  }
+  .hover\:border-gigas-400\/50:hover {
+    border-color: color-mix(in srgb, var(--color-gigas-400) 50%, transparent);
+  }
+  .hover\:text-gigas-400:hover {
+    color: var(--color-gigas-400);
+  }
+  .shadow-gigas-500\/25 {
+    --tw-shadow-color: color-mix(in srgb, var(--color-gigas-500) 25%, transparent);
+  }
+  .selection\:bg-gigas-500\/30::selection {
+    background-color: color-mix(in srgb, var(--color-gigas-500) 30%, transparent);
+  }
+  .selection\:text-gigas-200::selection {
+    color: var(--color-gigas-200);
+  }
 
   .text-kashmir-blue-400 {
     color: var(--color-kashmir-blue-400);
@@ -238,5 +286,172 @@ body {
   .footer-gradient {
     background-image: linear-gradient(to bottom, var(--color-kashmir-blue-400), var(--color-kashmir-blue-900));
     /* border: 2px solid rgba(255, 255, 255, 0.5); */
+  }
+
+  /* Wedgewood accent utilities (Experience page) */
+  .bg-wedgewood-400\/20 {
+    background-color: color-mix(in srgb, var(--color-wedgewood-400) 20%, transparent);
+  }
+  .bg-wedgewood-400\/50 {
+    background-color: color-mix(in srgb, var(--color-wedgewood-400) 50%, transparent);
+  }
+  .border-wedgewood-400\/30 {
+    border-color: color-mix(in srgb, var(--color-wedgewood-400) 30%, transparent);
+  }
+  .shadow-wedgewood-400\/10 {
+    --tw-shadow-color: color-mix(in srgb, var(--color-wedgewood-400) 10%, transparent);
+  }
+  .selection\:bg-wedgewood-500\/30::selection {
+    background-color: color-mix(in srgb, var(--color-wedgewood-500) 30%, transparent);
+  }
+  .selection\:text-wedgewood-200::selection {
+    color: var(--color-wedgewood-200);
+  }
+
+  /* Hopbush accent utilities (Projects page) */
+  .bg-hopbush-500\/20 {
+    background-color: color-mix(in srgb, var(--color-hopbush-500) 20%, transparent);
+  }
+  .border-hopbush-500\/30 {
+    border-color: color-mix(in srgb, var(--color-hopbush-500) 30%, transparent);
+  }
+  .shadow-hopbush-500\/10 {
+    --tw-shadow-color: color-mix(in srgb, var(--color-hopbush-500) 10%, transparent);
+  }
+  .hover\:border-hopbush-500\/30:hover {
+    border-color: color-mix(in srgb, var(--color-hopbush-500) 30%, transparent);
+  }
+  .hover\:shadow-hopbush-500\/10:hover {
+    --tw-shadow-color: color-mix(in srgb, var(--color-hopbush-500) 10%, transparent);
+  }
+  .text-hopbush-400 {
+    color: var(--color-hopbush-400);
+  }
+  .group-hover\:text-hopbush-400:is(:where(.group):hover *) {
+    color: var(--color-hopbush-400);
+  }
+  .selection\:bg-hopbush-500\/30::selection {
+    background-color: color-mix(in srgb, var(--color-hopbush-500) 30%, transparent);
+  }
+  .selection\:text-hopbush-200::selection {
+    color: var(--color-hopbush-200);
+  }
+
+  /* Kimberly accent utilities (Resume page) */
+  .bg-kimberly-500\/20 {
+    background-color: color-mix(in srgb, var(--color-kimberly-500) 20%, transparent);
+  }
+  .bg-kimberly-600\/20 {
+    background-color: color-mix(in srgb, var(--color-kimberly-600) 20%, transparent);
+  }
+  .text-kimberly-400 {
+    color: var(--color-kimberly-400);
+  }
+  .border-kimberly-500 {
+    border-color: var(--color-kimberly-500);
+  }
+  .border-kimberly-500\/30 {
+    border-color: color-mix(in srgb, var(--color-kimberly-500) 30%, transparent);
+  }
+  .bg-kimberly-600 {
+    background-color: var(--color-kimberly-600);
+  }
+  .bg-kimberly-700 {
+    background-color: var(--color-kimberly-700);
+  }
+  .shadow-kimberly-500\/25 {
+    --tw-shadow-color: color-mix(in srgb, var(--color-kimberly-500) 25%, transparent);
+  }
+  .shadow-kimberly-500\/40 {
+    --tw-shadow-color: color-mix(in srgb, var(--color-kimberly-500) 40%, transparent);
+  }
+  .from-kimberly-500\/20 {
+    --tw-gradient-from: color-mix(in srgb, var(--color-kimberly-500) 20%, transparent);
+  }
+  .to-kimberly-600\/20 {
+    --tw-gradient-to: color-mix(in srgb, var(--color-kimberly-600) 20%, transparent);
+  }
+  .from-kimberly-600 {
+    --tw-gradient-from: var(--color-kimberly-600);
+  }
+  .to-kimberly-700 {
+    --tw-gradient-to: var(--color-kimberly-700);
+  }
+  .from-kimberly-500 {
+    --tw-gradient-from: var(--color-kimberly-500);
+  }
+  .to-kimberly-600 {
+    --tw-gradient-to: var(--color-kimberly-600);
+  }
+  .hover\:from-kimberly-500:hover {
+    --tw-gradient-from: var(--color-kimberly-500);
+  }
+  .hover\:to-kimberly-600:hover {
+    --tw-gradient-to: var(--color-kimberly-600);
+  }
+  .hover\:shadow-kimberly-500\/40:hover {
+    --tw-shadow-color: color-mix(in srgb, var(--color-kimberly-500) 40%, transparent);
+  }
+  .selection\:bg-kimberly-500\/30::selection {
+    background-color: color-mix(in srgb, var(--color-kimberly-500) 30%, transparent);
+  }
+  .selection\:text-kimberly-200::selection {
+    color: var(--color-kimberly-200);
+  }
+
+  /* Careys Pink accent utilities (Contact page) */
+  .bg-careys-pink-500\/10 {
+    background-color: color-mix(in srgb, var(--color-careys-pink-500) 10%, transparent);
+  }
+  .bg-careys-pink-500\/20 {
+    background-color: color-mix(in srgb, var(--color-careys-pink-500) 20%, transparent);
+  }
+  .text-careys-pink-400 {
+    color: var(--color-careys-pink-400);
+  }
+  .border-careys-pink-500\/30 {
+    border-color: color-mix(in srgb, var(--color-careys-pink-500) 30%, transparent);
+  }
+  .border-careys-pink-500\/50 {
+    border-color: color-mix(in srgb, var(--color-careys-pink-500) 50%, transparent);
+  }
+  .from-careys-pink-500 {
+    --tw-gradient-from: var(--color-careys-pink-500);
+  }
+  .to-careys-pink-600 {
+    --tw-gradient-to: var(--color-careys-pink-600);
+  }
+  .from-careys-pink-400 {
+    --tw-gradient-from: var(--color-careys-pink-400);
+  }
+  .to-careys-pink-500 {
+    --tw-gradient-to: var(--color-careys-pink-500);
+  }
+  .hover\:from-careys-pink-400:hover {
+    --tw-gradient-from: var(--color-careys-pink-400);
+  }
+  .hover\:to-careys-pink-500:hover {
+    --tw-gradient-to: var(--color-careys-pink-500);
+  }
+  .hover\:border-careys-pink-500\/30:hover {
+    border-color: color-mix(in srgb, var(--color-careys-pink-500) 30%, transparent);
+  }
+  .focus\:border-careys-pink-500\/50:focus {
+    border-color: color-mix(in srgb, var(--color-careys-pink-500) 50%, transparent);
+  }
+  .group-focus-within\/input\:text-careys-pink-400:is(:where(.group\/input):focus-within *) {
+    color: var(--color-careys-pink-400);
+  }
+  .group-hover\:text-careys-pink-400:is(:where(.group):hover *) {
+    color: var(--color-careys-pink-400);
+  }
+  .group-hover\:bg-careys-pink-500\/20:is(:where(.group):hover *) {
+    background-color: color-mix(in srgb, var(--color-careys-pink-500) 20%, transparent);
+  }
+  .selection\:bg-careys-pink-500\/30::selection {
+    background-color: color-mix(in srgb, var(--color-careys-pink-500) 30%, transparent);
+  }
+  .selection\:text-careys-pink-200::selection {
+    color: var(--color-careys-pink-200);
   }
 }
