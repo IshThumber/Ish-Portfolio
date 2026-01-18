@@ -1,6 +1,7 @@
 import { AnimatePresence } from "motion/react";
 import { lazy, Suspense } from "react";
 import { Route, Routes, useLocation } from "react-router";
+import { Analytics } from "@vercel/analytics/react";
 
 // Regular import
 import Loading from "./components/Loading";
@@ -36,6 +37,7 @@ const App = () => {
   return (
     <Suspense fallback={<Loading />}>
       <AnimatedRoutes />
+      <Analytics />
     </Suspense>
   );
 };

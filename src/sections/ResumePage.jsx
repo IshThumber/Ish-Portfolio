@@ -7,7 +7,7 @@ import PageTransition from "../components/PageTransition";
 import CustomHeadings from "../components/CustomHeadings";
 
 // OPTION 1: If your PDF is in 'src/assets', import it (Recommended for Vite/Webpack)
-import resumePdf from "../assets/IshThumber_Resume.pdf";
+import resumePdf from "../assets/Ish_Thumber_Resume.pdf";
 
 // OPTION 2: If your PDF is in the 'public' folder, use the string path
 // const resumePdf = "src/assets/IshThumber-Software-Resume.pdf";
