@@ -205,7 +205,7 @@ export const certifications = [
     date: "2026",
     verifyUrl: "https://www.credly.com/badges/b84dc7bd-89a1-4387-abe1-119de88b98a0/public_url",
     description: "Advanced expertise in designing distributed systems and complex solutions on AWS.",
-    badge: "/src/assets/aws-certified-solutions-architect-professional.png",
+    badge: "/certifications/aws-certified-solutions-architect-professional.png",
   },
   {
     id: 2,
@@ -214,7 +214,7 @@ export const certifications = [
     date: "2025",
     verifyUrl: "https://www.credly.com/badges/bf5ab4c9-2fdf-4500-bd27-1a68e4fd5980/public_url",
     description: "Validates expertise in designing distributed systems on AWS.",
-    badge: "/src/assets/aws-certified-solutions-architect-associate.png",
+    badge: "/certifications/aws-certified-solutions-architect-associate.png",
   },
   {
     id: 3,
@@ -223,7 +223,7 @@ export const certifications = [
     date: "2024",
     verifyUrl: "https://www.credly.com/badges/88ec9590-0458-46a0-a6f9-1ecad0635794/public_url",
     description: "Proficiency in infrastructure as code using Terraform.",
-    badge: "/src/assets/hashicorp-certified-terraform-associate-003 (1).png",
+    badge: "/certifications/hashicorp-terraform-associate.png",
   },
   {
     id: 4,
@@ -232,6 +232,6 @@ export const certifications = [
     date: "2024",
     verifyUrl: "https://www.credly.com/badges/ebf6a2ab-b059-4d37-816e-e57cbec7d8d3/public_url",
     description: "Foundational understanding of AWS Cloud concepts and services.",
-    badge: "/src/assets/aws-certified-cloud-practitioner (1).png",
+    badge: "/certifications/aws-certified-cloud-practitioner.png",
   },
 ];
