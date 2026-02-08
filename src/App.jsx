@@ -14,6 +14,7 @@ const Contact = lazy(() => import("./sections/Contact"));
 const Error = lazy(() => import("./components/Error"));
 const Experience = lazy(() => import("./sections/Experiences"));
 const Resume = lazy(() => import("./sections/ResumePage"));
+const Certifications = lazy(() => import("./sections/Certifications"));
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -27,6 +28,7 @@ const AnimatedRoutes = () => {
         <Route path="/experience" element={<Experience />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/resume" element={<Resume />} />
+        <Route path="/certifications" element={<Certifications />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </AnimatePresence>

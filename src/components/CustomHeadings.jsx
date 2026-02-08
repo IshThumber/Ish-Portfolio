@@ -1,13 +1,13 @@
 import { motion } from "motion/react";
 
 const CustomHeadings = ({ heading, subHeading, description, gradientType }) => {
-  // Determine the gradient class - all classes must be explicitly listed for Tailwind v4
   const getGradientClass = () => {
     if (gradientType === "about") return "gradient-about";
     if (gradientType === "projects") return "gradient-projects";
     if (gradientType === "contact") return "gradient-contact";
     if (gradientType === "experiences") return "gradient-experiences";
     if (gradientType === "resume") return "gradient-resume";
+    if (gradientType === "certifications") return "gradient-certifications";
     return "gradient-about"; // fallback
   };
 

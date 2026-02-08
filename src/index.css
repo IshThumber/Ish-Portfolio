@@ -2,7 +2,9 @@
 
 @font-face {
   font-family: "GT Walsheim";
-  src: url("/fonts/GT-Walsheim-Regular.woff2") format("woff2"), url("/fonts/GT-Walsheim-Regular.woff") format("woff");
+  src:
+    url("/fonts/GT-Walsheim-Regular.woff2") format("woff2"),
+    url("/fonts/GT-Walsheim-Regular.woff") format("woff");
   font-weight: 300 900;
   font-style: normal;
   font-display: swap;
@@ -10,7 +12,9 @@
 
 @font-face {
   font-family: "Brandon Text";
-  src: url("/fonts/BrandonText-Medium.woff2") format("woff2"), url("/fonts/BrandonText-Medium.woff") format("woff");
+  src:
+    url("/fonts/BrandonText-Medium.woff2") format("woff2"),
+    url("/fonts/BrandonText-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -18,7 +22,9 @@
 
 @font-face {
   font-family: "fourHand W29";
-  src: url("/fonts/fourHand-W29-Regular.woff2") format("woff2"), url("/fonts/fourHand-W29-Regular.woff") format("woff");
+  src:
+    url("/fonts/fourHand-W29-Regular.woff2") format("woff2"),
+    url("/fonts/fourHand-W29-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -276,6 +282,10 @@ body {
 
   .gradient-resume {
     background-image: linear-gradient(to right, var(--color-kimberly-200), var(--color-kimberly-500));
+  }
+
+  .gradient-certifications {
+    background-image: linear-gradient(to right, var(--color-mantle-200), var(--color-mantle-400));
   }
 
   .gradient-hero {

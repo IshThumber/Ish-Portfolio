@@ -53,6 +53,7 @@ const Navbar = () => {
     { label: "About", to: "/about-me" },
     { label: "Projects", to: "/projects" },
     { label: "Experience", to: "/experience" },
+    { label: "Certifications", to: "/certifications" },
     // { label: "Bento Grid", to: "/bento-grid" },
     { label: "Resume", to: "/resume" },
   ];
