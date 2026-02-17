@@ -95,7 +95,7 @@ const HOBBY_PILLARS: HobbyPillar[] = [
     color: "bg-purple-500",
   },
 ];
-
+// sdfbs
 const Horizontal = () => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const sliderRef = React.useRef<HTMLDivElement>(null);
