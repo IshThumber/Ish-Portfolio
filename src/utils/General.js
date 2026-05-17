@@ -86,6 +86,38 @@ export const skills = [
 
 export const projects = [
   {
+    year: "2026",
+    name: "Databricks Accelerator",
+    description:
+      "A full-stack migration accelerator for moving data workloads into Databricks. It guides teams through connect, assess, profile, migrate, and reconcile phases for Google BigQuery and Azure Synapse Analytics, with automated readiness assessments, dependency and complexity analysis, wave planning, and Databricks Lakebridge–style SQL transpilation — all surfaced through guided wizards and dashboards that cut manual migration discovery and Day-2 setup time.",
+    liveUrl: null,
+    githubUrl: "Private", // GitLab: gitlab.searce.com/ps-9-11/intellicore-databricks-migrator
+    tech: [
+      "Databricks",
+      "Databricks Lakebridge",
+      "Google BigQuery",
+      "Azure Synapse Analytics",
+      "GCP",
+      "Azure",
+      "Python",
+      "FastAPI",
+      "Uvicorn",
+      "Pydantic",
+      "SQLAlchemy",
+      "SQLite",
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "React Router",
+      "D3",
+      "PyODBC",
+      "Azure Identity",
+      "DuckDB",
+      "GitLab CI/CD",
+    ],
+  },
+  {
     year: "2025",
     name: "Observability Accelerator",
     description:

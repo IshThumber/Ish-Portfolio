@@ -51,7 +51,7 @@ const Footer = () => {
         color: "hover:text-gray-100",
       },
     ],
-    []
+    [],
   );
 
   // Animation variants

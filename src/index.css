@@ -30,438 +30,141 @@
   font-display: swap;
 }
 
-:root {
-  --background-color: #0000;
+@theme {
+  /* ─── Base Surfaces ─────────────────────────────────── */
+  --color-bg-base: #111827; /* Global app background */
+  --color-bg-elevated: #131f2a; /* Cards, panels, elevated surfaces */
+  --color-bg-overlay: #0d1117; /* Modals, drawers, deepest surfaces */
 
-  /* Fonts */
+  /* ─── Global Text ────────────────────────────────────── */
+  --color-text-primary: #f5f5f5; /* Default body text */
+  --color-text-secondary: #9ca3af; /* Captions, metadata, secondary labels */
+  --color-text-muted: #4b5563; /* Disabled states, placeholders */
+
+  /* ─── Section Palettes (sampled representatives) ─────── */
+  /* Hero & Resume — Kimberly / Kashmir Blue */
+  --color-hero-400: #6a6eae;
+  --color-hero-500: #5777a0;
+  --color-hero-600: #4a6590;
+
+  /* About — Gigas (purple) */
+  --color-about-400: #9f70dc;
+  --color-about-500: #8055c8;
+  --color-about-600: #6b3fb8;
+
+  /* Projects — Hopbush (pink/purple) */
+  --color-projects-400: #c47ab4;
+  --color-projects-500: #b874a7;
+  --color-projects-600: #a05d8e;
+
+  /* Experience — Wedgewood (crisp blue) */
+  --color-experience-400: #6097c2;
+  --color-experience-500: #4682a9;
+  --color-experience-600: #346a90;
+
+  /* Contact — Careys Pink */
+  --color-contact-400: #d4878f;
+  --color-contact-500: #c3707d;
+  --color-contact-600: #ad5764;
+
+  /* Certifications — Mantle (muted green-gray) */
+  --color-certifications-400: #7a9990;
+  --color-certifications-500: #5b716a;
+  --color-certifications-600: #475c56;
+
+  /* ─── Typography ─────────────────────────────────────── */
   --font-primary: "Urbanist", sans-serif;
   --font-heading: "GT Walsheim", sans-serif;
   --font-accent: "Brandon Text", sans-serif;
   --font-signature: "fourHand W29", cursive;
 
-  --primary-color: #4682a9;
-  --light-background-color: #131f2a;
-  --color-wedgewood-50: #f4f7fb;
-  --color-wedgewood-100: #e8eff6;
-  --color-wedgewood-200: #ccddeb;
-  --color-wedgewood-300: #9fc2da;
-  --color-wedgewood-400: #6ba1c5;
-  --color-wedgewood-500: #4682a9;
-  --color-wedgewood-600: #366b93;
-  --color-wedgewood-700: #2d5777;
-  --color-wedgewood-800: #294a63;
-  --color-wedgewood-900: #263f54;
-  --color-wedgewood-950: #192938;
+  --text-xs: 0.75rem; /* 12px — Captions, labels */
+  --text-sm: 0.875rem; /* 14px — Secondary body */
+  --text-base: 1rem; /* 16px — Primary body */
+  --text-lg: 1.125rem; /* 18px — Lead / intro text */
+  --text-xl: 1.25rem; /* 20px — Sub-section headings */
+  --text-2xl: 1.5rem; /* 24px — Card headings */
+  --text-3xl: 1.875rem; /* 30px — Section sub-headings */
+  --text-4xl: 2.25rem; /* 36px — Section headings */
+  --text-5xl: 3rem; /* 48px — Hero text */
+  --text-6xl: 3.75rem; /* 60px — Ghost background text */
+  --text-9xl: 8rem; /* 128px — Giant ghost text (opacity ~0.05–0.08) */
 
-  --color-mantle-50: #f6f7f7;
-  --color-mantle-100: #e0e7e4;
-  --color-mantle-200: #c1cec8;
-  --color-mantle-300: #9aaea7;
-  --color-mantle-400: #81968f;
-  --color-mantle-500: #5b716a;
-  --color-mantle-600: #475a54;
-  --color-mantle-700: #3b4a45;
-  --color-mantle-800: #323d3a;
-  --color-mantle-900: #2c3532;
-  --color-mantle-950: #171c1b;
+  /* ─── Motion ─────────────────────────────────────────── */
+  --ease-cinematic: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-reveal: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-subtle: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
-  --color-hopbush-50: #faf5f9;
-  --color-hopbush-100: #f6edf4;
-  --color-hopbush-200: #eedceb;
-  --color-hopbush-300: #e1c0da;
-  --color-hopbush-400: #cd99c1;
-  --color-hopbush-500: #b874a7;
-  --color-hopbush-600: #a55d8f;
-  --color-hopbush-700: #8c4a76;
-  --color-hopbush-800: #753f63;
-  --color-hopbush-900: #633854;
-  --color-hopbush-950: #3a1d30;
+  --duration-instant: 80ms;
+  --duration-fast: 150ms;
+  --duration-transition: 400ms;
+  --duration-cinematic: 1200ms;
 
-  --color-kimberly-50: #f3f6fa;
-  --color-kimberly-100: #e9eef6;
-  --color-kimberly-200: #d8deed;
-  --color-kimberly-300: #bfc9e2;
-  --color-kimberly-400: #a5aed4;
-  --color-kimberly-500: #8e95c6;
-  --color-kimberly-600: #6a6eae;
-  --color-kimberly-700: #64669e;
-  --color-kimberly-800: #535580;
-  --color-kimberly-900: #474a68;
-  --color-kimberly-950: #2a2b3c;
+  /* ─── Z-Index Scale ──────────────────────────────────── */
+  --z-base: 0;
+  --z-content: 10;
+  --z-floating: 20;
+  --z-nav: 40;
+  --z-overlay: 50;
+  --z-toast: 60;
 
-  --color-loblolly-50: #f5f7f9;
-  --color-loblolly-100: #e9ecf0;
-  --color-loblolly-200: #d8dee5;
-  --color-loblolly-300: #c8d1da;
-  --color-loblolly-400: #9dacbd;
-  --color-loblolly-500: #8695ab;
-  --color-loblolly-600: #74819c;
-  --color-loblolly-700: #68728d;
-  --color-loblolly-800: #586075;
-  --color-loblolly-900: #49505f;
-  --color-loblolly-950: #2f323c;
-
-  --color-careys-pink-50: #fbf5f5;
-  --color-careys-pink-100: #f8ebec;
-  --color-careys-pink-200: #f1dadd;
-  --color-careys-pink-300: #e5bcc1;
-  --color-careys-pink-400: #d89ca4;
-  --color-careys-pink-500: #c3707d;
-  --color-careys-pink-600: #ac5265;
-  --color-careys-pink-700: #904053;
-  --color-careys-pink-800: #793849;
-  --color-careys-pink-900: #683342;
-  --color-careys-pink-950: #391821;
-
-  --color-gigas-50: #faf7fd;
-  --color-gigas-100: #f2ecfb;
-  --color-gigas-200: #e7dcf8;
-  --color-gigas-300: #d4c0f2;
-  --color-gigas-400: #ba98e8;
-  --color-gigas-500: #9f70dc;
-  --color-gigas-600: #8951cc;
-  --color-gigas-700: #733eb2;
-  --color-gigas-800: #5e358c;
-  --color-gigas-900: #512e75;
-  --color-gigas-950: #341655;
-
-  --color-kashmir-blue-50: #f5f7fa;
-  --color-kashmir-blue-100: #eaedf4;
-  --color-kashmir-blue-200: #d0d9e7;
-  --color-kashmir-blue-300: #a7b9d2;
-  --color-kashmir-blue-400: #7894b8;
-  --color-kashmir-blue-500: #5777a0;
-  --color-kashmir-blue-600: #445f85;
-  --color-kashmir-blue-700: #384d6c;
-  --color-kashmir-blue-800: #31415b;
-  --color-kashmir-blue-900: #2d394d;
-  --color-kashmir-blue-950: #1e2633;
-
-  --color-purple-400: #a855f7;
-  --color-purple-500: #8b5cf6;
-  --color-purple-700: #6d28d9;
-  --color-genoa-300: #10b981;
-  --color-genoa-400: #059669;
-  --color-genoa-500: #047857;
-  --color-genoa-600: #065f46;
-  --color-wild-sand-100: #f5f5f5;
-  --color-wild-sand-200: #e5e5e5;
-  --color-wild-sand-300: #d4d4d4;
-  --color-blue-gray-600: #4b5563;
-  --color-blue-gray-700: #374151;
-  --color-blue-gray-800: #1f2937;
-  --color-blue-gray-900: #111827;
+  /* ─── Glassmorphism ──────────────────────────────────── */
+  --glass-bg: rgba(15, 23, 42, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: 16px;
+  --glass-blur-heavy: 24px;
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 body {
   font-family: var(--font-primary);
-  background-color: var(--color-blue-gray-900);
-  color: var(--color-wild-sand-100);
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
-.font-heading {
-  font-family: var(--font-heading);
-}
-
-.font-accent {
-  font-family: var(--font-accent);
-}
-
-.font-signature {
-  font-family: var(--font-signature);
-}
-
 @layer utilities {
-  .text-wedgewood-400 {
-    color: var(--color-wedgewood-400);
-  }
-  .text-wedgewood-500 {
-    color: var(--color-wedgewood-500);
-  }
-
-  .text-hopbush-200 {
-    color: var(--color-hopbush-200);
-  }
-  .text-hopbush-400 {
-    color: var(--color-hopbush-400);
-  }
-  .text-hopbush-500 {
-    color: var(--color-hopbush-500);
-  }
-
-  .text-careys-pink-400 {
-    color: var(--color-careys-pink-400);
-  }
-  .text-careys-pink-500 {
-    color: var(--color-careys-pink-500);
-  }
-
-  .text-gigas-400 {
-    color: var(--color-gigas-400);
-  }
-  .text-gigas-500 {
-    color: var(--color-gigas-500);
-  }
-  .text-gigas-300 {
-    color: var(--color-gigas-300);
-  }
-  .bg-gigas-500 {
-    background-color: var(--color-gigas-500);
-  }
-  .bg-gigas-500\/20 {
-    background-color: color-mix(in srgb, var(--color-gigas-500) 20%, transparent);
-  }
-  .bg-gigas-300\/20 {
-    background-color: color-mix(in srgb, var(--color-gigas-300) 20%, transparent);
-  }
-  .from-gigas-500\/20 {
-    --tw-gradient-from: color-mix(in srgb, var(--color-gigas-500) 20%, transparent);
-  }
-  .to-gigas-300\/20 {
-    --tw-gradient-to: color-mix(in srgb, var(--color-gigas-300) 20%, transparent);
-  }
-  .from-gigas-300 {
-    --tw-gradient-from: var(--color-gigas-300);
-  }
-  .to-gigas-500 {
-    --tw-gradient-to: var(--color-gigas-500);
-  }
-  .border-gigas-400\/30 {
-    border-color: color-mix(in srgb, var(--color-gigas-400) 30%, transparent);
-  }
-  .border-gigas-300\/30 {
-    border-color: color-mix(in srgb, var(--color-gigas-300) 30%, transparent);
-  }
-  .border-gigas-400\/50 {
-    border-color: color-mix(in srgb, var(--color-gigas-400) 50%, transparent);
-  }
-  .hover\:border-gigas-400\/50:hover {
-    border-color: color-mix(in srgb, var(--color-gigas-400) 50%, transparent);
-  }
-  .hover\:text-gigas-400:hover {
-    color: var(--color-gigas-400);
-  }
-  .shadow-gigas-500\/25 {
-    --tw-shadow-color: color-mix(in srgb, var(--color-gigas-500) 25%, transparent);
-  }
-  .selection\:bg-gigas-500\/30::selection {
-    background-color: color-mix(in srgb, var(--color-gigas-500) 30%, transparent);
-  }
-  .selection\:text-gigas-200::selection {
-    color: var(--color-gigas-200);
-  }
-
-  .text-kashmir-blue-400 {
-    color: var(--color-kashmir-blue-400);
-  }
-  .text-kashmir-blue-500 {
-    color: var(--color-kashmir-blue-500);
-  }
-
-  .text-kimberly-500 {
-    color: var(--color-kimberly-500);
-  }
-
-  .gradient-about {
-    background-image: linear-gradient(to right, var(--color-gigas-200), var(--color-gigas-500));
-  }
-
-  .gradient-experiences {
-    background-image: linear-gradient(to right, var(--color-wedgewood-200), var(--color-wedgewood-500));
-  }
-
-  .gradient-projects {
-    background-image: linear-gradient(to right, var(--color-hopbush-200), var(--color-hopbush-500));
-  }
-
-  .gradient-contact {
-    background-image: linear-gradient(to right, var(--color-careys-pink-200), var(--color-careys-pink-500));
-  }
-
-  .gradient-resume {
-    background-image: linear-gradient(to right, var(--color-kimberly-200), var(--color-kimberly-500));
-  }
-
-  .gradient-certifications {
-    background-image: linear-gradient(to right, var(--color-mantle-200), var(--color-mantle-400));
-  }
-
   .gradient-hero {
-    background-image: linear-gradient(to right, var(--color-kimberly-500), var(--color-kimberly-900));
+    background-image: linear-gradient(135deg, var(--color-hero-400) 0%, var(--color-hero-500) 50%, var(--color-hero-600) 100%);
+  }
+  .gradient-about {
+    background-image: linear-gradient(135deg, var(--color-about-400) 0%, var(--color-about-500) 100%);
+  }
+  .gradient-projects {
+    background-image: linear-gradient(135deg, var(--color-projects-400) 0%, var(--color-projects-500) 60%, var(--color-projects-600) 100%);
+  }
+  .gradient-experiences {
+    background-image: linear-gradient(135deg, var(--color-experience-400) 0%, var(--color-experience-500) 100%);
+  }
+  .gradient-contact {
+    background-image: linear-gradient(135deg, var(--color-contact-400) 0%, var(--color-contact-500) 100%);
+  }
+  .gradient-certifications {
+    background-image: linear-gradient(135deg, var(--color-certifications-400) 0%, var(--color-certifications-500) 100%);
+  }
+  .gradient-resume {
+    background-image: linear-gradient(135deg, var(--color-hero-400) 0%, var(--color-hero-500) 100%);
   }
 
-  /* bg-gradient-to-br from-[#d89ca4] to-[#8c4a76] border-2 border-white/50 */
-  .footer-gradient {
-    background-image: linear-gradient(to bottom, var(--color-kashmir-blue-400), var(--color-kashmir-blue-900));
-    /* border: 2px solid rgba(255, 255, 255, 0.5); */
+  .gradient-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
   }
 
-  /* Wedgewood accent utilities (Experience page) */
-  .bg-wedgewood-400\/20 {
-    background-color: color-mix(in srgb, var(--color-wedgewood-400) 20%, transparent);
-  }
-  .bg-wedgewood-400\/50 {
-    background-color: color-mix(in srgb, var(--color-wedgewood-400) 50%, transparent);
-  }
-  .border-wedgewood-400\/30 {
-    border-color: color-mix(in srgb, var(--color-wedgewood-400) 30%, transparent);
-  }
-  .shadow-wedgewood-400\/10 {
-    --tw-shadow-color: color-mix(in srgb, var(--color-wedgewood-400) 10%, transparent);
-  }
-  .selection\:bg-wedgewood-500\/30::selection {
-    background-color: color-mix(in srgb, var(--color-wedgewood-500) 30%, transparent);
-  }
-  .selection\:text-wedgewood-200::selection {
-    color: var(--color-wedgewood-200);
+  .glass-surface {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
   }
 
-  /* Hopbush accent utilities (Projects page) */
-  .bg-hopbush-500\/20 {
-    background-color: color-mix(in srgb, var(--color-hopbush-500) 20%, transparent);
-  }
-  .border-hopbush-500\/30 {
-    border-color: color-mix(in srgb, var(--color-hopbush-500) 30%, transparent);
-  }
-  .shadow-hopbush-500\/10 {
-    --tw-shadow-color: color-mix(in srgb, var(--color-hopbush-500) 10%, transparent);
-  }
-  .hover\:border-hopbush-500\/30:hover {
-    border-color: color-mix(in srgb, var(--color-hopbush-500) 30%, transparent);
-  }
-  .hover\:shadow-hopbush-500\/10:hover {
-    --tw-shadow-color: color-mix(in srgb, var(--color-hopbush-500) 10%, transparent);
-  }
-  .text-hopbush-400 {
-    color: var(--color-hopbush-400);
-  }
-  .group-hover\:text-hopbush-400:is(:where(.group):hover *) {
-    color: var(--color-hopbush-400);
-  }
-  .selection\:bg-hopbush-500\/30::selection {
-    background-color: color-mix(in srgb, var(--color-hopbush-500) 30%, transparent);
-  }
-  .selection\:text-hopbush-200::selection {
-    color: var(--color-hopbush-200);
-  }
-
-  /* Kimberly accent utilities (Resume page) */
-  .bg-kimberly-500\/20 {
-    background-color: color-mix(in srgb, var(--color-kimberly-500) 20%, transparent);
-  }
-  .bg-kimberly-600\/20 {
-    background-color: color-mix(in srgb, var(--color-kimberly-600) 20%, transparent);
-  }
-  .text-kimberly-400 {
-    color: var(--color-kimberly-400);
-  }
-  .border-kimberly-500 {
-    border-color: var(--color-kimberly-500);
-  }
-  .border-kimberly-500\/30 {
-    border-color: color-mix(in srgb, var(--color-kimberly-500) 30%, transparent);
-  }
-  .bg-kimberly-600 {
-    background-color: var(--color-kimberly-600);
-  }
-  .bg-kimberly-700 {
-    background-color: var(--color-kimberly-700);
-  }
-  .shadow-kimberly-500\/25 {
-    --tw-shadow-color: color-mix(in srgb, var(--color-kimberly-500) 25%, transparent);
-  }
-  .shadow-kimberly-500\/40 {
-    --tw-shadow-color: color-mix(in srgb, var(--color-kimberly-500) 40%, transparent);
-  }
-  .from-kimberly-500\/20 {
-    --tw-gradient-from: color-mix(in srgb, var(--color-kimberly-500) 20%, transparent);
-  }
-  .to-kimberly-600\/20 {
-    --tw-gradient-to: color-mix(in srgb, var(--color-kimberly-600) 20%, transparent);
-  }
-  .from-kimberly-600 {
-    --tw-gradient-from: var(--color-kimberly-600);
-  }
-  .to-kimberly-700 {
-    --tw-gradient-to: var(--color-kimberly-700);
-  }
-  .from-kimberly-500 {
-    --tw-gradient-from: var(--color-kimberly-500);
-  }
-  .to-kimberly-600 {
-    --tw-gradient-to: var(--color-kimberly-600);
-  }
-  .hover\:from-kimberly-500:hover {
-    --tw-gradient-from: var(--color-kimberly-500);
-  }
-  .hover\:to-kimberly-600:hover {
-    --tw-gradient-to: var(--color-kimberly-600);
-  }
-  .hover\:shadow-kimberly-500\/40:hover {
-    --tw-shadow-color: color-mix(in srgb, var(--color-kimberly-500) 40%, transparent);
-  }
-  .selection\:bg-kimberly-500\/30::selection {
-    background-color: color-mix(in srgb, var(--color-kimberly-500) 30%, transparent);
-  }
-  .selection\:text-kimberly-200::selection {
-    color: var(--color-kimberly-200);
-  }
-
-  /* Careys Pink accent utilities (Contact page) */
-  .bg-careys-pink-500\/10 {
-    background-color: color-mix(in srgb, var(--color-careys-pink-500) 10%, transparent);
-  }
-  .bg-careys-pink-500\/20 {
-    background-color: color-mix(in srgb, var(--color-careys-pink-500) 20%, transparent);
-  }
-  .text-careys-pink-400 {
-    color: var(--color-careys-pink-400);
-  }
-  .border-careys-pink-500\/30 {
-    border-color: color-mix(in srgb, var(--color-careys-pink-500) 30%, transparent);
-  }
-  .border-careys-pink-500\/50 {
-    border-color: color-mix(in srgb, var(--color-careys-pink-500) 50%, transparent);
-  }
-  .from-careys-pink-500 {
-    --tw-gradient-from: var(--color-careys-pink-500);
-  }
-  .to-careys-pink-600 {
-    --tw-gradient-to: var(--color-careys-pink-600);
-  }
-  .from-careys-pink-400 {
-    --tw-gradient-from: var(--color-careys-pink-400);
-  }
-  .to-careys-pink-500 {
-    --tw-gradient-to: var(--color-careys-pink-500);
-  }
-  .hover\:from-careys-pink-400:hover {
-    --tw-gradient-from: var(--color-careys-pink-400);
-  }
-  .hover\:to-careys-pink-500:hover {
-    --tw-gradient-to: var(--color-careys-pink-500);
-  }
-  .hover\:border-careys-pink-500\/30:hover {
-    border-color: color-mix(in srgb, var(--color-careys-pink-500) 30%, transparent);
-  }
-  .focus\:border-careys-pink-500\/50:focus {
-    border-color: color-mix(in srgb, var(--color-careys-pink-500) 50%, transparent);
-  }
-  .group-focus-within\/input\:text-careys-pink-400:is(:where(.group\/input):focus-within *) {
-    color: var(--color-careys-pink-400);
-  }
-  .group-hover\:text-careys-pink-400:is(:where(.group):hover *) {
-    color: var(--color-careys-pink-400);
-  }
-  .group-hover\:bg-careys-pink-500\/20:is(:where(.group):hover *) {
-    background-color: color-mix(in srgb, var(--color-careys-pink-500) 20%, transparent);
-  }
-  .selection\:bg-careys-pink-500\/30::selection {
-    background-color: color-mix(in srgb, var(--color-careys-pink-500) 30%, transparent);
-  }
-  .selection\:text-careys-pink-200::selection {
-    color: var(--color-careys-pink-200);
+  .glass-heavy {
+    backdrop-filter: blur(var(--glass-blur-heavy));
+    -webkit-backdrop-filter: blur(var(--glass-blur-heavy));
+    background: rgba(10, 15, 28, 0.75);
   }
 }
