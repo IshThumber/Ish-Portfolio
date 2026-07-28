@@ -3,62 +3,105 @@ export const experience = [
     type: "community",
     name: "AWS Community Builder",
     company: "Amazon Web Services",
-    year: "Community Recognition",
-    description: ["Selected for the DevTools category for my expertise and contributions to the cloud development and DevOps community."],
-    startDate: "2022-06-01",
-    endDate: "2022-08-31",
+    year: "Community",
+    startDate: "2025",
+    endDate: "Present",
+
+    description: [
+      "Recognized in the DevTools category for contributing to and sharing knowledge around cloud development, DevOps, and AWS technologies.",
+      "Continued exploring cloud-native tooling while sharing practical learnings from building and operating real-world systems.",
+    ],
+
+    fieldNote: "The best way to understand something deeply is to build with it, break it, and share what you learned.",
   },
+
   {
     type: "work",
     name: "Cloud Engineer",
     company: "Searce Inc.",
     year: "Current Role",
+    startDate: "2025-03",
+    endDate: "Present",
+
     description: [
-      "Designing and deploying scalable, resilient cloud infrastructure for diverse client applications on AWS.",
-      "Integrating comprehensive monitoring with Prometheus and Grafana.",
-      "Enhancing security postures with Fortinet firewalls.",
+      "Working across AWS and GCP to design cloud platforms, migration architectures, networking, observability, security, and infrastructure automation for large-scale client environments.",
+      "Built observability solutions with Prometheus, Grafana, Loki, Alertmanager, and Thanos, including monitoring environments spanning 150+ instances.",
+      "Designed cloud infrastructure and networking across EKS, EC2, Auto Scaling, Route 53, EFS, Apigee X, Cloud Run, GKE, Private Service Connect, and multi-region architectures.",
+      "Contributed to large-scale AWS-to-GCP migration assessments covering 3,000+ containerized services, alongside GenAI prototypes using Amazon Bedrock.",
     ],
-    startDate: "2022-06-01",
-    endDate: "2022-08-31",
+
+    fieldNote:
+      "Cloud engineering stopped being about individual services and became a lesson in systems, trade-offs, reliability, and designing for scale.",
   },
-  {
-    type: "work",
-    name: "Frontend Developer",
-    company: "Tatvasoft (Internship)",
-    year: "Previous Role",
-    description: [
-      "Developed a book store website using React hooks and the Redux Toolkit.",
-      "Implemented features for user login and registration.",
-      "Integrated functionality to fetch a public book API for display on the home screen.",
-    ],
-    startDate: "2022-06-01",
-    endDate: "2022-08-31",
-  },
+
   {
     type: "work",
     name: "Web Developer",
-    company: "Paropkaaree Foundation (Volunteer)",
-    year: "Previous Role",
+    company: "Mayds — IIT Delhi Startup",
+    year: "Internship",
+    startDate: "2023-05",
+    endDate: "2023-07",
+
     description: [
-      "Redesigned the NGO website, resulting in a more intuitive user interface.",
-      "Successfully integrated a secure payment gateway for seamless online donations.",
-      "Utilized Tailwind CSS to enhance the website's visual appeal and user experience.",
+      "Built and improved web experiences for an early-stage startup, working across frontend development and product requirements.",
+      "Translated designs and evolving product ideas into responsive, reusable interfaces while working in a fast-moving startup environment.",
     ],
-    startDate: "2022-06-01",
-    endDate: "2022-08-31",
+
+    fieldNote:
+      "This is where I learned that shipping something useful matters more than endlessly polishing something perfect.",
   },
+
+  {
+    type: "work",
+    name: "Frontend Developer",
+    company: "TatvaSoft",
+    year: "Internship",
+    startDate: "2023",
+    endDate: "2023",
+
+    description: [
+      "Built a bookstore web application using React, React Hooks, and Redux Toolkit.",
+      "Implemented authentication flows and integrated external book APIs to create dynamic browsing experiences.",
+      "Focused on reusable components, application state, responsive interfaces, and frontend fundamentals.",
+    ],
+
+    fieldNote:
+      "My introduction to thinking beyond individual components and understanding how an application fits together.",
+  },
+
+  {
+    type: "volunteer",
+    name: "Web Developer",
+    company: "Paropkaaree Foundation",
+    year: "Volunteer",
+    startDate: "2022",
+    endDate: "2023",
+
+    description: [
+      "Redesigned the NGO's website to create a simpler and more intuitive experience for visitors.",
+      "Integrated an online payment workflow to make digital donations more accessible.",
+      "Used Tailwind CSS to build a responsive interface while improving the overall visual experience.",
+    ],
+
+    fieldNote: "A small reminder that software doesn't need massive scale to create meaningful impact.",
+  },
+
   {
     type: "work",
     name: "Big Data Analytics Engineer",
-    company: "Motorola Solutions (Internship)",
-    year: "Previous Role",
+    company: "Motorola Solutions",
+    year: "Internship",
+    startDate: "2022-06",
+    endDate: "2022-11",
+
     description: [
-      "Performed statistical analysis to assess the impact of data on business outcomes.",
-      "Wrote Apache Spark queries to extract data from Azure ADLS.",
-      "Created a Docker container of Python with PySpark, deployed on Kubernetes with cron jobs for routine deployment.",
+      "Worked with large-scale datasets using Apache Spark and Azure Data Lake Storage to extract and analyze information for business use cases.",
+      "Performed statistical analysis to understand how data influenced business outcomes.",
+      "Containerized Python and PySpark workloads with Docker and deployed scheduled processing jobs on Kubernetes.",
     ],
-    startDate: "2022-06-01",
-    endDate: "2022-08-31",
+
+    fieldNote:
+      "My first real glimpse of data, containers, and distributed systems working together — and probably where the infrastructure curiosity started.",
   },
 ];
 
@@ -87,134 +130,236 @@ export const skills = [
 export const projects = [
   {
     year: "2026",
-    name: "Databricks Accelerator",
+    name: "Intellicore Databricks Migrator",
     description:
-      "A full-stack migration accelerator for moving data workloads into Databricks. It guides teams through connect, assess, profile, migrate, and reconcile phases for Google BigQuery and Azure Synapse Analytics, with automated readiness assessments, dependency and complexity analysis, wave planning, and Databricks Lakebridge–style SQL transpilation — all surfaced through guided wizards and dashboards that cut manual migration discovery and Day-2 setup time.",
+      "A full-stack migration platform for moving enterprise data workloads from Google BigQuery and Azure Synapse Analytics to Databricks. It guides teams through discovery, assessment, profiling, migration, and reconciliation while automating dependency analysis, complexity scoring, wave planning, and SQL transpilation.",
+    impact:
+      "Turns a fragmented migration discovery process into a guided, repeatable workflow with automated readiness assessment and migration planning.",
+    keyTakeaway:
+      "Migration tooling isn't just about moving SQL — the hard part is understanding dependencies, complexity, sequencing, and everything surrounding the workload.",
     liveUrl: null,
-    githubUrl: "Private", // GitLab: gitlab.searce.com/ps-9-11/intellicore-databricks-migrator
+    githubUrl: "Private",
     tech: [
       "Databricks",
       "Databricks Lakebridge",
       "Google BigQuery",
       "Azure Synapse Analytics",
-      "GCP",
-      "Azure",
       "Python",
       "FastAPI",
-      "Uvicorn",
       "Pydantic",
       "SQLAlchemy",
-      "SQLite",
       "React",
       "TypeScript",
-      "Vite",
-      "Tailwind CSS",
-      "React Router",
       "D3",
+      "DuckDB",
       "PyODBC",
       "Azure Identity",
-      "DuckDB",
       "GitLab CI/CD",
     ],
   },
+
   {
     year: "2025",
-    name: "Observability Accelerator",
+    name: "Intellicore Observability",
     description:
-      "An automated monitoring solution designed to instantly deploy a production-grade observability stack. It provisions Prometheus for metrics collection and Grafana for visualization, complete with pre-configured dashboards for cluster health, node metrics, and application performance, significantly reducing Day-2 operational setup time.",
+      "A self-service observability platform for rapidly deploying production-ready monitoring across Kubernetes environments. It combines metrics, logs, traces, dashboards, and long-term observability components behind a guided deployment experience.",
+    impact:
+      "Reduced Kubernetes monitoring setup from a multi-step manual process to a guided deployment workflow that can establish the core observability stack in under 10 minutes.",
+    keyTakeaway:
+      "Observability gets interesting when you're monitoring the monitoring — multi-cluster visibility, storage, reliability, and operational simplicity matter as much as dashboards.",
     liveUrl: null,
     githubUrl: "Private",
-    tech: ["Prometheus", "Grafana", "Loki", "Tempo", "Helm", "Kubernetes", "Python", "FastAPI", "React", "TypeScript", "AWS EKS", "Vite", "Docker", "Kubernetes", "AWS"],
+    tech: [
+      "Prometheus",
+      "Grafana",
+      "Loki",
+      "Tempo",
+      "Thanos",
+      "Alertmanager",
+      "Kubernetes",
+      "AWS EKS",
+      "Helm",
+      "Docker",
+      "Python",
+      "FastAPI",
+      "React",
+      "TypeScript",
+      "Vite",
+    ],
   },
+
   {
     year: "2025",
-    name: "Kubernetes Accelerator",
+    name: "Intellicore Container Orchestration",
     description:
-      "A sophisticated platform engineered to automate EKS cluster provisioning. It supports both Single-Cluster and Multi-Cluster deployments with a focus on standardization and speed. The system leverages a decoupled architecture with a Python FastAPI backend for orchestration and a modern React/TypeScript frontend for an intuitive management experience.",
+      "A platform for standardizing and automating containerized workload and EKS deployment workflows. It combines infrastructure automation with a guided interface to reduce the repetitive work involved in preparing containerized applications for Kubernetes.",
+    impact:
+      "Created a reusable workflow around Docker, Terraform, Helm, ECR, and EKS instead of treating each Kubernetes deployment as a one-off implementation.",
+    keyTakeaway:
+      "The best platform abstractions remove repetitive decisions without hiding the infrastructure engineers still need to understand.",
     liveUrl: null,
     githubUrl: "Private",
-    tech: ["Python", "FastAPI", "React", "TypeScript", "AWS EKS", "Vite", "Docker", "Kubernetes", "AWS", "Helm", "AWS ECR"],
+    tech: [
+      "AWS EKS",
+      "Kubernetes",
+      "Terraform",
+      "Helm",
+      "Docker",
+      "AWS ECR",
+      "Python",
+      "FastAPI",
+      "React",
+      "TypeScript",
+      "Vite",
+    ],
   },
+
   {
     year: "2025",
     name: "RAG Flashcards",
     description:
-      "RAG Flashcards is an AI-driven flashcard generator. It ingests documents (PDFs), extracts and chunks text, embeds content, and indexes it for retrieval. Users can upload study materials, generate flashcards, and interact with a chatbot for personalized learning. The backend leverages AWS (S3, OpenSearch), Bedrock models, and Claude for advanced retrieval-augmented generation.",
+      "An AI-powered learning application that turns uploaded PDFs into contextual flashcards and enables document-grounded conversations using a retrieval-augmented generation pipeline.",
+    impact:
+      "Built the complete RAG lifecycle — document ingestion, chunking, embeddings, vector indexing, retrieval, generation, and conversational interaction — on AWS.",
+    keyTakeaway:
+      "RAG quality depends on much more than the LLM. Chunking, embeddings, retrieval strategy, vector mappings, and context construction can make or break the experience.",
     liveUrl: null,
     githubUrl: "https://github.com/IshThumber/RAG-flashcards",
-    tech: ["Python", "FastAPI", "AWS S3", "AWS OpenSearch", "Amazon Bedrock", "Anthropic Claude", "PDF Parsing"],
+    tech: [
+      "Python",
+      "FastAPI",
+      "Amazon S3",
+      "Amazon OpenSearch",
+      "Amazon Bedrock",
+      "Titan Embeddings",
+      "Anthropic Claude",
+      "RAG",
+    ],
   },
+
   {
     year: "2025",
-    name: "ContextCraft: Your AI-Powered Blog Companion",
+    name: "ContextCraft",
+    subtitle: "AI-Powered Writing Companion",
     description:
-      "ContextCraft is an AI-powered blog writing assistant that helps writers streamline their content creation process for Medium. It remembers your past writing style, suggests trending and personalized topics, generates high-quality drafts, helps revise for SEO and tone, and reminds you when it’s time to publish — giving you total control and creative focus without the clutter.",
+      "An AI writing companion designed around the complete content workflow — discovering ideas, understanding a writer's previous content, generating drafts, refining tone and SEO, and helping maintain a consistent publishing rhythm.",
+    impact:
+      "Explored how contextual memory and personalized generation can make AI writing tools feel less like generic text generators and more like creative collaborators.",
+    keyTakeaway:
+      "Good AI products aren't just prompts wrapped in a UI — context, memory, workflow design, and user control are what make the intelligence useful.",
     liveUrl: null,
     githubUrl: "https://github.com/ishthumber/contextcraft",
-    tech: ["Python", "FastAPI", "Supabase", "Supabase Auth", "OpenAI API / Nebius AI"],
+    tech: ["Python", "FastAPI", "Supabase", "Supabase Auth", "OpenAI API", "Nebius AI"],
   },
+
   {
     year: "2025",
-    name: "SmartCover AI: AI-Powered Cover Letter Generator",
+    name: "SmartCover AI",
+    subtitle: "AI-Powered Cover Letter Generator",
     description:
-      "SmartCover AI is a production-ready React application that generates personalized cover letters using Gemini AI. Users can upload their resumes, enter job details, and generate polished, exportable cover letters within seconds — with Google Drive integration, advanced AI model options, persistent state, and full client-side privacy.",
+      "A resume-aware cover letter generator that combines job context with candidate information to produce personalized, editable, and exportable cover letters through a focused React experience.",
+    impact:
+      "Built the complete browser-based workflow from resume ingestion and AI generation to authentication, persistence, document export, and Google Drive integration.",
+    keyTakeaway:
+      "AI should accelerate the blank-page problem without taking control away from the person actually writing.",
     liveUrl: "https://smartcover-xi.vercel.app/",
     githubUrl: "https://github.com/IshThumber/SmartCover",
-    tech: ["React", "Vite", "Tailwind CSS", "Gemini AI", "Supabase Auth", "Google Drive API", "jsPDF", "pdfjs-dist", "mammoth.js"],
+    tech: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Gemini AI",
+      "Supabase Auth",
+      "Google Drive API",
+      "jsPDF",
+      "pdfjs-dist",
+      "mammoth.js",
+    ],
   },
+
   {
     year: "2025",
     name: "Seamless DataSync Deployment",
     description:
-      "Engineered a Python-based automation tool for AWS DataSync that eliminated 95% of manual configuration. The solution included an intuitive UI for rapid job deployment and optimized data transfers across regions, reducing setup time by 50%  and operational overhead by 30%.",
+      "An automation platform for deploying AWS DataSync jobs through a guided interface, replacing repetitive infrastructure configuration with reusable workflows and infrastructure-as-code.",
+    impact:
+      "Eliminated approximately 95% of manual configuration, reduced setup time by 50%, and lowered operational overhead by 30%.",
+    keyTakeaway:
+      "Automation delivers the most value when it removes repetitive operational work while keeping infrastructure predictable and reproducible.",
     liveUrl: null,
     githubUrl: "Private",
-    tech: ["Python", "AWS DataSync", "IAM", "Vite.js", "Flask", "Terraform"],
+    tech: ["Python", "AWS DataSync", "AWS IAM", "Terraform", "Flask", "Vite"],
   },
+
   {
     year: "2024",
     name: "Terraform Cross-Account Pipeline",
+    subtitle: "Cross-Account Provisioning Accelerator",
     description:
-      "Developed a CI/CD pipeline using AWS CodePipeline and Terraform to automate infrastructure provisioning across multiple AWS accounts. This accelerator eliminated 70% of manual effort  and cut deployment time by 50%  by standardizing state management and security checks.",
-    liveUrl: "https://ishthumber.medium.com/automating-cross-account-terraform-deployments-with-aws-codepipeline-e8f80e1ee137",
+      "A CI/CD architecture for securely provisioning Terraform infrastructure across multiple AWS accounts using centralized pipelines, remote state management, and cross-account IAM.",
+    impact:
+      "Eliminated approximately 70% of manual provisioning effort and reduced deployment time by 50% through standardized infrastructure delivery.",
+    keyTakeaway:
+      "Infrastructure automation becomes much more interesting across account boundaries — identity, state, blast radius, and trust relationships become first-class design decisions.",
+    liveUrl:
+      "https://ishthumber.medium.com/automating-cross-account-terraform-deployments-with-aws-codepipeline-e8f80e1ee137",
     githubUrl: "Private",
-    tech: ["Terraform", "AWS CodePipeline", "CodeBuild", "S3", "DynamoDB"],
+    tech: ["Terraform", "AWS CodePipeline", "AWS CodeBuild", "AWS IAM", "Amazon S3", "DynamoDB"],
   },
+
   {
     year: "2023",
     name: "CRUDSify",
     description:
-      "A powerful data management application that simplifies CRUD operations with an intuitive UI, seamless integration, and email features for efficient data handling. This project showcases full-stack capabilities from database to frontend.",
+      "A full-stack data management application built around everyday CRUD workflows, combining a responsive interface with backend APIs, persistence, and email functionality.",
+    impact:
+      "Built an end-to-end application spanning frontend state, REST APIs, backend logic, database operations, and deployment.",
+    keyTakeaway:
+      "Building both sides of an application made the boundary between frontend and backend feel much less like a boundary.",
     liveUrl: "https://crudsify.vercel.app/",
     githubUrl: "https://github.com/IshThumber/CRUDSify",
-    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "TailwindCSS"],
+    tech: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
   },
+
   {
-    year: "ND",
+    year: "2023",
     name: "Personal Portfolio",
     description:
-      "My personal corner of the internet. Designed with a modern aesthetic and built with React and TailwindCSS, this project is a testament to my passion for clean code, responsive design, and great user experience.",
+      "My evolving corner of the internet — built to experiment with frontend engineering, interaction design, animation, and how technical work can be communicated with more personality.",
+    impact:
+      "Became an ongoing playground for experimenting with React, motion, visual storytelling, and personal branding.",
+    keyTakeaway: "A portfolio shouldn't only document what I've built — it should feel like something I built.",
     liveUrl: "https://ishthumber.vercel.app/",
     githubUrl: "https://github.com/IshThumber/Ish-Portfolio",
-    tech: ["React.js", "TailwindCSS", "Framer Motion", "GSAP"],
+    tech: ["React", "Tailwind CSS", "Framer Motion", "GSAP"],
   },
+
   {
     year: "2022",
     name: "PhD Admission Portal",
     description:
-      "A comprehensive web portal for PhD admissions at Charusat University. The system streamlines the application process for students and provides robust management tools for faculty and administrators, handling complex workflows and data securely.",
+      "A full-stack admissions platform for managing PhD application workflows at CHARUSAT, designed for both applicants and university administrators.",
+    impact:
+      "Translated a multi-step institutional workflow into a web application spanning authentication, application management, persistent data, and administrative experiences.",
+    keyTakeaway:
+      "Real applications are mostly workflows, edge cases, permissions, and data consistency hiding behind seemingly simple screens.",
     liveUrl: "https://charusatphd.vercel.app/",
     githubUrl: "Private",
-    tech: ["React.js", "Node.js", "Docker", "AWS", "PostgreSQL", "Prisma"],
+    tech: ["React", "Node.js", "PostgreSQL", "Prisma", "Docker", "AWS"],
   },
+
   {
     year: "2022",
     name: "NGO Website Redesign",
     description:
-      "A complete redesign of an NGO's website to enhance user experience and engagement. The project involved modern UI/UX design principles, responsive layouts, and integration with backend services for dynamic content management.",
+      "A redesign of Paropkaaree Foundation's website focused on making information easier to navigate, improving the visual experience, and supporting online donations.",
+    impact:
+      "Turned an early web-development project into something used for a real organization with real users and a real-world purpose.",
+    keyTakeaway:
+      "One of the first projects that taught me software doesn't need massive scale to have a meaningful impact.",
     liveUrl: "https://paropkaree.vercel.app/",
     githubUrl: "https://github.com/IshThumber/parpkaree",
-    tech: ["HTML", "CSS", "JavaScript", "Tailwind", "React.js"],
+    tech: ["React", "JavaScript", "Tailwind CSS", "HTML", "CSS"],
   },
 ];
 

@@ -1,46 +1,80 @@
-import { AnimatePresence } from "motion/react";
-import { lazy, Suspense } from "react";
-import { Route, Routes, useLocation } from "react-router";
+import React, { useState, useEffect } from "react";
 import { Analytics } from "@vercel/analytics/react";
 
-// Regular import
-import Loading from "./components/Loading";
-import About from "./sections/About";
-import HeroMain from "./sections/HeroMain";
+// Components
+import Navbar from "./components/Navbar";
+import CustomCursor from "./components/CustomCursor";
 
-// Lazy imports
-const ProjectWrapper = lazy(() => import("./sections/Projects"));
-const Contact = lazy(() => import("./sections/Contact"));
-const Error = lazy(() => import("./components/Error"));
-const Experience = lazy(() => import("./sections/Experiences"));
-const Resume = lazy(() => import("./sections/ResumePage"));
-const Certifications = lazy(() => import("./sections/Certifications"));
-
-const AnimatedRoutes = () => {
-  const location = useLocation();
-
-  return (
-    <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<HeroMain />} />
-        <Route path="/about-me" element={<About />} />
-        <Route path="/projects" element={<ProjectWrapper />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="/certifications" element={<Certifications />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
-    </AnimatePresence>
-  );
-};
+// Sections
+import HeroViewfinder from "./sections/HeroViewfinder";
+import JourneyOdyssey from "./sections/JourneyOdyssey";
+import GarageObservatory from "./sections/GarageObservatory";
+import ArtifactsProjects from "./sections/ArtifactsProjects";
+import TechnicalToolbox from "./sections/TechnicalToolbox";
+import PitStopContact from "./sections/PitStopContact";
 
 const App = () => {
+  const [activeSection, setActiveSection] = useState("viewfinder");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = [
+        "viewfinder",
+        "odyssey",
+        "garage",
+        "artifacts",
+        "pitstop",
+      ];
+      const scrollPosition = window.scrollY + 200;
+
+      for (const sectionId of sections) {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          const top = el.offsetTop;
+          const height = el.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            setActiveSection(sectionId);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <Suspense fallback={<Loading />}>
-      <AnimatedRoutes />
+    <div className="min-h-screen bg-[#FAF8F5] text-[#1E293B] font-primary relative selection:bg-[#FDBA9A]/30 selection:text-[#1E293B]">
+      {/* Custom Viewfinder Cursor for Desktop */}
+      <CustomCursor />
+
+      {/* Field Journal Navigation Header */}
+      <Navbar activeSection={activeSection} />
+
+      {/* Main Journal Flow */}
+      <main>
+        {/* 01 / THE VIEWFINDER */}
+        <HeroViewfinder />
+
+        {/* 02 / THE ODYSSEY */}
+        <JourneyOdyssey />
+
+        {/* 03 / THE GARAGE & OBSERVATORY */}
+        <GarageObservatory />
+
+        {/* 04 / THE ARTIFACTS (Visual Centerpiece) */}
+        <ArtifactsProjects />
+
+        {/* TECHNICAL TOOLBOX */}
+        <TechnicalToolbox />
+
+        {/* 05 / THE PIT STOP */}
+        <PitStopContact />
+      </main>
+
       <Analytics />
-    </Suspense>
+    </div>
   );
 };
 

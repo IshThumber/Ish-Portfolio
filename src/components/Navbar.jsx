@@ -1,191 +1,129 @@
-import { AnimatePresence, motion } from "motion/react";
-import React, { useEffect, useState } from "react";
-import { Link, NavLink, useLocation } from "react-router";
-import { FiMenu, FiX, FiArrowUpRight } from "react-icons/fi";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-const MenuIcon = () => <FiMenu size={24} />;
-const CloseIcon = () => <FiX size={24} />;
+export const Navbar = ({ activeSection = "viewfinder" }) => {
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-const NavItem = ({ to, children, onClick }) => {
-  const location = useLocation();
-  const isActive = location.pathname === to;
-
-  return (
-    <li className="relative z-10">
-      <NavLink
-        to={to}
-        onClick={onClick}
-        className={`relative block px-4 py-2 text-sm font-accent tracking-wide transition-colors duration-300 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hero-400
-          ${isActive ? "text-white" : "text-gray-400 hover:text-white"}`}
-      >
-        {/* Active Pill Animation */}
-        {isActive && (
-          <motion.div
-            layoutId="active-nav-pill"
-            className="absolute inset-0 bg-white/10 rounded-full backdrop-blur-sm border border-white/5 shadow-inner"
-            transition={{ type: "spring", stiffness: 400, damping: 30 }}
-          />
-        )}
-        <span className="relative z-10">{children}</span>
-      </NavLink>
-    </li>
-  );
-};
-
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
-
-  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 60);
+      setScrolled(window.scrollY > 40);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
-  useEffect(() => setIsOpen(false), [location]);
-
-  const links = [
-    { label: "About", to: "/about-me" },
-    { label: "Projects", to: "/projects" },
-    { label: "Experience", to: "/experience" },
-    { label: "Certifications", to: "/certifications" },
-    { label: "Resume", to: "/resume" },
+  const navLinks = [
+    { id: "viewfinder", label: "01 / VIEWFINDER", href: "#viewfinder" },
+    { id: "odyssey", label: "02 / ODYSSEY", href: "#odyssey" },
+    { id: "garage", label: "03 / GARAGE & OBS", href: "#garage" },
+    { id: "artifacts", label: "04 / ARTIFACTS", href: "#artifacts" },
+    { id: "pitstop", label: "05 / PIT STOP", href: "#pitstop" },
   ];
 
-  // Map route to section border color
-  const getBorderTint = () => {
-    const path = location.pathname;
-    if (path.includes("about")) return "border-about-500/30";
-    if (path.includes("projects")) return "border-projects-500/30";
-    if (path.includes("experience")) return "border-experience-500/30";
-    if (path.includes("contact")) return "border-contact-500/30";
-    if (path.includes("certifications")) return "border-certifications-500/30";
-    if (path.includes("resume")) return "border-hero-500/30";
-    return "border-hero-500/30"; // default
-  };
-
   return (
-    <>
-      <header className={`fixed top-0 left-0 z-40 w-full transition-all duration-500 ${isScrolled ? "py-4" : "py-6"}`}>
-        <nav className="mx-auto max-w-6xl px-6 md:px-12">
-          <motion.div
-            initial={{ y: -20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 100,
-              damping: 18,
-              mass: 0.8,
-            }}
-            className={`
-               relative flex items-center justify-between px-5 py-3
-               rounded-2xl transition-[background-color,border-color,box-shadow] duration-500 ease-out
-               ${isScrolled ? `glass-surface border-b-2 ${getBorderTint()}` : "bg-transparent border border-transparent"}
-             `}
-          >
-            {/* Logo */}
-            <Link
-              to="/"
-              className="font-primary text-3xl font-bold tracking-tight text-white hover:opacity-80 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hero-400 rounded"
-            >
-              Ish<span className="text-about-400">.</span>
-            </Link>
+    <header
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+        scrolled ? "bg-[#FAF8F5]/90 backdrop-blur-md border-b border-[#CBD5E1] shadow-xs py-3" : "bg-transparent py-5"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        {/* Brand Logo & Handwritten Title */}
+        <a href="#viewfinder" className="flex items-center gap-2 group">
+          <div className="w-8 h-8 rounded-full border-1.5 border-[#1E293B] bg-[#FEF3C7] flex items-center justify-center font-bold text-sm text-[#1E293B] shadow-2xs group-hover:rotate-12 transition-transform">
+            IT
+          </div>
+          <div>
+            <span className="font-bold text-base tracking-tight text-[#1E293B]">Ish Thumber</span>
+            <span className="hidden sm:inline-block font-handwriting text-xs text-slate-500 ml-2">field notebook</span>
+          </div>
+        </a>
 
-            {/* Desktop Navigation */}
-            <ul className="hidden md:flex items-center gap-1 bg-transparent p-1 rounded-2xl">
-              {links.map((link) => (
-                <NavItem key={link.to} to={link.to}>
-                  {link.label}
-                </NavItem>
-              ))}
-            </ul>
-
-            {/* CTA Button */}
-            <div className="hidden md:block">
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-1.5 bg-[#FFFFFF]/80 backdrop-blur-sm border border-[#CBD5E1] rounded-full p-1.5 shadow-2xs">
+          {navLinks.map((link) => {
+            const isActive = activeSection === link.id;
+            return (
               <a
-                href="/contact"
-                className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-about-400 to-about-600 text-white text-sm font-accent tracking-wide shadow-lg shadow-about-500/20 hover:shadow-about-500/40 hover:scale-105 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-about-400"
+                key={link.id}
+                href={link.href}
+                className={`px-3 py-1.5 rounded-full text-[12px] font-medium tracking-[0.02em] transition-all duration-200 ${
+                  isActive
+                    ? "bg-[#1E293B] text-[#FAF8F5] shadow-xs font-semibold"
+                    : "text-[#64748B] hover:text-[#1E293B] hover:bg-[#FAF8F5]"
+                }`}
               >
-                <span>Get in Touch</span>
-                <FiArrowUpRight className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
+                {link.label}
               </a>
-            </div>
-
-            {/* Mobile Menu Toggle */}
-            <div className="md:hidden flex items-center">
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="flex items-center justify-center w-12 h-12 text-gray-300 hover:text-white hover:bg-white/10 rounded-xl transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hero-400"
-                aria-label="Toggle Menu"
-              >
-                {isOpen ? <CloseIcon /> : <MenuIcon />}
-              </button>
-            </div>
-          </motion.div>
+            );
+          })}
         </nav>
-      </header>
 
-      {/* Mobile Menu Overlay */}
+        {/* Action CTAs: Resume & Contact */}
+        <div className="hidden sm:flex items-center gap-3">
+          <a
+            href="/Ish_Thumber_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download="Ish_Thumber_Resume.pdf"
+            className="px-4 py-1.5 rounded-md border border-[#1E293B] text-xs font-semibold text-[#1E293B] bg-white hover:bg-[#FEF3C7] transition-colors shadow-2xs flex items-center gap-1.5"
+          >
+            <span>📄 Resume PDF</span>
+          </a>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="md:hidden p-2 rounded-md border border-[#CBD5E1] bg-white text-[#1E293B]"
+          aria-label="Toggle Navigation Menu"
+        >
+          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            {mobileMenuOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
+      </div>
+
+      {/* Mobile Drawer */}
       <AnimatePresence>
-        {isOpen && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }} className="fixed inset-0 z-50 glass-heavy md:hidden">
-            {/* Close Button Inside Overlay for ease */}
-            <div className="absolute top-6 right-6">
-              <button
-                onClick={() => setIsOpen(false)}
-                className="flex items-center justify-center w-12 h-12 text-gray-300 hover:text-white hover:bg-white/10 rounded-xl transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hero-400"
-                aria-label="Close Menu"
-              >
-                <CloseIcon />
-              </button>
-            </div>
-
-            <div className="flex flex-col h-full px-6 pt-32 pb-12">
-              <div className="flex flex-col gap-6">
-                {links.map((link, i) => (
-                  <NavLink
-                    key={link.to}
-                    to={link.to}
-                    onClick={() => setIsOpen(false)}
-                    className={({ isActive }) => `
-                        text-4xl font-black font-heading tracking-tighter transition-colors min-h-[48px] flex items-center
-                        ${isActive ? "gradient-text gradient-hero" : "text-gray-400 hover:text-white"}
-                      `}
-                  >
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{
-                        delay: 0.1 + i * 0.08,
-                        duration: 0.5,
-                        ease: "easeOut",
-                      }}
-                    >
-                      {link.label}
-                    </motion.div>
-                  </NavLink>
-                ))}
-              </div>
-
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="mt-auto">
-                <div className="h-px w-full bg-gradient-to-r from-transparent via-gray-700 to-transparent mb-8" />
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-[#FAF8F5] border-b border-[#CBD5E1] px-4 pt-2 pb-6 shadow-md"
+          >
+            <div className="flex flex-col gap-2 mt-2">
+              {navLinks.map((link) => (
                 <a
-                  href="/contact"
-                  className="flex items-center justify-center gap-2 w-full h-14 bg-white text-gray-900 font-bold rounded-xl active:scale-95 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hero-400"
+                  key={link.id}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="px-4 py-2 rounded-md text-sm font-medium text-[#1E293B] hover:bg-[#FEF3C7]"
                 >
-                  Let's Work Together <FiArrowUpRight />
+                  {link.label}
                 </a>
-              </motion.div>
+              ))}
+              <div className="pt-2 border-t border-slate-200 mt-2 flex gap-3">
+                <a
+                  href="/Ish_Thumber_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download="Ish_Thumber_Resume.pdf"
+                  className="flex-1 py-2 text-center rounded-md border border-[#1E293B] text-xs font-semibold text-[#1E293B] bg-white"
+                >
+                  📄 View Resume PDF
+                </a>
+              </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </header>
   );
 };
 
