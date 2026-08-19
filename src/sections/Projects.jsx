@@ -51,7 +51,13 @@ const ProjectItem = ({ project, spanClass = "" }) => {
 
         <div className="flex gap-3">
           {project.liveUrl && (
-            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" title="Live Demo">
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors"
+              title="Live Demo"
+            >
               <FiExternalLink size={20} />
             </a>
           )}
@@ -61,7 +67,13 @@ const ProjectItem = ({ project, spanClass = "" }) => {
               <FiLock size={20} />
             </span>
           ) : (
-            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" title="GitHub Repo">
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors"
+              title="GitHub Repo"
+            >
               <FiGithub size={20} />
             </a>
           )}
@@ -70,7 +82,9 @@ const ProjectItem = ({ project, spanClass = "" }) => {
 
       {/* Content Section */}
       <div>
-        <h3 className="text-2xl md:text-3xl font-bold text-gray-100 group-hover:text-hopbush-400 transition-colors duration-300">{project.name}</h3>
+        <h3 className="text-2xl md:text-3xl font-bold text-gray-100 group-hover:text-hopbush-400 transition-colors duration-300">
+          {project.name}
+        </h3>
 
         <motion.p
           layout
@@ -86,7 +100,10 @@ const ProjectItem = ({ project, spanClass = "" }) => {
       <div className="mt-6 pt-4 border-t border-gray-700/50">
         <div className="flex flex-wrap gap-2">
           {project.tech.map((tech) => (
-            <span key={tech} className="px-2.5 py-1 text-xs font-medium rounded-md bg-gray-700/50 text-hopbush-500 border border-gray-600/30">
+            <span
+              key={tech}
+              className="px-2.5 py-1 text-xs font-medium rounded-md bg-gray-700/50 text-hopbush-500 border border-gray-600/30"
+            >
               {tech}
             </span>
           ))}
@@ -126,7 +143,12 @@ const Projects = () => {
           />
 
           {/* Projects Grid */}
-          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={containerVariants} initial="hidden" animate="visible">
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
             {projects.map((project, index) => {
               // Logic for span classes: Make specific featured items span 2 columns if desired
               // For now, let's make the first item span 2 columns on large screens for visual interest

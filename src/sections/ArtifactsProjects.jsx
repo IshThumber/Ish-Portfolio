@@ -260,6 +260,42 @@ export const ArtifactsProjects = () => {
 
   return (
     <section id="artifacts" className="relative py-20 md:py-28 bg-[#FAF8F5] border-t border-[#CBD5E1]">
+      <img
+        src="/doodles/lucky-cat-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute top-10 right-6 w-20 h-20 opacity-80 rotate-3 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/leaf-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute top-1/2 left-6 w-20 h-20 opacity-80 -rotate-6 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/ramen-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute bottom-10 right-10 w-20 h-20 opacity-80 rotate-6 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/robot-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute top-1/3 left-10 w-20 h-20 opacity-80 rotate-6 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/gauntlet-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute bottom-1/3 right-16 w-20 h-20 opacity-80 -rotate-3 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/mountains-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute top-10 left-1/3 w-20 h-20 opacity-80 rotate-3 pointer-events-none select-none"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">

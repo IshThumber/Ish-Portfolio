@@ -17,6 +17,24 @@ export const HeroViewfinder = () => {
 
   return (
     <section id="viewfinder" className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden bg-paper-grid">
+      <img
+        src="/doodles/juicebox2-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute bottom-10 left-6 w-20 h-20 opacity-80 -rotate-6 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/binoculars-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute top-24 right-10 w-20 h-20 opacity-80 rotate-6 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/camera2-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute bottom-24 right-16 w-20 h-20 opacity-80 -rotate-3 pointer-events-none select-none"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* System Voice Section Marker */}
         <div className="flex items-center gap-3 mb-6">

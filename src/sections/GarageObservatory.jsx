@@ -272,6 +272,15 @@ export const GarageObservatory = () => {
   const [activeTab, setActiveTab] = useState("photography"); // 'photography' | 'automotive' | 'astronomy'
   const [selectedPhoto, setSelectedPhoto] = useState(null);
 
+  useEffect(() => {
+    if (!selectedPhoto) return;
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") setSelectedPhoto(null);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedPhoto]);
+
   // Automotive RPM state
   const [rpm, setRpm] = useState(4200);
   const isRedline = rpm >= 6400;
@@ -390,6 +399,48 @@ export const GarageObservatory = () => {
 
   return (
     <section id="garage" className="relative py-20 md:py-28 bg-paper-grid border-t border-[#CBD5E1]">
+      <img
+        src="/doodles/dino-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute top-10 left-6 w-20 h-20 opacity-80 -rotate-6 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/d20-dice-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute top-1/3 right-10 w-20 h-20 opacity-80 rotate-6 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/juicebox2-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute bottom-10 left-10 w-20 h-20 opacity-80 rotate-3 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/ufo-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute top-1/2 left-24 w-20 h-20 opacity-80 rotate-6 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/moon-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute top-10 right-24 w-20 h-20 opacity-80 -rotate-3 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/rocket-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute bottom-1/3 right-10 w-20 h-20 opacity-80 rotate-3 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/filmreel2-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute bottom-10 left-1/3 w-20 h-20 opacity-80 -rotate-6 pointer-events-none select-none"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
@@ -476,7 +527,7 @@ export const GarageObservatory = () => {
             {/* Lightbox Modal */}
             {selectedPhoto && (
               <div
-                className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 select-none"
+                className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 select-none h-full overflow-y-hidden"
                 onClick={() => setSelectedPhoto(null)}
                 onContextMenu={(e) => e.preventDefault()}
               >
@@ -507,7 +558,7 @@ export const GarageObservatory = () => {
                         className="w-full h-full object-contain max-h-[75vh] select-none pointer-events-none"
                       />
                     </div>
-                    <div className="md:col-span-4 p-6 flex flex-col justify-between space-y-6 bg-[#1E293B] overflow-y-auto">
+                    <div className="md:col-span-4 p-6 flex flex-col justify-center space-y-6 bg-[#1E293B] overflow-y-auto">
                       <div>
                         <div className="flex items-center gap-2 mb-2 font-mono text-xs text-[#BAE6FD]">
                           <span>📍 {selectedPhoto.location}</span>

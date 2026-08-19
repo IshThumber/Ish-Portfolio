@@ -377,6 +377,15 @@ export const education = [
 export const certifications = [
   {
     id: 1,
+    name: "Claude Certified Architect - Professional",
+    issuer: "Anthropic",
+    date: "2026",
+    verifyUrl: "https://www.credly.com/badges/2d5e9212-ea0a-449e-872c-6dc92de2d92d",
+    description: "Professional-level expertise in architecting and building production systems with Claude.",
+    badge: "/certifications/claude-certified-architect-professional.png",
+  },
+  {
+    id: 2,
     name: "AWS Solutions Architect - Professional",
     issuer: "Amazon Web Services",
     date: "2026",
@@ -385,7 +394,7 @@ export const certifications = [
     badge: "/certifications/aws-certified-solutions-architect-professional.png",
   },
   {
-    id: 2,
+    id: 3,
     name: "AWS Solutions Architect – Associate",
     issuer: "Amazon Web Services",
     date: "2025",
@@ -394,7 +403,7 @@ export const certifications = [
     badge: "/certifications/aws-certified-solutions-architect-associate.png",
   },
   {
-    id: 3,
+    id: 4,
     name: "HashiCorp Terraform Associate",
     issuer: "HashiCorp",
     date: "2024",
@@ -403,7 +412,7 @@ export const certifications = [
     badge: "/certifications/hashicorp-terraform-associate.png",
   },
   {
-    id: 4,
+    id: 5,
     name: "AWS Cloud Practitioner",
     issuer: "Amazon Web Services",
     date: "2024",

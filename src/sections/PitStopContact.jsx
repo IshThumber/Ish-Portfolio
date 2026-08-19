@@ -24,6 +24,48 @@ export const PitStopContact = () => {
 
   return (
     <section id="pitstop" className="relative pt-20 pb-0 bg-[#FAF8F5] border-t border-[#CBD5E1] overflow-hidden">
+      <img
+        src="/doodles/ramen-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute top-10 left-6 w-20 h-20 opacity-80 -rotate-3 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/d20-dice-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute top-1/3 right-10 w-20 h-20 opacity-80 rotate-6 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/juicebox2-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute bottom-16 left-16 w-20 h-20 opacity-80 rotate-3 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/pirate-hat-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute top-1/2 left-1/3 w-20 h-20 opacity-80 -rotate-6 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/mask-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute bottom-24 right-24 w-20 h-20 opacity-80 rotate-6 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/cape-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute top-10 right-1/3 w-20 h-20 opacity-80 -rotate-3 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/ninja-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute bottom-10 right-6 w-20 h-20 opacity-80 rotate-3 pointer-events-none select-none"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* ── Section Marker ── */}
         <div className="flex items-center gap-3 mb-12">

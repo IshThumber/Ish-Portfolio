@@ -64,6 +64,30 @@ export const TechnicalToolbox = () => {
 
   return (
     <section className="relative py-16 bg-paper-grid border-t border-[#CBD5E1]">
+      <img
+        src="/doodles/d20-dice-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute top-10 right-6 w-20 h-20 opacity-80 rotate-6 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/lucky-cat-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute bottom-16 left-8 w-20 h-20 opacity-80 -rotate-6 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/raygun-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute top-1/2 right-10 w-20 h-20 opacity-80 -rotate-3 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/koi-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute bottom-10 right-1/3 w-20 h-20 opacity-80 rotate-6 pointer-events-none select-none"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-10 max-w-2xl">

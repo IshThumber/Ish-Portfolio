@@ -10,6 +10,42 @@ export const JourneyOdyssey = () => {
 
   return (
     <section id="odyssey" className="relative py-20 md:py-28 bg-[#FAF8F5] border-t border-[#CBD5E1]">
+      <img
+        src="/doodles/leaf-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute top-10 right-6 w-20 h-20 opacity-80 rotate-6 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/lucky-cat-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute top-1/2 left-6 w-20 h-20 opacity-80 -rotate-3 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/dino-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute bottom-10 right-10 w-20 h-20 opacity-80 rotate-6 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/compass-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute top-1/3 right-24 w-20 h-20 opacity-80 -rotate-6 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/treasure-map-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute bottom-1/3 left-16 w-20 h-20 opacity-80 rotate-3 pointer-events-none select-none"
+      />
+      <img
+        src="/doodles/knight-helmet-doodle.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden lg:block absolute top-10 left-24 w-20 h-20 opacity-80 -rotate-3 pointer-events-none select-none"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
@@ -135,6 +171,13 @@ export const JourneyOdyssey = () => {
                     </span>
                   </div>
                 ))}
+
+                <img
+                  src="/doodles/juicebox-doodle.svg"
+                  alt=""
+                  aria-hidden="true"
+                  className="w-16 h-16 mx-auto opacity-70 -rotate-6 pointer-events-none select-none"
+                />
               </div>
             </motion.div>
           );
