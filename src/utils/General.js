@@ -395,7 +395,7 @@ export const certifications = [
   },
   {
     id: 3,
-    name: "AWS Solutions Architect – Associate",
+    name: "AWS Solutions Architect - Associate",
     issuer: "Amazon Web Services",
     date: "2025",
     verifyUrl: "https://www.credly.com/badges/bf5ab4c9-2fdf-4500-bd27-1a68e4fd5980/public_url",

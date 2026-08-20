@@ -46,8 +46,14 @@ export const HeroViewfinder = () => {
           {/* Left Column: Personal Story & Value Proposition */}
           <div className="lg:col-span-7 z-10">
             {/* Narrative Voice Greeting */}
-            <div className="inline-block relative mb-4">
+            <div className="flex items-center gap-3 mb-4">
               <h2 className="text-xl sm:text-2xl font-medium text-[#475569] tracking-tight">Hi, I'm Ish.👋</h2>
+              <div className="hidden sm:flex w-11 h-11 items-center justify-center bg-[#FDBA9A]/30 border border-[#1E293B]/70 rounded-lg shadow-md rotate-6 pointer-events-none select-none shrink-0">
+                <img src="/doodles/striped-planet-doodle.png" alt="" aria-hidden="true" className="w-8 h-8" />
+              </div>
+              <div className="hidden sm:flex w-11 h-11 items-center justify-center bg-[#FEF3C7]/50 border border-[#1E293B]/70 rounded-lg shadow-md -rotate-6 pointer-events-none select-none shrink-0">
+                <img src="/doodles/comet-doodle.png" alt="" aria-hidden="true" className="w-8 h-8" />
+              </div>
             </div>
 
             {/* Narrative Voice Hero Main Title (H1: Weight 700, clamp 38px-54px) */}
